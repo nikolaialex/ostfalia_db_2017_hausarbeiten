@@ -1,5 +1,5 @@
 # Inhaltsverzeichnis
 
-+ [Einleitung](introduction.md)
++ [Einleitung](./introduction.md)
 + [...](...)
-+ [Literaturverzeichnis](references.md) 
++ [Literaturverzeichnis](./references.md) 
