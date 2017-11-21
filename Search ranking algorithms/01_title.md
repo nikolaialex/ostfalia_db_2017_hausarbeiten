@@ -3,6 +3,6 @@ Kurze Beschreibung des Inhaltes.
 
 ## Autoren
 
-| Name          | Matrikelnummer | Hochschule | E-Mail                     |
-|:--------------|:---------------|:-----------|:---------------------------|
-|Max Mustermann | 123456789      | Ostfalia   | max.mustermann@ostfalia.de |
+| Name             | Matrikelnummer | Hochschule | E-Mail                     |
+|:-----------------|:---------------|:-----------|:---------------------------|
+|Christian Jürgens | 7005047        | Emden      | ch.jay585@gmail.com        |
