@@ -1,8 +1,10 @@
-# Titel der Arbeit
-Kurze Beschreibung des Inhaltes.
+# Graphenbasierte vs. relationale Datenbanken
+## Vergleich der Speicherung und Abfrage bei der Analyse von Social Data
 
-## Autoren
+Kurze Beschreibung folgt
+
+## Autor
 
 | Name          | Matrikelnummer | Hochschule | E-Mail                     |
 |:--------------|:---------------|:-----------|:---------------------------|
-|Max Mustermann | 123456789      | Ostfalia   | max.mustermann@ostfalia.de |
+| Jens Gäbeler | 70453756      | Ostfalia   | j.gaebeler@ostfalia.de |
