@@ -3,8 +3,7 @@ Apache Kafka ...
 
 ## Autoren
 
-| Name             | Matrikelnummer | Hochschule | E-Mail                     |
-|:-----------------|:---------------|:-----------|:---------------------------|
-| Sebastian Große  | 123456789      | Beuth      |                            |
-| Daniel Dannewitz |                |            |                            | 
-
+| Name             | Matrikelnummer | Hochschule                          | E-Mail                     |
+|:-----------------|:---------------|:------------------------------------|:---------------------------|
+| Sebastian Große  | 856132         | Beuth Hochschule für Technik Berlin | s69728@beuth-hochschule.de |
+| Daniel Dannewitz |                |                                     |                            | 
