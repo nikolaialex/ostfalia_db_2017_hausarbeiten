@@ -6,7 +6,7 @@
 
 Im Internet gibt es viele verschiedene Kryptobörsen. Alle Kryptobörsen verbindet der Handel mit verschiedenen Kryptowährungen. Welche Währungen allerdings gehandelt werden und welche Bezahlmethoden akzeptiert werden ist sehr unterschiedlich. Aber Kryptobörsen verhalten sich analog zu den Märkten und Bärsen im Finanzsektor.
 
-Die 5 größten Kryptowährungen (Bitcoin, Ethereum, Dash, Ripple und Monero) werden auf fast allen Börsen gehandelt. Wobei als Referenz immer der Bitcoin gilt, da dies die Leitwährung ist, welche auch am stärksten gehandelt wird.
+Die 5 größten Kryptowährungen ([Bitcoin](...), [Ethereum](...), [Dash](...), [Ripple](...) und [Monero](...)) werden auf fast allen Börsen gehandelt. Wobei als Referenz immer der Bitcoin gilt, da dies die Leitwährung ist, welche auch am stärksten gehandelt wird.
 
 ## Unterschiede zwischen den Kryptobörsen
 
