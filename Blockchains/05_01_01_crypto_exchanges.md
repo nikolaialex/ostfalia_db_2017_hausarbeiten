@@ -34,8 +34,12 @@ Ein weiterer wichtiger Unterschied ist die Verifizierung für den Handel mit Kry
 Legende
 
 EUR     - Euro
+USD     - US Dollar
 BTC     - Bitcoin
 BCH     - Bitcoin Cash
+BTG     - Bitcoin Gold
+
+noch zu ergänzen
 
 ...
 ```
