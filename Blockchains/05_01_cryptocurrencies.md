@@ -3,7 +3,7 @@
 # Kryptowährungen
 
 - [Kryptobörsen](05_01_01_crypto_exchanges.md)
-- [Bitcoin](...)
+- [Bitcoin](05_01_02_bitcoin.md)
 - [Ethereum](...)
 - [Dash](...)
 - [Ripple](...)

@@ -1,5 +1,7 @@
 [<< zurück](05_01_cryptocurrencies.md)
 
+***
+
 # Kryptobörsen
 
 ## Was ist eine Kryptobörse
@@ -43,3 +45,7 @@ noch zu ergänzen
 
 ...
 ```
+
+***
+
+[<< Wallets](05_01_cryptocurrencies.md) | [Bitcoin >>](05_01_02_bitcoin.md)
