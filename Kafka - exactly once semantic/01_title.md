@@ -6,4 +6,4 @@ Apache Kafka ...
 | Name             | Matrikelnummer | Hochschule                          | E-Mail                     |
 |:-----------------|:---------------|:------------------------------------|:---------------------------|
 | Sebastian Große  | 856132         | Beuth Hochschule für Technik Berlin | s69728@beuth-hochschule.de |
-| Daniel Dannewitz |                |                                     |                            | 
+| Daniel Dannewitz |                | HS Emden-Leer                       | daniel.dannewitz@stud.hs-emden-leer.de| 
