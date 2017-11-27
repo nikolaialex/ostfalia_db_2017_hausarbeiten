@@ -10,9 +10,8 @@
 
 2008 wurde zum ersten mal das Konzept von Bitcoin in einem White Paper von Satoshi Nakamoto vorgestellt. Was der Name Bitcoin aussagt bis Heute nicht bekannt, ob es Pseudonym, eine Person oder eine Gruppe ist. Die Idee hinter diesen White Paper stammt aus der Idee einen kryptografischen Währung aus dem Jahr 1998 von Wei Dai. 
 
-_„Das Kernproblem konventioneller Währungen ist das Ausmaß an Vertrauen, das nötig ist, damit sie funktionieren. Der Zentralbank muss vertraut werden, dass sie die Währung nicht entwertet, doch die Geschichte des Fiatgeldes ist voll von Verrat an diesem Vertrauen. Banken muss vertraut werden, dass sie unser Geld aufbewahren und es elektronisch transferieren, doch sie verleihen es in Wellen von Kreditblasen mit einem kleinen Bruchteil an Deckung. Wir müssen den Banken unsere Privatsphäre anvertrauen, vertrauen, dass sie Identitätsdieben nicht die Möglichkeit geben, unsere Konten leerzuräumen. Ihre massiven Zusatzkosten machen Micropayments unmöglich.
- Eine Generation früher hatten Nutzer von Time-Sharing-Computersystemen ein ähnliches Problem. Vor dem Aufkommen von starker Verschlüsselung mussten die User sich auf Passwortschutz für ihre Daten verlassen und dem Systemadministrator vertrauen, dass dieser ihre Informationen vertraulich hielt. Diese Privatsphäre konnte jederzeit aufgehoben werden, wenn der Administrator zu dem Schluss kam, dass sie weniger wog als andere Belange, oder auf Anweisung seiner Vorgesetzten. Dann aber wurde starke Verschlüsselung für die Masse der Nutzer verfügbar, und Vertrauen war nicht länger nötig. Daten konnten auf eine Weise gesichert werden, die einen Zugriff durch Dritte – egal aus welchem Grund, egal mit wie guten Entschuldigungen, egal was sonst – unmöglich machten.
- Es ist Zeit, dass wir dasselbe mit Geld machen. Mit einer elektronischen Währung, die auf einem kryptografischen Beweis beruht und kein Vertrauen in Mittelsmänner benötigt, ist Geld sicher und kann mühelos transferiert werden.“_ - Satoshi Nakamato[01]
+_„Das Kernproblem konventioneller Währungen ist das Ausmaß an Vertrauen, das nötig ist, damit sie funktionieren. Der Zentralbank muss vertraut werden, dass sie die Währung nicht entwertet, doch die Geschichte des Fiatgeldes ist voll von Verrat an diesem Vertrauen. Banken muss vertraut werden, dass sie unser Geld aufbewahren und es elektronisch transferieren, doch sie verleihen es in Wellen von Kreditblasen mit einem kleinen Bruchteil an Deckung. [...]
+ Mit einer elektronischen Währung, die auf einem kryptografischen Beweis beruht und kein Vertrauen in Mittelsmänner benötigt, ist Geld sicher und kann mühelos transferiert werden.“_ - Satoshi Nakamato[01]
 
 ## Eigenschaften
 
@@ -43,7 +42,7 @@ Quellenangabe:
 
 Medienverweise:
 
-0001 -  (http://geekfence.com/2017/05/11/is-bitcoin-the-digital-gold [abgerufen am 24. November 2017])
+0001 -  (https://pixabay.com/de/bitcoin-btc-kryptow%C3%A4hrung-1813503/ - freie kommerzielle Nutzung - [abgerufen am 27. November 2017])
 
 ```
 
