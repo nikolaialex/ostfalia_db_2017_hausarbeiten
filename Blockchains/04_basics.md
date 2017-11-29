@@ -18,7 +18,9 @@ Eine einmal erzeugte Kette von Blöcken kann nur durch neue Blöcke erweitert we
 
 Eine Hashfunktion bildet eine Eingabe von beliebiger Länge auf einen eindeutigen Hashwert mit fester Länge ab. Der Hashwert zeichnet sich dadurch aus, dass er zwar leicht zu errechnen ist, sich aus ihm jedoch nicht (oder nur unter erheblichem Aufwand) die Ausgangsdaten rekonstruieren lassen. Zur Berechnung von Hashwerten kommen deshalb mathematische Einwegfunktionen zum Einsatz. Eine wichtige Eigenschaft von Hashfunktionen ist die sogenannte Kollisionsresistenz. Damit ist gemeint, dass verschiedene Eingabedaten nicht denselben Hashwert hervorbringen dürfen. In der Praxis ist dies allerdings nie mit letzter Konsequenz vermeidbar, da durch die feste Größe des Hashwertes nur eine endliche Menge unterschiedlicher Hashwerte erzeugbar ist, während eine unendliche Menge unterschiedlicher Eingabedaten möglich ist. [03]
 
-Bei Blockchains gelten oftmals bestimmte Vorgaben für den Hashwert, so dass ein zusätzliches Datenfeld derart gefüllt werden muss, dass der Hashwert die Vorgaben erfüllt. Dieses zusätzliche Datenfeld ist die oben bereits angesprochene Nonce. Bei Bitcoin muss der Hashwert beispielsweise eine Serie von Nullen aufweisen. Für die Nonce müssen nun verschiedene Werte durchprobiert werden, bis ein Hashwert entsteht, der die Vorgaben erfüllt. Dies ist ein sehr aufwändiges Verfahren und soll dafür sorgen, dass Blöcke nicht beliebig hinzugefügt werden können.
+## Mining
+
+Bei Blockchains gelten oftmals bestimmte Vorgaben für den Hashwert, so dass ein zusätzliches Datenfeld derart gefüllt werden muss, dass der Hashwert die Vorgaben erfüllt. Dieses zusätzliche Datenfeld ist die oben bereits angesprochene Nonce. Bei Bitcoin muss der Hashwert beispielsweise eine Serie von Nullen aufweisen. Für die Nonce müssen nun verschiedene Werte durchprobiert werden, bis ein Hashwert entsteht, der die Vorgaben erfüllt. Dieses als "Mining" bezeichnete Verfahren ist sehr aufwändig und soll dafür sorgen, dass Blöcke nicht beliebig hinzugefügt werden können.
 
 ```
 Quellenangabe:
