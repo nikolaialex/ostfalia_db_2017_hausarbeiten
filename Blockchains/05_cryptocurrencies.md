@@ -36,6 +36,32 @@ Ein weiterer wichtiger Unterschied ist die Verifizierung für den Handel mit Kry
 
 ***
 
+# Wallet
+
+Um Kryptowährungen aufzubewahren benutzt man sogenannte Wallets. Wallets sind im übertragenden Sinne digitale Geldbeutel. Die Auswahl des richtigen Wallets ist mittlerweile nicht mehr einfach zu definieren.
+
+## Arten von Wallets
+
+Wallets an sich unterscheiden sich nicht in ihrer Funktionalität, das aufbewahren von Kryptowährungen, sondern wie man diese Verwalten möchte. 
+
+Zum einen gibt es für jede große Kryptowährung eine eigene App auf dem Smartphone, sowohl für Android und IOS Nutzer. Diese App kann man sich einfach im Store herunterladen und dann seine Kryptowährung transferieren. In den meisten Fällen kann man seine Kryptowährung verwalten und versenden. Der direkte Verkauf oder Ankauf bieten manche Apps an, allerdings nicht alle und die Tradingfees sind hoch.
+
+Dann gibt es noch Wallet Apps die haben sich darauf spezialisiert nicht nur eine bestimmte Währung zu verwalten, sondern man kann über eine App mehrere Währungen verwalten. Wenn man eine App nutzt, egal ob spezialisert oder allgemein, bieten sich eher für den langfristigen Anleger an. Spekulanten die mit Kryptowährungen Handel betreiben werden nicht als erste Wahl zur App greifen. Bei Bitcoin kann man mit der App bezahlen bei allen Händlern die dies unterstützen.
+
+Die bisher beliebteste Art seine Kryptowährungen aufzubewahren ist die Möglichkeit der integrierten Wallet in einer Kryptobörse. Alle namhaften Kryptobörsen bieten ebenfalls Wallets an, zum einen werden diese benötigt um Handel zu treiben und man hat dort auch die Möglichkeit seine Währungen zu verwalten. Die Funtkionalität im Vergleich zur App ist nicht eingeschränkt. An Kryptobörsen können Wallets zu allen Währungen angelegt werden, mit den man auf der jeweiligen Börse auch Handel treibt.
+
+Bei diesen Möglichkeiten ist natürlich ein Vertrauen notwendig in die jeweilige Börse oder dem Wallet. Letztendlich kann man seine Kryptowährung ebenfalls auf einem USB-Stick speichern. Damit hat man seine Kryptowährung physisch als Hash auf einem Datenträger.
+
+Zum speichern des Hashes ist natürlich ein gewisses Grundwissen von nöten. Allerdings gibt es auch dafür eine Lösung, die Hardware-Wallets. Diese sind USB-Sticks sehr ähnlich, funktionieren allerdings mit einer Software die die Verifizierung, das Verwalte und Übertragen schon mitliefert. Das ist die bisher sicherste Methode seine Kryptowährungen zu verwalten, da die meisten Hardware Wallets als sehr sicher gelten.
+
+## Sicherheit von Wallets
+
+Die Sicherheit von Wallets liegt vor allem am User. Wie in allen Bereichen im Web liegt es an dem Nutzer ein sicheres Passwort zu vergeben oder eine Zwei-Faktor Authentifizierung zu aktivieren. Beliebt ist auch der Fingerabdruck bei App-Wallets.
+
+Natürlich gibt es bei jeder Online Variante immer die Möglichkeit, dass die Plattform mit Nutzerdaten gehackt wird. Davor kann man sich nur mit der Zwei-Faktor Authentifizierung oder den Hardware-Wallets schützen.
+
+***
+
 # Bitcoin
 
 ![Bild von Bitcoin](files/bitcoin.jpg)
@@ -100,6 +126,14 @@ Dash ist im Moment drittbekannteste Währung im Krypto Universum. Dash hat die g
 Allerdings gibt es eine kleine Feinheit, die den Dashcoin doch vom Bitcoin unterscheidet. Bei Bitcoin sind Transaktionsinformationen öffentlich und von jedem einsehbar. Dashcoin erweitert die Währung um das System PrivateSend. Dabei werden die Informationen der Transaktion mit den anderer User vermischt und die reinen Informationen der Transaktion zu verschleiern. Damit gibt es beim Dashcoin eine erhöhte Privatsphäre und gibt dem Coin seine Daseinsberechtigung.
 
 Noch eine Besonderheit nimmt sich Dash heraus. Zehn Prozent aller Mining Einkünfte gehen in eine sogenannte Schatzkammer, womit das Prjekt weiter entwickelt und finanziert wird.
+
+***
+
+# Ripple
+
+***
+
+# Monero
 
 ***
 

@@ -10,15 +10,15 @@
     - Digitale Signaturen
     - Funktionsweise
     - Mining
-    - Wallets
 - [Kryptowährungen](05_cryptocurrencies.md)
     - Kryptobörsen
+    - Wallet
     - Bitcoin
     - Ethereum
     - Dash
     - Ripple
     - Monero
-- [Anwendunsgebiete]()
+- [Anwendunsgebiete](06_use_cases.md)
     - Smart Contracts
     - Digitale Versteigerungen
     - Wahlsystem Digitalisieren
