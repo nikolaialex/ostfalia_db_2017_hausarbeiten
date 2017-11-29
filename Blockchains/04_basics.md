@@ -1,5 +1,7 @@
 [<< zurück](02_toc.md)
 
+***
+
 # Grundlagen
 
 Eine Blockchain ist eine Kette von Blöcken, die über eine kryptographische Hashfunktion miteinander verbunden sind. Der über die Hashfunktion erzeugte Hashwert kann dabei als Zeiger auf den vorangehenden Block verstanden werden. Neu anzuhängende Blöcke müssen stets den Hashwert des Blockes enthalten, an den sie angehängt werden sollen. Das Grundprinzip einer Blockchain entspricht somit einer verketteten Liste, allerdings ist diese mit kryptographischen Mitteln abgesichert. [01]
@@ -22,7 +24,14 @@ Eine Hashfunktion bildet eine Eingabe von beliebiger Länge auf einen eindeutige
 
 Bei Blockchains gelten oftmals bestimmte Vorgaben für den Hashwert, so dass ein zusätzliches Datenfeld derart gefüllt werden muss, dass der Hashwert die Vorgaben erfüllt. Dieses zusätzliche Datenfeld ist die oben bereits angesprochene Nonce. Bei Bitcoin muss der Hashwert beispielsweise eine Serie von Nullen aufweisen. Für die Nonce müssen nun verschiedene Werte durchprobiert werden, bis ein Hashwert entsteht, der die Vorgaben erfüllt. Dieses als "Mining" bezeichnete Verfahren ist sehr aufwändig und soll dafür sorgen, dass Blöcke nicht beliebig hinzugefügt werden können.
 
+***
+
+[<< Einleitung](03_introduction.md) | [Anwendungsgebiete >>](05_cryptocurrencies.md)
+
+***
+
 ```
+
 Quellenangabe:
 
 [01] - Stephan Wiefling, Luigi Lo Iacono, Frederik Sandbrink: Anwendung der Blockchain außerhalb von Geldwährungen. Erschienen in: Datenschutz und Datensicherheit - DuD, August 2017, Volume 41, Issue 8, S. 482–486.
@@ -34,7 +43,3 @@ Medienverweise:
 01 -  Schematische Darstellung einer Blockchain nach [02]
 
 ```
-
-***
-
-[<< Einleitung](03_introduction.md) | [Anwendungsgebiete >>](05_use_cases.md)

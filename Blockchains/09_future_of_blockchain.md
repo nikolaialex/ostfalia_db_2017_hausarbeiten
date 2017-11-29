@@ -1,5 +1,7 @@
 [<< zurück](02_toc.md)
 
+***
+
 # Zukunft der Blockchain
 
 Es existieren zahlreiche Ideen und Konzepte, wie Blockchains in Zukunft eingesetzt werden können. Dieser Abschnitt soll eine kleine Übersicht über mögliche Einsatzszenarios der Blockchain in der Zukunft geben.
@@ -30,15 +32,17 @@ Da Daten in einer Blockchain weitgehend sicher vor Manipulationen sind, sind Blo
 
 Für dieses Konzept ist es erforderlich, dass die Lebensmittel mit einem RFID-Chip ausgestattet sind, durch den sie eindeutig identifiziert und automatisch erfasst werden können. Das Konzept sieht nun vor, jeden Produktionsschritt mit allen relevanten Informationen in einer Blockchain zu speichern. So könnte beispielsweise erfasst werden, wo und wann der jeweilige Produktionsschritt stattfand und welche Mitarbeiter beteiligt waren. Da RFIDs bereits heute in der Lebensmittelproduktion verbreitet sind, ist die Umsetzung dieses Konzepts relativ einfach. Da die Daten in der Blockchain nicht nachträglich verändert werden können, lassen sich Lebensmittelskandale nicht mehr so leicht vertuschen und es lässt sich leicht feststellen, welche Produkte von einer möglichen Verunreinigung betroffen sind. [02, Kap. 3.5]
 
+***
+
+[<< Sicherheit](08_security.md) | [Äußere Faktoren >>](10_external_factors.md)
+
+***
 
 ```
+
 Quellenangabe:
 
 [01] - Esther Mengelkamp, Benedikt Notheisen, Carolin Beer, David Dauer, Christof Weinhardt: A blockchain-based smart grid: towards sustainable local energy markets. Erschienen in: Computer Science - Research and Development, 2017, S. 1–8.
 [02] - Stephan Wiefling, Luigi Lo Iacono, Frederik Sandbrink: Anwendung der Blockchain außerhalb von Geldwährungen. Erschienen in: Datenschutz und Datensicherheit - DuD, August 2017, Volume 41, Issue 8, S. 482–486.
 
 ```
-
-***
-
-[<< Sicherheit](07_security.md) | [Äußere Faktoren >>](09_external_factors.md)
