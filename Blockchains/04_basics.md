@@ -1,3 +1,5 @@
+***
+
 [<< zurück](02_toc.md)
 
 ***
@@ -26,7 +28,7 @@ Bei Blockchains gelten oftmals bestimmte Vorgaben für den Hashwert, so dass ein
 
 ***
 
-[<< Einleitung](03_introduction.md) | [Anwendungsgebiete >>](05_cryptocurrencies.md)
+[<< Einleitung](03_introduction.md) | [Kryptowährungen >>](05_cryptocurrencies.md)
 
 ***
 
@@ -43,3 +45,5 @@ Medienverweise:
 01 -  Schematische Darstellung einer Blockchain nach [02]
 
 ```
+
+***

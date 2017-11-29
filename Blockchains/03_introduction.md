@@ -1,3 +1,5 @@
+***
+
 [<< zurück](02_toc.md)
 
 ***
@@ -7,3 +9,5 @@
 ***
 
 [<< Inhaltsverzeichnis](02_toc.md) | [Grundlagen >>](04_basics.md)
+
+***

@@ -1,3 +1,5 @@
+***
+
 [<< zurück](02_toc.md)
 
 ***
@@ -127,3 +129,5 @@ Medienverweise:
 0001 -  (https://pixabay.com/de/bitcoin-btc-kryptow%C3%A4hrung-1813503/ - freie kommerzielle Nutzung - [abgerufen am 27. November 2017])
 
 ```
+
+***

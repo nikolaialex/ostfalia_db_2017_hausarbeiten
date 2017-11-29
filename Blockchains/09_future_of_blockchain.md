@@ -1,3 +1,5 @@
+***
+
 [<< zurück](02_toc.md)
 
 ***
@@ -46,3 +48,5 @@ Quellenangabe:
 [02] - Stephan Wiefling, Luigi Lo Iacono, Frederik Sandbrink: Anwendung der Blockchain außerhalb von Geldwährungen. Erschienen in: Datenschutz und Datensicherheit - DuD, August 2017, Volume 41, Issue 8, S. 482–486.
 
 ```
+
+***
