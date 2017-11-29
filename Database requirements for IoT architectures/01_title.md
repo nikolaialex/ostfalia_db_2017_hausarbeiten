@@ -3,6 +3,6 @@ Kurze Beschreibung des Inhaltes.
 
 ## Autoren
 
-| Name            | Matrikelnummer | Hochschule      | E-Mail                                  |
+| Name        | Matrikelnummer | Hochschule      | E-Mail                                  |
 |:----------------|:---------------|:----------------|:----------------------------------------|
-|Henning Rückborn | 123456789      | HS Emden/Leer   | henning.rueckborn@stud.hs-emden-leer.de |
+|Henning Rückborn | ------   | HS Emden/Leer   | henning.rueckborn@stud.hs-emden-leer.de |
