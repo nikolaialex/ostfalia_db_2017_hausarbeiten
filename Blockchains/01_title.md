@@ -1,5 +1,6 @@
 # Blockchains
-Kurze Beschreibung des Inhaltes.
+
+Blockchains erfreuen sich seit Einführung des auf ihr basierenden Bitcoin großen Interesses. In jüngerer Zeit hat dieses Interesse durch immer weiter steigende Bitcoin-Kurse und neue Einsatzideen für Blockchains weiter zugenommen. In dieser Hausarbeit soll geklärt werden, was eine Blockchain ist, wie sie funktioniert und wofür sie eingesetzt werden kann. 
 
 ## Autoren
 
