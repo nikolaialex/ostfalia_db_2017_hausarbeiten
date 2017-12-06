@@ -42,7 +42,7 @@ Quellenangabe:
 
 Medienverweise:
 
-01 -  Schematische Darstellung einer Blockchain nach [02]
+01 -  Schematische Darstellung einer Blockchain (eigene Arbeit, nach [02])
 
 ```
 
