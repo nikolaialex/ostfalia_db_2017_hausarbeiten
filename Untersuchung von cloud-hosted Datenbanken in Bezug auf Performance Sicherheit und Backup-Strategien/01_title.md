@@ -5,4 +5,4 @@ Kurze Beschreibung des Inhaltes.
 
 | Name          | Matrikelnummer | Hochschule | E-Mail                     |
 |:--------------|:---------------|:-----------|:---------------------------|
-|Max Mustermann | 123456789      | Ostfalia   | max.mustermann@ostfalia.de |
+|Michael Rothkegel | 123456789      | Ostfalia   | max.mustermann@ostfalia.de |
