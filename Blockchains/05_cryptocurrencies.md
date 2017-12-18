@@ -131,9 +131,17 @@ Noch eine Besonderheit nimmt sich Dash heraus. Zehn Prozent aller Mining Einkün
 
 # Ripple
 
+Ripple wird gerne als Bitcoin für Banken bezeichnet. Das liegt vor allem daran das es in Ripple möglich ist, sogenannte Schuldscheine auszustellen. Zudem ist die Grundidee von Ripple ein schnelles und skalierbares System zu erschaffen, dass in Echtzeit agiert. In der Blockhain von Ripple werden zu den Transaktionen auch der jeweilige Gegenwert gespeichert.
+
+Da Ripple keinen eigentlichen Wert speichert, sondern nur als Platzhalter den aktuellen Gegenwert in Form von IOU, muss sich das Ripple Netzwerk an Portalen bedienen. Diese Gateways können schnell die gewünschte Transaktion in eine Fiatwährung umwandeln.
+
+Die Ripple Währung ist komplett vorgemined. Das bedeutet es werden im Laufe der Zeit keine weiteren Ripple Coins (XRP) dazukommen. Zurzeit sind von 100 Milliarden Coins gerade mal 42 Milliarden Ripple Coins im Umlauf. Der größte Teil der Coins ist in Besitz von Ripple, was auch bisher der größte Kritikpunkt dieser Währung und des Konzeptes ist. Es wäre möglich, mit dieser riesigien Summe den Kurs zu kontrollieren.
+
 ***
 
 # Monero
+
+Der Monero ist dem Bitcoin sehr ähnlich. Jedoch muss man dazu sagen, dass natürlich auch Monero versucht, sich von seinem großen Burder abzuheben. Der Fokus von Monero liegt mehr Privatsphäre und Anonymität.[03]
 
 ***
 
@@ -157,6 +165,7 @@ Quellenangabe:
 
 [01] - Bitcoin open source implementation of P2P currency. 11. Februar 2009 (p2pfoundation.ning.com [abgerufen am 24. November 2017]).
 [02] - (https://www.ethereum.org/ [abgerufen am 27. November 2017]).
+[03] - (https://getmonero.org/ [abgerufen am 18. Dezember 2017])
 
 Medienverweise:
 
