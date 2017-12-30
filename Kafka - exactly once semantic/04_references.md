@@ -6,7 +6,7 @@
 
 **[NarkhedeShapiraPalino2017-07]** Neha Narkhede, Gwen Shapira, and Todd Palino: "Kafka: The Definitive Guide", O’Reilly, 2017, ISBN: 978-1-491-99065-0
 
-**[kafka-users]**https://kafka.apache.org/powered-by
+**[kafka-users]** https://kafka.apache.org/powered-by
 
 **[kafka-use-cases]** https://kafka.apache.org/uses
 
