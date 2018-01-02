@@ -4,11 +4,8 @@
 
 - [Einleitung](03_introduction.md)
 - [Grundlagen](04_basics.md)
-    - Hash-Funktionen
-    - Datenstruktur
-    - Dezentralisierung
-    - Digitale Signaturen
-    - Funktionsweise
+    - Aufbau einer Blockchain
+    - Berechnung des Hashwertes
     - Mining
 - [Kryptowährungen](05_cryptocurrencies.md)
     - Kryptobörsen
@@ -24,8 +21,20 @@
     - Wahlsystem Digitalisieren
     - Kontotransaktion und Bezahlsysteme
 - [Gefahren der Blockchain](07_risk_of_blockchain.md)
+	- Effizienz
+	- Datenschutz
+	- Verlust von Wallets
 - [Sicherheit](08_security.md)
+	- Proof of work
+	- Proof of stake
+	- Proof of activity
+	- Die Sicherheit im Beispiel
 - [Zukunft der Blockchain](09_future_of_blockchain.md)
+	- Smart Grid
+	- Schutz persönlicher Daten
+	- Digitale Rechteverwaltung
+	- Domain Name Service (DNS)
+	- Überwachung von Lebensmitteln
 - [Äußere Faktoren](10_external_factors.md)
     - Community
     - Politik
