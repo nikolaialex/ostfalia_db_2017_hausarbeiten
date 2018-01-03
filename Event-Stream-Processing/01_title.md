@@ -1,8 +1,8 @@
-# Titel der Arbeit
+# Event-Stream-Processing
 Kurze Beschreibung des Inhaltes.
 
 ## Autoren
 
 | Name          | Matrikelnummer | Hochschule | E-Mail                     |
 |:--------------|:---------------|:-----------|:---------------------------|
-|Michael Rothkegel | 123456789      | Ostfalia   | max.mustermann@ostfalia.de |
+|Jan-Steffen Neurath | 285074      | Lübeck   | jan-steffen.neurath@stud.fh-luebeck.de |

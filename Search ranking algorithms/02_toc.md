@@ -8,4 +8,3 @@
 + [Nearest Neighbor Search](08_nearest_neighbor.md)
 + [Semantische Erschließung von Dokumenten](09_semantic_ranking.md)
 + [Literaturverzeichnis](10_references.md) 
-

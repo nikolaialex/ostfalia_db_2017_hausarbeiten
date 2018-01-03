@@ -16,9 +16,3 @@ Die Kriterien, nach dem Dokumente sortiert werden, lassen sich wie folgt verallg
 * Grad der inhaltlichen Ähnlichkeit zwischen Anfrage und Dokumenten
 
 [^2]:http://www.ling.uni-potsdam.de/~kolb/ECL/TextMining.pdf
-
-
-
-
-
-

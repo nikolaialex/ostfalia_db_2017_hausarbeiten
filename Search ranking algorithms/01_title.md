@@ -14,6 +14,7 @@ Verständnis für die Abschnitte [TF-IDF](07_tfidf.md), [Nearest Neighbor Search
 und [Semantische Erschließung von Dokumenten](09_semantic_ranking.md) darstellt.
 
 
+
 ## Autoren
 
 | Name             | Matrikelnummer | Hochschule | E-Mail                     |
