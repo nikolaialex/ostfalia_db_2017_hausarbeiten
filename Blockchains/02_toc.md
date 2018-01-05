@@ -40,7 +40,8 @@
     - Politik
     - Gesetzliche Grundlagen
 - [Alternative zur Blockhain](11_alternatives.md)
-    - IOTA
+    - Hashgraph
+    - Tangle
 - [Literaturverzeichnis](12_references.md) 
 
 ***

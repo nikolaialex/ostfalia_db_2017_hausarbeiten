@@ -141,7 +141,7 @@ Die Ripple Währung ist komplett vorgemined. Das bedeutet es werden im Laufe der
 
 # Monero
 
-Der Monero ist dem Bitcoin sehr ähnlich. Jedoch muss man dazu sagen, dass natürlich auch Monero versucht, sich von seinem großen Burder abzuheben. Der Fokus von Monero liegt mehr Privatsphäre und Anonymität.[03]
+Der Monero ist dem Bitcoin sehr ähnlich. Jedoch muss man dazu sagen, dass natürlich auch Monero versucht, sich von seinem großen Bruder abzuheben. Der Fokus von Monero liegt mehr Privatsphäre und Anonymität.[03]
 
 ***
 
