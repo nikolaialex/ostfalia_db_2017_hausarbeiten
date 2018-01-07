@@ -1,5 +1,6 @@
 # Kafka - exactly once semantic
-Apache Kafka ...
+
+Die vorliegende Arbeit beschäftigt sich mit einem Überblick zu Apache Kafka. Es wird die Funktionsweise von Apache Kafka erläutert und insbesondere auf die, in neueren Versionen unterstützte, "exactly once" Semantik eingegangen.
 
 ## Autoren
 
