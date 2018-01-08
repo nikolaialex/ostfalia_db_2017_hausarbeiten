@@ -8,15 +8,15 @@
 
 ## Was ist eine Kryptobörse
 
-Im Internet gibt es viele verschiedene Kryptobörsen. Alle Kryptobörsen verbindet der Handel mit verschiedenen Kryptowährungen. Welche Währungen allerdings gehandelt werden und welche Bezahlmethoden akzeptiert werden ist sehr unterschiedlich. Aber Kryptobörsen verhalten sich analog zu den Märkten und Bärsen im Finanzsektor.
+Im Internet gibt es viele verschiedene Kryptobörsen. Alle Kryptobörsen verbindet der Handel mit verschiedenen Kryptowährungen. Welche Währungen allerdings gehandelt werden und welche Bezahlmethoden akzeptiert werden ist sehr unterschiedlich. Aber Kryptobörsen verhalten sich analog zu den Märkten und Börsen im Finanzsektor.
 
 Die 5 größten Kryptowährungen (Bitcoin, Ethereum, Dash, Ripple und Monero) werden auf fast allen Börsen gehandelt. Wobei als Referenz immer der Bitcoin gilt, da dies die Leitwährung ist, welche auch am stärksten gehandelt wird.
 
 ## Unterschiede zwischen den Kryptobörsen
 
-Ein klarer Unterschied der schon erwähnt wurde ist die Anzahl der verschiedenen Kryptowährungen die gehandelt werden können. Zudem bietet jede Börse unterschiedliche Zahlungsarten an, wobei sich auch die Transaktionsgebühren stark unterscheiden.
+Ein klarer Unterschied, der schon erwähnt wurde, ist die Anzahl der verschiedenen Kryptowährungen die gehandelt werden können. Zudem bietet jede Börse unterschiedliche Zahlungsarten an, wobei sich auch die Transaktionsgebühren stark unterscheiden.
 
-Ein weiterer wichtiger Unterschied ist die Verifizierung für den Handel mit Kryptowährungen. Manche Börsen haben ein mehrstufiges Verifizierungssystem, die unterschiedliche Anforderungen haben. Je nachdem welche Anforderungen man erfüllt, schalten sich unterschiedliche Funktionen frei. Es gibt auch Börsen an denen man einfach so handeln kann oder nur mit E-Mail Verifikation. Das Post-Ident verfahren findet man bei vereinzelten Börsen ebenfalls.
+Ein weiterer wichtiger Unterschied ist die Verifizierung für den Handel mit Kryptowährungen. Manche Börsen haben ein mehrstufiges Verifizierungssystem, die unterschiedliche Anforderungen haben. Je nachdem welche Anforderungen man erfüllt, schalten sich unterschiedliche Funktionen frei. Es gibt auch Börsen an denen man einfach so handeln kann oder nur mit E-Mailverifikation. Das Post-Identverfahren findet man bei vereinzelten Börsen ebenfalls.
 
 ## Übersicht über die Kryptobörsen
 
@@ -42,23 +42,23 @@ Um Kryptowährungen aufzubewahren benutzt man sogenannte Wallets. Wallets sind i
 
 ## Arten von Wallets
 
-Wallets an sich unterscheiden sich nicht in ihrer Funktionalität, das aufbewahren von Kryptowährungen, sondern wie man diese Verwalten möchte. 
+Wallets an sich unterscheiden sich nicht in ihrer Funktionalität, das Aufbewahren von Kryptowährungen, sondern wie man diese verwalten möchte. 
 
-Zum einen gibt es für jede große Kryptowährung eine eigene App auf dem Smartphone, sowohl für Android und IOS Nutzer. Diese App kann man sich einfach im Store herunterladen und dann seine Kryptowährung transferieren. In den meisten Fällen kann man seine Kryptowährung verwalten und versenden. Der direkte Verkauf oder Ankauf bieten manche Apps an, allerdings nicht alle und die Tradingfees sind hoch.
+Zum Einen gibt es für jede große Kryptowährung eine eigene App auf dem Smartphone, sowohl für Android- und IOS-Nutzer. Diese App kann man sich einfach im Store herunterladen und dann seine Kryptowährung transferieren. In den meisten Fällen kann man seine Kryptowährung verwalten und versenden. Den direkten Verkauf oder Ankauf bieten manche Apps an, allerdings nicht alle und die Tradingfees sind hoch. Zum Anderen gibt es Wallet Apps, die sich nicht nur darauf spezialisiert haben eine bestimmte Währung zu verwalten, sondern eine Vielzahl von Währungen innerhalb einer App. Ein Handel zwischen den unterschiedlichen Währungen ist dennoch nicht möglich. Dies erfolgt ausschließlich an den Kryptobörsen.
 
-Dann gibt es noch Wallet Apps die haben sich darauf spezialisiert nicht nur eine bestimmte Währung zu verwalten, sondern man kann über eine App mehrere Währungen verwalten. Wenn man eine App nutzt, egal ob spezialisert oder allgemein, bieten sich eher für den langfristigen Anleger an. Spekulanten die mit Kryptowährungen Handel betreiben werden nicht als erste Wahl zur App greifen. Bei Bitcoin kann man mit der App bezahlen bei allen Händlern die dies unterstützen.
+Die Nutzung einer App - egal ob spezialisiert oder allgemein, bietet sich eher für langfristige Anleger an. Spekulanten, die mit Kryptowährungen Handel betreiben, werden nicht als erste Wahl zur App greifen. Bei der offiziellen Bitcoin Wallet App ist es mittlerweile sogar möglich bei diversen Händlern zu bezahlen. 
 
-Die bisher beliebteste Art seine Kryptowährungen aufzubewahren ist die Möglichkeit der integrierten Wallet in einer Kryptobörse. Alle namhaften Kryptobörsen bieten ebenfalls Wallets an, zum einen werden diese benötigt um Handel zu treiben und man hat dort auch die Möglichkeit seine Währungen zu verwalten. Die Funtkionalität im Vergleich zur App ist nicht eingeschränkt. An Kryptobörsen können Wallets zu allen Währungen angelegt werden, mit den man auf der jeweiligen Börse auch Handel treibt.
+Die bisher beliebteste Art seine Kryptowährungen aufzubewahren ist die Möglichkeit der integrierten Wallet in einer Kryptobörse. Alle namenhaften Kryptobörsen bieten ebenfalls Wallets an. So ist die gleichzeitige Möglichkeit der Verwaltung seiner Währungen und die Möglichkeit des Handelns gegeben. Die Funtkionalität im Vergleich zur App ist nicht eingeschränkt. An Kryptobörsen können Wallets zu allen Währungen angelegt werden, mit den man auf der jeweiligen Börse auch Handel treibt.
 
 Bei diesen Möglichkeiten ist natürlich ein Vertrauen notwendig in die jeweilige Börse oder dem Wallet. Letztendlich kann man seine Kryptowährung ebenfalls auf einem USB-Stick speichern. Damit hat man seine Kryptowährung physisch als Hash auf einem Datenträger.
 
-Zum speichern des Hashes ist natürlich ein gewisses Grundwissen von nöten. Allerdings gibt es auch dafür eine Lösung, die Hardware-Wallets. Diese sind USB-Sticks sehr ähnlich, funktionieren allerdings mit einer Software die die Verifizierung, das Verwalte und Übertragen schon mitliefert. Das ist die bisher sicherste Methode seine Kryptowährungen zu verwalten, da die meisten Hardware Wallets als sehr sicher gelten.
+Zum Speichern des Hashes ist natürlich ein gewisses Grundwissen von Nöten. Allerdings gibt es auch dafür eine Lösung, die Hardware-Wallets. Diese sind USB-Sticks sehr ähnlich, funktionieren allerdings mit einer Software, die die Verifizierung, das Verwalten und Übertragen schon mitliefert. Das ist die bisher sicherste Methode seine Kryptowährungen zu verwalten, da die meisten Hardware Wallets als sehr sicher gelten.
 
 ## Sicherheit von Wallets
 
-Die Sicherheit von Wallets liegt vor allem am User. Wie in allen Bereichen im Web liegt es an dem Nutzer ein sicheres Passwort zu vergeben oder eine Zwei-Faktor Authentifizierung zu aktivieren. Beliebt ist auch der Fingerabdruck bei App-Wallets.
+Die Sicherheit von Wallets liegt vor allem am User. Wie in allen Bereichen im Web liegt es an dem Nutzer ein sicheres Passwort zu vergeben oder eine Zwei-Faktor-Authentifizierung zu aktivieren. Beliebt ist auch der Fingerabdruck bei Wallet Apps.
 
-Natürlich gibt es bei jeder Online Variante immer die Möglichkeit, dass die Plattform mit Nutzerdaten gehackt wird. Davor kann man sich nur mit der Zwei-Faktor Authentifizierung oder den Hardware-Wallets schützen.
+Natürlich gibt es bei jeder Onlinevariante immer die Möglichkeit, dass die Plattform mit Nutzerdaten gehackt wird. Davor kann man sich nur mit der Zwei-Faktor Authentifizierung oder den Hardware-Wallets schützen.
 
 ***
 
