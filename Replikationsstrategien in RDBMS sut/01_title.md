@@ -7,3 +7,8 @@ In dieser Arbeit werden die verschiedenen Strategien zum Einsatz von Replikation
 | :----------- | :------------- | :---------------------- | :------------------------- |
 | Lina Suttrup |                | Beuth Hochschule Berlin | s70419@beuth-hochschule.de |
 
+
+
+
+
+[Inhaltsverzeichnis](02_toc.md)
