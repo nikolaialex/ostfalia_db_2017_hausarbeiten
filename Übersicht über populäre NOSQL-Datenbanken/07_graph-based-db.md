@@ -2,13 +2,16 @@
 
 Die mathematische Theorie zu Graphen ist weitaus älter als die Entwicklung der graphenbasierten Datenbanken (Hunger, S.3). Bereits 1736 befasste sich Leonard Euler unwissentlich bei der Lösung des berühmten Königsberger Brückenproblems mit der Graphentheorie (Nitzsche, S.19). Er entwickelte die Theorie, "als er einen Weg über die sieben Brücken des damaligen Königsbergs finden wollte, ohne eine doppelt überqueren zu müssen" (Hunger, S.3).
 
-Dabei "zeichnete er zwischen den Stadtteile die Spazierwege über die Brücken als gerade oder gebogene Kanten und ließ die Feinheiten des Stadtplans weg" (siehe Abbildung ?). Daraus entstand die Form, die wir heute als Graphen bezeichnen. (Nitzsche, S.19)
+Dabei "zeichnete er zwischen den Stadtteilen die Spazierwege über die Brücken als gerade oder gebogene Kanten und ließ die Feinheiten des Stadtplans weg" (siehe Abbildung ?). Daraus entstand die Form, die wir heute als Graphen bezeichnen. (Nitzsche, S.19)
 
-<br/>
-![Image of neo4j-datasctructure](images/graph-theory-euler.png)
-<br/>
+![Image of graph theory of euler](images/graph-theory-euler.png)
+
 *Abbildung ?: Königsberger Brückenproblem von L. Euler<br/>
 (https://link.springer.com/chapter/10.1007/978-3-8348-9968-2_2)*
+
+Auf die Graphentheorie kann aufgrund des Umfanges dieser Arbeit nicht näher eingegangen werden, aber sie dient als Grundlage für die weitere Vorstellung der graphenbasierten Datenbanken, da diese auf dieses Datenmodell zurückgreifen.
+
+Graphenbasierte Datenbanken vereinen
 
 Die Auswahl und Vorstellung der folgenden Graphdatenbanken erfolgte aufgrund der Beliebtheit im Januar 2018 auf dem Portal DB-Engines [1]. Demzufolge ist Neo4j auf Platz 1, Microsoft Azure Cosmos DB auf Platz 2 und OrientDB auf Platz 3. Aufgrund des Umfanges dieser Hausarbeit konnte nur auf die ersten drei Platzierungen  eingegangen werden.
 
@@ -32,9 +35,8 @@ Eigenschaften werden als string abgebildet. Wenn sie einen Key besitzen, wird di
 
 Durch Beschriftungen können Knoten in Gruppen eingeteilt werden. Ein Knoten kann dabei auch mehrere Beschriftungen besitzen. Beschriftungen sind dabei auch indexiert, um die Suche nach Knoten im Graph zu beschleunigen. Native Indizes sind im Hinblick auf Geschwindigkeit optimiert. (Neo4j Inc., 2018, Product Basics)
 
-<br/>
 ![Image of neo4j-datasctructure](images/neo4j-datastructure.png)
-<br/>
+
 *Abbildung ?: Datenstruktur von Neo4j<br/>
 (https://s3.amazonaws.com/dev.assets.neo4j.com/wp-content/uploads/20170731095054/Property-Graph-Concepts-Simple.svg)*
 
@@ -46,9 +48,8 @@ Cypher ist eine Abfragesprache, die für alle Graphdatenbanken geeignet ist und 
 
 Wie in Abbildung ? erkennbar, werden die "Knoten als geklammerte Bezeichner und Beziehungen als Pfeile aus Bindestrichen (ggf. mit Zusatzinformationen wie Richtung oder Typ)" dargestellt. "Attribute werden in einer JSON-ähnlichen Syntax in geschweiften Klammern" abgebildet. (Hunger, S.6)
 
-<br/>
 ![Image of cypher](images/property-graph-cypher.png)
-<br/>
+
 *Abbildung ?: Beispiel von Abfragesprache Cypher<br/>
 (https://s3.amazonaws.com/dev.assets.neo4j.com/wp-content/uploads/20170731135122/Property-Graph-Cypher.svg)*
 
