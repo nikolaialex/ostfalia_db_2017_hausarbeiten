@@ -1,2 +1,0 @@
-# Warm Standby
-

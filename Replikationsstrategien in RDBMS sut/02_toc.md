@@ -1,9 +1,10 @@
 # Inhaltsverzeichnis
 
 + [Einleitung](03_introduction.md)
-+ [Replikationsverfahren](04_replication.md)
-+ [Cold Standby](06_cold_standby.md)
-+ [Warm Standby](05_warm_standby.md)
-+ [Peer to Peer](07_peer_to_peer.md)
++ [Asynchrone Replikation](04_asynchronous_replication.md)
++ [Synchrone Replikation](05_synchronous_replication.md)
++ [Bidirektionale Replikation](06_peer_to_peer.md)
++ [Fazit](07_conclusion.md)
 + [Literaturverzeichnis](08_references.md) 
+
 
