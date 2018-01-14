@@ -1,6 +1,6 @@
 # 7 Literaturverzeichnis
 
-
+Brien, J. (2017). https://t3n.de/news/microsoft-azure-cosmos-db-822053. Online. [Zugriff: 14.01.2018]
 
 Hecht, R. (2015). Konzeptuelle und Methodische Aufarbeitung von NoSQL-Datenbanksystemen.
 
@@ -11,6 +11,8 @@ Hunger, M. (2014). Neo4j 2.0: Eine Graphdatenbank für alle. entwickler. Press.
 Klettke, M., Scherzinger, S., & Störl, U. (2014). Datenbanken ohne Schema?. Datenbank-Spektrum, 14(2), 119-129.
 
 Meier, A. & Kaufmann, M. (2016). SQL-& NoSQL-Datenbanken. Springer Vieweg.
+
+Microsoft (2017). https://docs.microsoft.com/de-de/azure/cosmos-db. Online. [Zugriff: 14.01.2018]
 
 Neo4j, Inc. (2018). https://neo4j.com. Online. [Zugriff: 06.01.2018]
 
