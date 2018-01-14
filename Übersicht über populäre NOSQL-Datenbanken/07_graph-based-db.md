@@ -111,4 +111,3 @@ Nach Meinung von Microsoft (2017, Graph Introduction) biete die Graph-API ihrer 
 
 ***
 [1] https://db-engines.com/en/ranking/graph+dbms
-

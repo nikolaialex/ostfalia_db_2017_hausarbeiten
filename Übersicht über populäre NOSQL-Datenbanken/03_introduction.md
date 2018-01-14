@@ -50,8 +50,12 @@ Graphen ausgelegt (Herden et al., S.337-338). Dieser Datenbanktyp organisiert "O
 
 In der nachfolgenden Grafik sind Vertreter der vier NoSQL-Datenbank Kategorien abgebildet:
 
-
+<br/>
 ![Image of nosql-database-family](images/nosql-database-family.jpg)
-
+<br/>
 *Abbildung 1: Übersicht der vier NoSQL-Datenbank Kategorien<br/>
 (https://aryannava.files.wordpress.com/2014/04/nosql-database-family.jpg)*
+
+
+
+
