@@ -54,7 +54,3 @@ In der nachfolgenden Grafik sind Vertreter der vier NoSQL-Datenbank Kategorien a
 
 *Abbildung 1: Übersicht der vier NoSQL-Datenbank Kategorien<br/>
 (https://aryannava.files.wordpress.com/2014/04/nosql-database-family.jpg)*
-
-
-
-
