@@ -6,15 +6,15 @@
 
 # Grundlagen
 
-Eine Blockchain ist eine Kette von Blöcken, die über eine kryptographische Hashfunktion miteinander verbunden sind. Der über die Hashfunktion erzeugte Hashwert kann dabei als Zeiger auf den vorangehenden Block verstanden werden. Neu anzuhängende Blöcke müssen stets den Hashwert des Blockes enthalten, an den sie angehängt werden sollen. Das Grundprinzip einer Blockchain entspricht somit einer verketteten Liste, allerdings ist diese mit kryptographischen Mitteln abgesichert. [01]
+Eine Blockchain ist eine Kette von Blöcken, die über eine kryptographische Hashfunktion miteinander verbunden sind. Der erzeugte Hashwert, mittels einer Hashfunktion, kann dabei als Zeiger auf den vorangehenden Block verstanden werden. Neu anzuhängende Blöcke müssen stets den Hashwert des Blockes enthalten, an den sie angehängt werden sollen. Das Grundprinzip einer Blockchain entspricht somit einer verketteten Liste, welche durch kryptographische Verfahren abgesichert werden.[01]
 
-Verdeutlichen lässt sich das Funktionsprinzip einer Blockchain an einem einfachen Beispiel: Die Besitzverhältnisse zu einem Gegenstand sollen abgebildet werden. Zunächst geht der Gegenstand vom Hersteller in den Besitz eines Händlers über. Diese Transaktion wird in Form eines Blocks gespeichert. Verkauft der Händler den Gegenstand nun an einen Kunden, wird ein neuer Block angehängt, der den erneuten Übergang des Gegenstands vom Händler an den Kunden abbildet. Diese Transaktionskette könnte bei einem späteren Weiterverkauf erweiter werden. Im Nachhinein kann so jederzeit nachvollzogen werden, zu welchem Zeitpunkt welche Transaktion durchgeführt wurde. [01]
+Verdeutlichen lässt sich das Funktionsprinzip einer Blockchain an einem einfachen Beispiel: Die Besitzverhältnisse zu einem Gegenstand sollen abgebildet werden. Zunächst geht der Gegenstand vom Hersteller in den Besitz eines Händlers über. Diese Transaktion wird in Form eines Blocks gespeichert. Verkauft der Händler den Gegenstand nun an einen Kunden, wird ein neuer Block angehängt, der den erneuten Übergang des Gegenstands vom Händler an den Kunden abbildet. Diese Transaktionskette könnte bei einem späteren Weiterverkauf erweitert werden. Im Nachhinein kann so jederzeit nachvollzogen werden, zu welchem Zeitpunkt welche Transaktion durchgeführt wurde. [01]
 
 ## Aufbau einer Blockchain
 
 ![Schematische Darstellung einer Blockchain](files/blockchain.jpg)
 
-Die vorstehende Grafik zeigt den typischen Aufbau einer Blockchain. Das elementare Element, über das die namensgebende Kette ("chain") hergestellt wird, ist der Hashwert des vorhergehenden Blockes. Darüber hinaus enthält ein Block typischerweise einen Zeitstempel und eine sogenannte Nonce ("number used once"). Die Nonce ist ein Zahlenwert, der in die Berechnung des Hashwertes einfließt. Schließlich enthält der Block auch noch die eigentliche Transaktion (oder ggf. eine Gruppe von Transaktionen), welche überhaupt erst zur Erzeugung eines neuen Blocks geführt haben. [02]
+Die vorstehende Grafik zeigt den typischen Aufbau einer Blockchain. Das Hauptelement, über das die namensgebende Kette ("chain") hergestellt wird, ist der Hashwert des vorhergehenden Blockes. Darüber hinaus enthält ein Block typischerweise einen Zeitstempel und eine sogenannte Nonce ("number used once"). Die Nonce ist ein Zahlenwert, der in die Berechnung des Hashwertes einfließt. Schließlich enthält der Block noch die eigentliche Transaktion (oder ggf. eine Gruppe von Transaktionen), welche überhaupt erst zur Erzeugung eines neuen Blocks geführt haben. [02]
 
 Eine einmal erzeugte Kette von Blöcken kann nur durch neue Blöcke erweitert werden. Das Ändern oder Löschen bestehender Blöcke ist nicht vorgesehen. Eine Blockchain wird im Laufe ihres Lebens also immer größer.
 
@@ -25,6 +25,8 @@ Eine Hashfunktion bildet eine Eingabe von beliebiger Länge auf einen eindeutige
 ## Mining
 
 Bei Blockchains gelten oftmals bestimmte Vorgaben für den Hashwert, so dass ein zusätzliches Datenfeld derart gefüllt werden muss, dass der Hashwert die Vorgaben erfüllt. Dieses zusätzliche Datenfeld ist die oben bereits angesprochene Nonce. Bei Bitcoin muss der Hashwert beispielsweise eine Serie von Nullen aufweisen. Für die Nonce müssen nun verschiedene Werte durchprobiert werden, bis ein Hashwert entsteht, der die Vorgaben erfüllt. Dieses als "Mining" bezeichnete Verfahren ist sehr aufwändig und soll dafür sorgen, dass Blöcke nicht beliebig hinzugefügt werden können.
+
+Die Validierungsmechanismen vom Mining werden im Kapitel [Sicherheit](08_security.md) näher erläutert.
 
 ***
 

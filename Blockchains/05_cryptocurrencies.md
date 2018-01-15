@@ -8,15 +8,15 @@
 
 ## Was ist eine Kryptobörse
 
-Im Internet gibt es viele verschiedene Kryptobörsen. Alle Kryptobörsen verbindet der Handel mit verschiedenen Kryptowährungen. Welche Währungen allerdings gehandelt werden und welche Bezahlmethoden akzeptiert werden, ist sehr unterschiedlich. Aber Kryptobörsen verhalten sich analog zu den Märkten und Börsen im Finanzsektor.
+Im Internet gibt es viele verschiedene Kryptobörsen. Alle Kryptobörsen verbindet der Handel mit verschiedenen Kryptowährungen. Welche Währungen allerdings gehandelt werden und welche Bezahlmethoden akzeptiert werden, ist sehr unterschiedlich. Dennoch verhalten sich Kryptobörsen analog zu den Märkten und Börsen im Finanzsektor.
 
 Die 5 größten Kryptowährungen (Bitcoin, Ethereum, Dash, Ripple und Monero) werden auf fast allen Börsen gehandelt. Wobei als Referenz immer der Bitcoin gilt, da dies die Leitwährung ist, welche auch am stärksten gehandelt wird.
 
 ## Unterschiede zwischen den Kryptobörsen
 
-Ein klarer Unterschied, der schon erwähnt wurde, ist die Anzahl der verschiedenen Kryptowährungen, die gehandelt werden können. Zudem bietet jede Börse unterschiedliche Zahlungsarten an, wobei sich auch die Transaktionsgebühren stark unterscheiden.
+Ein klarer Unterschied ist die Anzahl der verschiedenen Kryptowährungen, die gehandelt werden können. Zudem bietet jede Börse unterschiedliche Zahlungsarten an, wobei sich auch die Transaktionsgebühren stark unterscheiden.
 
-Ein weiterer wichtiger Unterschied ist die Verifizierung für den Handel mit Kryptowährungen. Manche Börsen haben ein mehrstufiges Verifizierungssystem, die unterschiedliche Anforderungen haben. Je nachdem welche Anforderungen man erfüllt, schalten sich unterschiedliche Funktionen frei. Es gibt auch Börsen, an denen man einfach so handeln kann oder nur mit E-Mailverifikation. Das Post-Identverfahren findet man bei vereinzelten Börsen ebenfalls.
+Ein weiterer wichtiger Unterschied ist die Verifizierung für den Handel mit Kryptowährungen. Manche Börsen haben ein mehrstufiges Verifizierungssystem, die unterschiedliche Anforderungen haben. Je nachdem welche Anforderungen man erfüllt, schalten sich unterschiedliche Funktionen frei. Ebenfalls gibt es Börsen, an denen man ohne Verifizierung handeln kann oder nur mit E-Mail Verifikation. Das Post-Identverfahren ist an manchen Börsen vertreten.
 
 ## Übersicht über die Kryptobörsen
 
@@ -52,7 +52,7 @@ Die bisher beliebteste Art seine Kryptowährungen aufzubewahren, ist die Möglic
 
 Bei diesen Möglichkeiten ist natürlich ein Vertrauen notwendig in die jeweilige Börse oder dem Wallet. Letztendlich kann man seine Kryptowährung ebenfalls auf einem USB-Stick speichern. Damit hat man seine Kryptowährung physisch als Hash auf einem Datenträger.
 
-Zum Speichern des Hashes ist natürlich ein gewisses Grundwissen von Nöten. Allerdings gibt es auch dafür eine Lösung, die Hardware-Wallets. Diese sind USB-Sticks sehr ähnlich, funktionieren allerdings mit einer Software, die die Verifizierung, das Verwalten und Übertragen schon mitliefert. Das ist die bisher sicherste Methode seine Kryptowährungen zu verwalten, da die meisten Hardware-Wallets als sehr sicher gelten.
+Zum Speichern des Hashes ist natürlich ein gewisses Grundwissen von Nöten. Allerdings gibt es auch dafür eine Lösung, die Hardware-Wallets. Diese sind USB-Sticks sehr ähnlich, funktionieren allerdings mit einer Software, die die Verifizierung, das Verwalten und Übertragen schon mitliefert. Das ist die bisher sicherste Methode seine Kryptowährungen zu verwalten, da diese als sehr sicher gelten.
 
 ## Sicherheit von Wallets
 
@@ -68,7 +68,7 @@ Natürlich gibt es bei jeder Onlinevariante immer die Möglichkeit, dass die Pla
 
 ## Entstehung von Bitcoin
 
-2008 wurde zum ersten Mal das Konzept von Bitcoin in einem White Paper von Satoshi Nakamoto vorgestellt. Was der Name Bitcoin aussagt, also ob es Pseudonym, eine Person oder eine Gruppe ist, ist bis heute nicht bekannt. Die Idee hinter diesem White Paper stammt aus der Idee einer kryptografischen Währung aus dem Jahr 1998 von Wei Dai. 
+2008 wurde zum ersten Mal das Konzept von Bitcoin in einem White Paper von Satoshi Nakamoto vorgestellt. Was der Name Bitcoin aussagt, also ob es ein Pseudonym, eine Person oder eine Gruppe ist, ist bis heute nicht bekannt. Die Idee hinter diesem White Paper stammt aus der Idee einer kryptografischen Währung aus dem Jahr 1998 von Wei Dai. 
 
 _„Das Kernproblem konventioneller Währungen ist das Ausmaß an Vertrauen, das nötig ist, damit sie funktionieren. Der Zentralbank muss vertraut werden, dass sie die Währung nicht entwertet, doch die Geschichte des Fiatgeldes ist voll von Verrat an diesem Vertrauen. Banken muss vertraut werden, dass sie unser Geld aufbewahren und es elektronisch transferieren, doch sie verleihen es in Wellen von Kreditblasen mit einem kleinen Bruchteil an Deckung. [...]
  Mit einer elektronischen Währung, die auf einem kryptografischen Beweis beruht und kein Vertrauen in Mittelsmänner benötigt, ist Geld sicher und kann mühelos transferiert werden.“_ - Satoshi Nakamato[01]
@@ -103,7 +103,7 @@ Es bleibt spannend, wie sich Bitcoin in den nächsten Jahren oder sogar Jahrzent
 
 Das Konzept von Ethereum geht um einiges tiefer, als nur eine Währung mit der Blockchain zu verwalten. Natürlich gibt es hinter dem Projekt Ethereum eine Währung names Ether. Allerdings ist Ether nur ein Teil vom Ethereum-Universum.
 
-Ethereum versucht die normale Client-Server-Architektur zu revolutionieren, indem sie ein verteiltes System anbieten, welches das Anlegen, Verwalten und die Ausführung von dezentralen Programmen ermöglicht. Ethereum verfolgt ebenso ganz stark das Konzept der Smart Contracts. Zur Zeit ist Ether die zweitstärkste Kryptowährung und ermöglicht so das Ethereum-Projekt weiter voran zu bringen[02].
+Ethereum versucht die normale Client-Server-Architektur zu revolutionieren, indem sie ein verteiltes System anbieten, welches das Anlegen, Verwalten und die Ausführung von dezentralen Programmen ermöglicht. Ethereum verfolgt ebenso stark das Konzept der Smart Contracts. Zur Zeit ist Ether die zweitstärkste Kryptowährung und ermöglicht so das Ethereum-Projekt weiter voran zu bringen[02].
 
 ## Blockchain
 
@@ -111,7 +111,7 @@ Ethereum verwendet die Blockchain, allerdings haben sie diese für ihre Bedürfn
 
 ## Smart Contracts
 
-Das, was Ethereum wirklich hervorhebt von den anderen Technologien und Kryptowährungen, sind die Smart Contracts. Dort bietet Ethereum die Möglichkeit sogar eigene Krptowährungen zu designen und zu erstellen. [Mehr Details zum Thema Smart Contracts auf der dazugehörigen Seite.](06_use_cases.md)
+Was Ethereum wirklich hervorhebt von den anderen Technologien und Kryptowährungen, sind die Smart Contracts. Dort bietet Ethereum die Möglichkeit sogar eigene Krptowährungen zu designen und zu erstellen. [Mehr Details zum Thema Smart Contracts auf der dazugehörigen Seite.](06_use_cases.md)
 
 ## Kickstart
 
@@ -121,7 +121,7 @@ Das Portfolio vom Ethereum-Projekt wird zudem erweitert durch die Möglichkeit s
 
 # Dash
 
-Dash ist im Moment drittbekannteste Währung im Krypto-Universum. Dash hat die gleiche Funktionsweise wie Bitcoin. Es ist eine Kryptowährung und ursprünglich bekannt unter der Bezeichnung XCoin oder Darkcoin. 
+Dash ist im Moment die drittbekannteste Währung im Krypto-Universum. Dash hat die gleiche Funktionsweise wie Bitcoin. Es ist eine Kryptowährung und ursprünglich bekannt unter der Bezeichnung XCoin oder Darkcoin. 
 
 Allerdings gibt es eine kleine Feinheit, die den Dashcoin doch vom Bitcoin unterscheidet. Bei Bitcoin sind Transaktionsinformationen öffentlich und von jedem einsehbar. Dashcoin erweitert die Währung um das System PrivateSend. Dabei werden die Informationen der Transaktion mit denen anderer User vermischt, um die reinen Informationen der Transaktion zu verschleiern. Damit gibt es beim Dashcoin eine erhöhte Privatsphäre und gibt dem Coin seine Daseinsberechtigung.
 
@@ -131,7 +131,7 @@ Noch eine Besonderheit nimmt sich Dash heraus. Zehn Prozent aller Mining-Einkün
 
 # Ripple
 
-Ripple wird gerne als Bitcoin für Banken bezeichnet. Das liegt vor allem daran, dass es in Ripple möglich ist, sogenannte Schuldscheine auszustellen. Zudem ist die Grundidee von Ripple ein schnelles und skalierbares System zu erschaffen, dass in Echtzeit agiert. In der Blockchain von Ripple werden zu den Transaktionen auch der jeweilige Gegenwert gespeichert.
+Ripple wird gerne als Bitcoin für Banken bezeichnet. Das liegt vor allem daran, dass es in Ripple möglich ist, sogenannte Schuldscheine auszustellen. Zudem ist die Grundidee von Ripple ein schnelles und skalierbares System zu erschaffen, dass in Echtzeit agiert. In der Blockchain von Ripple werden zu den Transaktionen der jeweilige Gegenwert gespeichert.
 
 Da Ripple keinen eigentlichen Wert speichert, sondern nur als Platzhalter den aktuellen Gegenwert in Form von IOU, muss sich das Ripple Netzwerk an Portalen bedienen. Diese Gateways können schnell die gewünschte Transaktion in eine Fiatwährung umwandeln.
 
@@ -151,16 +151,6 @@ Der Monero ist dem Bitcoin sehr ähnlich. Jedoch muss man dazu sagen, dass natü
 
 ```
 
-Legende
-
-EUR     - Euro
-USD     - US Dollar
-BTC     - Bitcoin
-BCH     - Bitcoin Cash
-BTG     - Bitcoin Gold
-
-noch zu ergänzen
-
 Quellenangabe:
 
 [01] - Bitcoin open source implementation of P2P currency. 11. Februar 2009 (p2pfoundation.ning.com [abgerufen am 24. November 2017]).
@@ -170,6 +160,44 @@ Quellenangabe:
 Medienverweise:
 
 0001 -  (https://pixabay.com/de/bitcoin-btc-kryptow%C3%A4hrung-1813503/ - freie kommerzielle Nutzung - [abgerufen am 27. November 2017])
+
+Legende
+
+EUR     - Euro
+USD     - US Dollar
+GBP     - Britische Pfund
+BTC     - Bitcoin
+BCH     - Bitcoin Cash
+BTG     - Bitcoin Gold
+ETH     - Ether
+XRP     - Ripple
+LTC     - Litecoin
+Dash    - Dashcoin
+ETC     - Ether Classic
+XMR     - Monero
+EOS     - Eos
+MLN     - Melon
+XEM     - NEM
+STRAT   - Stratis
+ZEC     - ZCash
+IOTA    - Iota
+NEO     - Neo Coin
+BCC     - BitConnect
+OMG     - OmiseGo
+QTM     - Qtum
+AVT     - Aventus
+EDO     - Eidoo
+WAVES   - Waves Coin
+STEEM   - Steem Coin
+LSK     - Lisk
+GAME    - GameCredits
+SYS     - SysCoin
+PAY     - TenX
+SC      - Siacoin
+KMD     - Komodo
+GNT     - Golem
+MAID    - MaidSafeCoin
+UBQ     - Ubiq
 
 ```
 

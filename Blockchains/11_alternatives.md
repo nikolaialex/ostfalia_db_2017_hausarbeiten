@@ -8,7 +8,7 @@
 
 ## Hash Graph [01]
 
-Hashgraph ist eine Alternative zur Blockchain und möchte gerne die Blockchain als Technologie ablösen. Hashgraph ist eine entwickelte Datenstruktur mit Konsensalgorithmus von der Firma Swirlds. Die Datenstrukturen werden von dem Konsensalgorithmus durch Angriffe von außen geschützt. Im übertragenen Sinne ist es eine Stempelkarte [02], die genau und automatisch aufzeichnet, welcher Hash zu welchem Besitzer gehört. Dies klingt sehr nach Blockchain, allerdings kann eine Blockchain theoretisch verändert werden, sobald man mehr als 51% der Blockchain besitzt. Hashgraph ist auch nicht dezentral organisert.
+Hashgraph ist eine Alternative zur Blockchain und möchte gerne die Blockchain als Technologie ablösen. Hashgraph ist eine entwickelte Datenstruktur mit Konsensalgorithmus von der Firma Swirlds. Die Datenstrukturen werden von dem Konsensalgorithmus durch Angriffe von außen geschützt. Im übertragenen Sinne ist es eine Stempelkarte [02], die genau und automatisch aufzeichnet, welcher Hash zu welchem Besitzer gehört. Dies klingt sehr nach Blockchain, allerdings kann eine Blockchain theoretisch verändert werden, sobald man mehr als 51% der Blockchain besitzt. Hashgraph ist nicht dezentral organisert.
 
 Die Vorteile von Hashgraph sind [02,03]:
 
@@ -35,9 +35,9 @@ Die Vorteile von Tangle sind:
 
 Besonders ist der Punkt der Transaktionsgebühren. Nicht wegen der offensichtlichen Tatsache, dass man dadurch kostenfrei traden kann, sondern dass dies nur möglich ist, weil keine Miner notwendig sind, um Transaktionen zu bestätigen. Tangle soll so leichtgewichtig sein, dass selbst Smartphones und kleinste Rechner Transaktionen verifizieren können. Tangle erreicht aber erst seine volle Stärke, umso gößer das Netzwerk wird, da es dadurch effizienter und effektiver arbeitet.
 
-Ein weiterer interessanter Fakt zur Tangle-Technologie ist, dass es nicht binär funktioniert, sondern ein Tenärsystem verwendet. Dies sorgt allerdings auch für große Diskussionen innerhalb der gesamten Community. Da Daten bei jeder Transaktion umgewandelt werden müssen, könnte dies zu einem Problem werden.
+Ein weiterer interessanter Fakt zur Tangle-Technologie ist, dass es nicht binär funktioniert, sondern ein Tenärsystem verwendet. Dies sorgt allerdings für große Diskussionen innerhalb der gesamten Community. Da Daten bei jeder Transaktion umgewandelt werden müssen, könnte dies zu einem Problem werden.
 
-Was dem IOTA und der Tangle-Technologie in der letzten Zeit einen starken Aufwind gegeben hat, war die Tatsache, dass große Unternehmen mit an dem Aufbau des Netzwerkes beteiligt sind wie Bosch, Microsoft und Fujitsu.
+Was dem IOTA und der Tangle-Technologie in der letzten Zeit einen starken Aufwind gegeben hat, war die Tatsache, dass große Unternehmen mit an dem Aufbau des Netzwerkes beteiligt sind wie Bosch, Microsoft oder Fujitsu.
 
 ***
 
