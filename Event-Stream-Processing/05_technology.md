@@ -1,41 +1,47 @@
-# Gundlagen
+# Technologie
 
-Diese Grundlagen befassen sich mit den Begrifflichkeiten, stellen die konkrete Motivation und Anwendungsgebiete vor. Auf Basis dieser Grundlagen können im folgenden Kapitel konkrete Techniken und Vorgehensweisen erläutert werden.
+Dieses Kapitel befasst sich mit der grundlegenden Technologie nach der das Event-Stream-Processing arbeitet. Grundlegendes Ziel ist dabei aus einem primitiven Ereigniststrom durch Abstraktion abstraktere Ereignisse zu erkennen. Die folgende Abbildung verdeutlich noch einmal diesen Ansatz.
 
-## Event
+![Abstraktion von Ereignissen](./files/abstractionOfEventsThroughPatterns.png)
 
-Ein grundlegender Begriff stellt das **Event** oder auch Ereignis an sich dar. David Luckham definiert ein Event als eine Aufzeichnung einer Änderung in einem System. Die Events sind über drei Faktoren miteinander verbunden: Zeit, Kausalität und Aggregation. Darüberhinaus können die Events in einer Hierarchie zueinander stehen, dass bedeutet das ein Event aus mehreren anderen Events hervorgehen kann. Als Beispiel für ein sehr niedriges Event kann ein Netzwerkevent in Form eines Ping eines Routers dienen. Mehrere langsame Pings können auf das höhere Event eines Ausfalls aggregiert werden. [1]
+## Grundzyklus ereignisverarbeitender Systeme
 
-Events können auch als Veränderung eines Zustands eines reallen oder virutellen Objekts beschrieben werden. Dabei kann zwischen technischen Ereignissen (bspw. Veränderung einer gemessenen Temperatur) und Geschäftsereignissen (Kündigung eines Liefervertrags) unterschieden werden. [2]
+Systeme die speziell für die Verarbeitung von Ereignissen entwickelt wurden, basieren auf einem üblichen Zyklus aus drei Teilen: Erkennen, Verarbeiten und Reagieren. [1]
 
-Wichtig für die Abgrenzung eines Events besteht in dem Verständnis, dass ein Event einen konkretem Zeitpunkt zugeordnet wird. Damit besitzt ein Event keine Dauer und grenzt sich damit von einer Aktivität ab. Eine Aktivität besteht aus einem Start- und einem Endeereignis. Eine Aktivität ändert den Zustand des Systems nicht. Als Beispiel für eine Aktivität kann der Transport einer Palette genommen werden. Das Anfangsereignis ist die Abfahrt des Gabelstaplers und das Endereignis die Ankunft im Lager. [3]
+1. Beim **Erkennen** werden die Ereignisse als Teil der Realität interpretiert und in Echtzeit verarbeitet.
+2. Bei der **Verarbeitung** analysiert das System die Daten um Muster zu erkennen. Die Analyse kann auf einen oder mehreren Datenströmen durchgeführt werden.
+3. Beim **Reagieren** löst das System Aktionen auf Basis der analysierten Daten aus. Es kann sich um Warnmeldungen, auslösen von Geschäftsprozessen oder Information von Benutzern handeln.
 
-## Event-Stream
+![Grundzyklus Ereignis Verarbeitung](./files/grundzyklusEventStreamProcessing.png)
 
-Ein Ereignisstrom oder **Event-Stream** besteht aus einer linear geordneten Sequenz kontinuierlich eintreffenden Ereignissen. Der typischer zu verarbeitender Datenstrom weist die folgenden Kennzeichen auf: 
+## Event Processing Agent
+
+Der vorgestellte Grundzyklus wird von einem sogenannten Event Processing Agenten umgesetzt. Der Agent verarbeitet einen Ereignisstrom und erzeugt einen entsprechenden Ausgangsstrom. Zur Realisierung der Verarbeitung erhält der Event Processing Agent folgende Artefakte:
+
+- Ein **Modell** der zu erwartenden Ereignisse inkl. Datentypen und Beziehungen.
+- **Ereignisregeln** bestehend aus einem Bedingungsteil und einem Aktionsteil. Der Bedingungsteil beschreibt ein oder mehrere verknüpfte Muster. Die Formulierung von Ereignisregeln erfolgt in sogenannten Event Processing Languages. Eine konkrete Sprache betrachten wir im folgenden Kapitel Projekte.
+- Je nach Einsatzszenario erhält der Agent über eine Datenbank oder einen Dienst Zugriff auf weiteres Kontextwissen. [1]
+
+Die tatsächliche Verarbeitung und damit die Mustererkennung erfolgen in der **Event Processing Engine**, diese ist Teil des Agenten. Die Engine gleicht kontinuierlich die eintreffenden Ereignisse mit den Regeln ab. Um entsprechende Muster zu erkennen hält die Engine Ereignisse im Arbeitsspeicher. Da dieser begrenzt ist, sind hierfür spezielle Strategien notwendig.
+
+![Event Processing Agent](./files/eventProcessingAgent.png)
+
+Damit die Engine die Ereignisse möglichst in Echtzeit verarbeiten kann, erfolgt vorab eine **Filterung** der Ereignisse. Dabei prüft der Filter, ob die Engine den Ereignistyp überhaupt verarbeitet. In konkreten Szenarien treten Ereignisse auch doppelt auf, da sie beispielsweise von mehreren Sensoren erfasst werden. Auch diese werden gefiltert. [2]
+
+Nach dem Filtern bereitet der **Präprozessor** die Daten der Ereignisse auf. Hierbei handelt es sich um typische Aufgaben wie Validierung der Daten, Anreicherung der Daten und Wandlungen des Formats. Der Präprozessor stellt darüberhinaus sicher, dass die Ereignisse den für den Engine korrekten Zeitstempel aufweisen und stellt sicher, dass die Ereignisse in der richtigen Reihenfolge verarbeitet werden. Dies ist notwendig da die Ereignisse aus verschiedenen Quellen stammen können.
 
 
-- Er enhält aktuelle live Daten. Die enthaltenen Daten sind von geringer Komplexität und lassen sich mit wenigen Daten beschreiben. 
-- Der Datenstrom ist hochfrequent, es handelt sich um Ereignisse mit einer hohen Eingangsrate. 
-- Der Datenstrom ist unbegrenzt, neue Ereignisse geschehen fortlaufend. 
-- Es können nicht alle Daten gespeichert werden, der Datenstrom ist volatil. 
-- Die enthaltenen Datensätze stehen in einer impliziten Beziehung. [2]
+## Event Processing Network
 
-## Event-Stream-Processing
+Zur Realisierung komplexer Verarbeitungsschritte wird das Devide und Conquer Prinzip angewendet. Mehrere Event Processing Agenten werden verknüpft und bilden jeweils einen Teilschritt ab. [1]
 
-In den Quellen finden sich zwei teilweise synonym verwendete Begriffe für die Technologie der Verarbeitung von Ereignisdatenströmen. Sowohl der Begriff **Event-Stream-Processing** als auch der Begriff **Complex-Event-Processing (CEP)** beschreiben Softwaretechnologie zur dynamischen Analyse von massiven Ereigniströmen in Echtzeit. Ziel ist dabei ein Informationsgewinn aus dem Erkennen der Beziehung zwischen den Ereignissen auf Basis von Mustern. Die Abgrenzung zwischen den beiden Begriffen erfolgt häufig über die Komplexität der Verarbeitung der Ereignisse. Als Event-Stream-Processing kann eine einfache Verarbeitung bspw. in Form einer Aggregation gesehen werden. Das Complex-Event-Processing versucht auf Basis von Regeln Muster zu erkennen und daraus höherwertige abstraktere Ereignisse zu generieren. In dieser Arbeit werden die Begriffe synonym verwendet. [2] [4] [5]
+Eine derartige Event-Driven Architecture basiert auf drei Ebenen:
 
-## Konkrete Anwendungsfälle
+- **Ereignisquellen**: Entitäten die Objekte überwachen und Ereignisse publizieren oder Objekte die selbst Ereignisse erzeugen. Auch Ereignisverarbeitende Entitäten stellen selbst wiederum Ereignisse zur Weiterverarbeitung bereit. Beispiele: Sensoren, Web Services, Datenticker, RFID-Lesegeräte, Benutzerinteraktionen, E-Mail, interne Uhren.
+- **Ereignisverarbeitung**: Die Ereignisverarbeitung erfolgt wie bereits beschrieben über Event Processing Agenten mittels eines Regelsatzes.
+- **Ereignisbehandlung**: Verantwortlich für die Ereignisbehandlung der ausgewerteten Datenströme sind Unternehmensanwendungen im Backend. Typische Aktionen sind hier: Aufruf von Diensten, Aktualisierung eines Dashboards, Publizieren einer Nachricht für registrierte Anwendungen, Auslösen eines menschlichen Prozesses.
 
-Mit der geschaffenen grundlegenden Übersicht sollen an diese Stelle möglichst konkrete Einsatzgebiete für das Event-Stream-Processing als Motivation präsentiert werden.
-
-- Leistungsvoraussage für Windenergieanlagen. Die Daten mehrere Windenergieanlagen werden ausgewertet um eine Voraussage über die Stromproduktion zu gewinnen. [6]
-- Business Acitivity Monitoring. Kontrolle der Einhaltung von Service-Level-Agreements im IT-Umfeld.
-- Echtzeitüberwachung der Produktion im Industrie 4.0 Umfeld. Unter anderem zur Ablaufoptimierung, Erkennung von Wartungsnotwendigkeit und Qualitätsanalyse.
-- Überwachung von Supply-Chains mit der Erkennung von Verzögerungen.
-- Kundenbeziehung. Erfassung von Kunden-Feedback über Verhalten in sozialen Netzwerken.
-- Finanzmärkte. Analyse von Aktienkursen und Einflussgrößen. Erkennung von Betrug im Zahlungsverkehr. [7]
-
+![Event Processing Architecture](./files/eventDrivenArchitecture.png)
 
 ***
 
@@ -43,22 +49,19 @@ Mit der geschaffenen grundlegenden Übersicht sollen an diese Stelle möglichst 
 
 Quellen:
 
-[1] Luckham, David (2002): The Power of Events: An Introduction to Complex Event Processing in Distributed Enterprise Systems. Pearson Education, Inc, Seite 88ff.
+[1] Bruns, Ralf; Dunkel, Jürgen (o.J.): Complex Event Processing im Überblick, Seite 7f.
 
-[2] Bruns, Ralf; Dunkel, Jürgen (o.J.): Complex Event Processing im Überblick, Seite 9f.
+[2] Hedtstück, Ulrich (2017): Complex Event Processing. Berlin, Heidelberg: Springer Berlin Heidelberg, Seite 22f.
 
-[3] Hedtstück, Ulrich (2017): Complex Event Processing. Berlin, Heidelberg: Springer Berlin Heidelberg, Seite 12f.
+Bildnachweis:
 
-[4] Bade, Dirk (2009): Event Stream Processing & Complex Event Processing, online unter http://docplayer.org/3361260-Event-stream-processing-complex-event-processing-dirk-bade.html
+[1] Bruns, Ralf; Dunkel, Jürgen (o.J.): Complex Event Processing im Überblick, Seite 5.
 
-[5] David B. Robins (2010): Complex Event Processing, University of Washington, Seite 1.
+[2] Bruns, Ralf; Dunkel, Jürgen (o.J.): Complex Event Processing im Überblick, Seite 6.
 
-[6] von Gallera, Diana; Trujillo, Juan José; Nicklas, Daniela (o.J.): Leistungskennlinienberechnung von
-Windenergieanlagen unter Einsatz eines
-Datenstrommanagementsystems, online unter http://odysseus.informatik.uni-oldenburg.de/fileadmin/files/WEAUsingOdysseus.pdf.  
+[3] Bruns, Ralf; Dunkel, Jürgen (o.J.): Complex Event Processing im Überblick, Seite 13.
 
-[7] Projekt Odysseus, Uni Oldenburg: online unter http://odysseus.informatik.uni-oldenburg.de.
-
+[4] Bruns, Ralf; Dunkel, Jürgen (o.J.): Complex Event Processing im Überblick, Seite 15.
 
 ```
 
