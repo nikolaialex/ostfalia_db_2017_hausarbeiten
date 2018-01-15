@@ -6,9 +6,17 @@
 
 # Literaturverzeichnis
 
+Achim86: Heute ist Blockchain, Morgen ist Hashgraph!. Online-Artikel, erschienen am 10.10.2017, URL: https://steemit.com/deutsch/@achim86/heute-ist-blockchain-morgen-ist-hashgraph abgerufen am 05.01.2018
+
 Advopedia: Bitcoin: So ist die Rechtslage in Deutschland. Online-Artikel, erschienen am 21.08.2017, URL: https://www.advopedia.de/news/ratgeber/bitcoin-so-ist-die-rechtslage-in-deutschland abgerufen am 04.01.2018
 
+Leemon Baird: The Swirlds Hashgraph Consensus Algorithm. Whitepaper, URL: http://www.swirlds.com/downloads/SWIRLDS-TR-2016-01.pdf abgerufen am 05.01.2018
+
 Christian Beckel: Skalieren Blockchains? Sorgen und Lösungsansätze. Online-Artikel, 2017, URL: http://site.blocklab.de/2017/Skalierung/ abgerufen am 02.01.2018
+
+Florian Christof: IOTA: "Unser Tangle ist die bessere Blockchain". Online-Artikel, erschienen am 05.01.2018, URL: https://futurezone.at/digital-life/iota-unser-tangle-ist-die-bessere-blockchain/302.843.398 abgerufen am 05.01.2018
+
+Stefan Grübler: Hashgraph - was ist das?. Online-Artikel, erschienen am 01.11.2017, URL: https://medium.com/@stefangrbler/hashgraph-was-ist-das-96f7d3e1bde abgerufen am 05.01.2018
 
 Tobias Herrmann: Bitcoin: Gefahr eines Datenschutz-GAU durch die Blockchain? Online-Artikel, 02.08.2017, URL: https://www.datenschutzbeauftragter-info.de/bitcoin-gefahr-eines-datenschutz-gau-durch-die-blockchain/ abgerufen am 02.01.2018
 
@@ -37,6 +45,8 @@ Wikipedia: Liste von Kryptowährungen. Online-Artikel, aktualisiert am 30.12.201
 https://www.ethereum.org/ abgerufen am 27. November 2017.
 
 https://getmonero.org/ abgerufen am 18. Dezember 2017
+
+https://iota.org/ abgerufen am 05.01.2018
 
 ***
 
