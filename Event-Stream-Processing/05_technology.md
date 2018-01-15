@@ -2,7 +2,7 @@
 
 Dieses Kapitel befasst sich mit der grundlegenden Technologie nach der das Event-Stream-Processing arbeitet. Grundlegendes Ziel ist dabei aus einem primitiven Ereigniststrom durch Abstraktion abstraktere Ereignisse zu erkennen. Die folgende Abbildung verdeutlich noch einmal diesen Ansatz.
 
-![Abstraktion von Ereignissen](files/abstractionOfEventsThroughPatterns.png)
+![Abstraktion von Ereignissen](files/abstractionOfEventsThroughPatterns.PNG)
 
 ## Grundzyklus ereignisverarbeitender Systeme
 
@@ -12,7 +12,7 @@ Systeme die speziell für die Verarbeitung von Ereignissen entwickelt wurden, ba
 2. Bei der **Verarbeitung** analysiert das System die Daten um Muster zu erkennen. Die Analyse kann auf einen oder mehreren Datenströmen durchgeführt werden.
 3. Beim **Reagieren** löst das System Aktionen auf Basis der analysierten Daten aus. Es kann sich um Warnmeldungen, auslösen von Geschäftsprozessen oder Information von Benutzern handeln.
 
-![Grundzyklus Ereignis Verarbeitung](files/grundzyklusEventStreamProcessing.png)
+![Grundzyklus Ereignis Verarbeitung](files/grundzyklusEventStreamProcessing.PNG)
 
 ## Event Processing Agent
 
@@ -24,7 +24,7 @@ Der vorgestellte Grundzyklus wird von einem sogenannten Event Processing Agenten
 
 Die tatsächliche Verarbeitung und damit die Mustererkennung erfolgen in der **Event Processing Engine**, diese ist Teil des Agenten. Die Engine gleicht kontinuierlich die eintreffenden Ereignisse mit den Regeln ab. Um entsprechende Muster zu erkennen hält die Engine Ereignisse im Arbeitsspeicher. Da dieser begrenzt ist, sind hierfür spezielle Strategien notwendig. [3] 
 
-![Event Processing Agent](files/eventProcessingAgent.png)
+![Event Processing Agent](files/eventProcessingAgent.PNG)
 
 Damit die Engine die Ereignisse möglichst in Echtzeit verarbeiten kann, erfolgt vorab eine **Filterung** der Ereignisse. Dabei prüft der Filter, ob die Engine den Ereignistyp überhaupt verarbeitet. In konkreten Szenarien treten Ereignisse auch doppelt auf, da sie beispielsweise von mehreren Sensoren erfasst werden. Auch diese werden gefiltert. [2]
 
@@ -36,11 +36,11 @@ Die Engine muss die Ereignisse zur Verarbeitung auswählen, da bei einem endlose
 
 Bei einem gleitenden Zeitfenster steht jeweils ein bestimmtes Zeitfenster zur Verfügung. Hier können jeweils unterschiedliche viele Ereignisse enthalten sein. Zum Verschieben des Zeitfensters gibt es weitere unterschiedliche Verfahren. Die folgende Abbildung zeigt ein gleitendes Zeitfenster.
 
-![Event Processing Agent](files/gleitendesZeitfenster.png)
+![Event Processing Agent](files/gleitendesZeitfenster.PNG)
 
 Im Gegensatz zum Zeitfenster kommt bei dem Längenfenster die Angabe einer festen Größe zum Einsatz.
 
-![Event Processing Agent](files/gleitendesLaengenfenster.png)
+![Event Processing Agent](files/gleitendesLaengenfenster.PNG)
 
 Beim Verschieben eines **Sliding-Window** gibt es abhängig vom Faktor mit dem das Fenster verschoben wird drei mögliche Folgezustände:
 
@@ -68,7 +68,7 @@ Eine derartige Event-Driven Architecture basiert auf drei Ebenen:
 - **Ereignisverarbeitung**: Die Ereignisverarbeitung erfolgt wie bereits beschrieben über Event Processing Agenten mittels eines Regelsatzes.
 - **Ereignisbehandlung**: Verantwortlich für die Ereignisbehandlung der ausgewerteten Datenströme sind Unternehmensanwendungen im Backend. Typische Aktionen sind hier: Aufruf von Diensten, Aktualisierung eines Dashboards, Publizieren einer Nachricht für registrierte Anwendungen, Auslösen eines menschlichen Prozesses.
 
-![Event Processing Architecture](files/eventDrivenArchitecture.png)
+![Event Processing Architecture](files/eventDrivenArchitecture.PNG)
 
 Innerhalb des Netzwerks spricht man auch von einer Event Cloud. Damit ist nur gemeint, dass alle Ereignisquellen ihre Ereignisse zentral zur Verfügung stellen und die verarbeitenden Agenten sich hierfür registrieren können. Dabei kann der Agent bereits bestimmen welche Ereignistypen er erhalten möchte. [2]
 
