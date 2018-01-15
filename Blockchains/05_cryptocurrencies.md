@@ -16,7 +16,7 @@ Die 5 größten Kryptowährungen (Bitcoin, Ethereum, Dash, Ripple und Monero) we
 
 Ein klarer Unterschied ist die Anzahl der verschiedenen Kryptowährungen, die gehandelt werden können. Zudem bietet jede Börse unterschiedliche Zahlungsarten an, wobei sich auch die Transaktionsgebühren stark unterscheiden.
 
-Ein weiterer wichtiger Unterschied ist die Verifizierung für den Handel mit Kryptowährungen. Manche Börsen haben ein mehrstufiges Verifizierungssystem, die unterschiedliche Anforderungen haben. Je nachdem welche Anforderungen man erfüllt, schalten sich unterschiedliche Funktionen frei. Ebenfalls gibt es Börsen, an denen man ohne Verifizierung handeln kann oder nur mit E-Mail Verifikation. Das Post-Identverfahren ist an manchen Börsen vertreten.
+Ein weiterer wichtiger Unterschied ist die Verifizierung für den Handel mit Kryptowährungen. Manche Börsen haben ein mehrstufiges Verifizierungssystem, die unterschiedliche Anforderungen haben. Je nachdem welche Anforderungen man erfüllt, schalten sich unterschiedliche Funktionen frei. Ebenfalls gibt es Börsen, an denen man ohne Verifizierung handeln kann oder nur mit E-Mail-Verifikation. Das Post-Identverfahren ist an manchen Börsen vertreten.
 
 ## Übersicht über die Kryptobörsen
 

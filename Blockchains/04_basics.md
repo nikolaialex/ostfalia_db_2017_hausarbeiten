@@ -6,7 +6,7 @@
 
 # Grundlagen
 
-Eine Blockchain ist eine Kette von Blöcken, die über eine kryptographische Hashfunktion miteinander verbunden sind. Der erzeugte Hashwert, mittels einer Hashfunktion, kann dabei als Zeiger auf den vorangehenden Block verstanden werden. Neu anzuhängende Blöcke müssen stets den Hashwert des Blockes enthalten, an den sie angehängt werden sollen. Das Grundprinzip einer Blockchain entspricht somit einer verketteten Liste, welche durch kryptographische Verfahren abgesichert werden.[01]
+Eine Blockchain ist eine Kette von Blöcken, die über eine kryptographische Hashfunktion miteinander verbunden sind. Der mittels einer Hashfunktion erzeugte Hashwert kann dabei als Zeiger auf den vorangehenden Block verstanden werden. Neu anzuhängende Blöcke müssen stets den Hashwert des Blockes enthalten, an den sie angehängt werden sollen. Das Grundprinzip einer Blockchain entspricht somit einer verketteten Liste, welche durch kryptographische Verfahren abgesichert werden.[01]
 
 Verdeutlichen lässt sich das Funktionsprinzip einer Blockchain an einem einfachen Beispiel: Die Besitzverhältnisse zu einem Gegenstand sollen abgebildet werden. Zunächst geht der Gegenstand vom Hersteller in den Besitz eines Händlers über. Diese Transaktion wird in Form eines Blocks gespeichert. Verkauft der Händler den Gegenstand nun an einen Kunden, wird ein neuer Block angehängt, der den erneuten Übergang des Gegenstands vom Händler an den Kunden abbildet. Diese Transaktionskette könnte bei einem späteren Weiterverkauf erweitert werden. Im Nachhinein kann so jederzeit nachvollzogen werden, zu welchem Zeitpunkt welche Transaktion durchgeführt wurde. [01]
 
