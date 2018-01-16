@@ -20,4 +20,8 @@ Neo4j, Inc. (2010). https://neo4j.com/blog/the-top-10-ways-to-get-to-know-neo4j.
 
 Nitzsche, M. (2005). Graphen für Einsteiger. Wiesbaden: Vieweg.
 
+OrientDB, Ltd. (2018). http://orientdb.com. Online. [Zugriff: 16.01.2018]
+
+Schmeck, J. (2015). OrientDB. Eine NoSQL Datenbank. Universität Siegen.
+
 Terrill, G. (2008). https://www.infoq.com/news/2008/06/neo4j. Online. [Zugriff: 08.01.2018]
