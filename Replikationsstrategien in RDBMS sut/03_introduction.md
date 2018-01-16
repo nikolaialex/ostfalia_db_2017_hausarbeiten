@@ -1,6 +1,6 @@
 # Einleitung
 
-Datenbanken stehen heutzutage im Kern vieler Anwengungen und Systeme. 
+Datenbanken stehen heutzutage im Kern vieler Anwengungen und Systeme. Da diese Datenbanken möglichst immer und von vielen Standorten aus erreichbar sein sollen, bietet es sich an, die Daten an den verschiedenen Standorten zu speichern. Dies nennt man **verteiltes Dantenbanksystem**. Die Methode, um verteilte Datenbanksysteme zu erstellen und aufrecht zu erhalten nennt sicht **Replikation**. Daten können hiermit an mehreren Knoten gespeichert werden und bleiben damit auch nach Ausfall einer der Datenbankservern erreichbar. Die Geschwindigkeit der Lesezugriffe kann durch Replikation ebenfalls verbessert werden, da auf eine lokale zugegriffen wird anstatt auf ein entferntes System.
 
 http://www.itwissen.info/Replikation-replication.html
 
