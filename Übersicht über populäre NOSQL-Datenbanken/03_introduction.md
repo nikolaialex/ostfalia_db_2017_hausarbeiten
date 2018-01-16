@@ -48,8 +48,7 @@ ersten vorgestellten Ansätzen geringer." (Herden et al., S.337-338)
 Graphdatenbanken sind auf das Speichern und effiziente Traversieren von
 Graphen ausgelegt (Herden et al., S.337-338). Dieser Datenbanktyp organisiert "Objekte in Knoten und Beziehungen zwischen Objekten in Kanten" (Meier und Kaufmann, Abstract).
 
-In der nachfolgenden Grafik sind Vertreter der vier NoSQL-Datenbank Kategorien abgebildet:
-
+In der nachfolgenden Grafik sind einige Vertreter der vier NoSQL-Datenbank Kategorien abgebildet:
 
 ![Image of nosql-database-family](images/nosql-database-family.jpg)
 

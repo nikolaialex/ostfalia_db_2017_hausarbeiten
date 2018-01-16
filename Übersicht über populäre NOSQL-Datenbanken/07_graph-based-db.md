@@ -48,7 +48,7 @@ Durch Beschriftungen können Knoten in Gruppen eingeteilt werden. Ein Knoten kan
 *Abbildung ?: Datenstruktur von Neo4j<br/>
 (https://s3.amazonaws.com/dev.assets.neo4j.com/wp-content/uploads/20170731095054/Property-Graph-Concepts-Simple.svg)*
 
-### Cypher
+### Abfragesprache
 
 Die Firma Neo4j Inc. entwickelte zusätzlich die Graphdatenbankabfragesprache Cypher für die Neo4j Graph Datenbank. Sie ist aber darüber hinaus für alle Graphdatenbanken anwendbar und wurde aus diesem Zweck im Jahr 2016 zu einem Open Source Projekt von der Neo4j Inc. erklärt. Sie soll laut Hersteller die beliebteste Abfragesprache für Graphdatenbanken sein und als Standard-Sprache ("SQL for graphs") weiterhin ausgebaut werden. (Neo4j Inc., 2018, Cypher)
 
@@ -80,18 +80,30 @@ Laut Neo4j Inc. (2018, Product Comparison) biete die Neo4j Datenbank folgende Vo
 
 ## Microsoft Azure Cosmos DB
 
-Microsoft stellte ihre weltweit verfügbare Datenbank-Lösung am 10.05.2017 erstmals auf der Microsoft-Entwicklerkonferenz "Build 2017"  vor. "Als 'Datenbank der Zukunft', die noch viele Jahrzehnte Bestand haben soll, bezeichnet Microsoft-Manager Dharma Shukla die neue Azure Cosmos DB gegenüber dem Tech-Portal Techcrunch". Microsoft begann die Entwicklung bereits 2010 und baut auf den NoSQL-DocumentDB-Service auf. Mit der Entwicklung der Azure-Cosmos-Datenbank sollte zuerst den "hauseigenen Entwicklern die Arbeit mit weltweit verfügbaren Applikationen" erleichtert werden. Zukünftig soll sie, wie auch DocumentDB, "weltweit verfügbare Cloud-Services und Applikationen abbilden". (Brien)
+Microsoft stellte ihre weltweit verfügbare Datenbank-Lösung am 10.05.2017 erstmals auf der Microsoft-Entwicklerkonferenz "Build 2017" vor. "Als 'Datenbank der Zukunft', die noch viele Jahrzehnte Bestand haben soll, bezeichnet Microsoft-Manager Dharma Shukla die neue Azure Cosmos DB gegenüber dem Tech-Portal Techcrunch". Microsoft begann die Entwicklung bereits 2010 und baut auf den NoSQL-DocumentDB-Service auf. Mit der Entwicklung der Azure-Cosmos-Datenbank sollte zuerst den "hauseigenen Entwicklern die Arbeit mit weltweit verfügbaren Applikationen" erleichtert werden. Zukünftig soll sie, wie auch DocumentDB, "weltweit verfügbare Cloud-Services und Applikationen abbilden". (Brien)
 
 "Azure Cosmos DB unterstützt verschiedene Datentypen sowie eine Reihe von APIs um auf Daten etwa von MongoDB, DocumentDB SQL, Gremlin und Azure Tables zugreifen zu können. Als eines der ersten kommerziellen Datenbankangebote setzt Cosmos DB laut Microsoft auf die Möglichkeit für die Nutzer, zwischen verschiedenen Konsistenzmodellen zu wählen." Zur Zeit ist sie in 34 Azure-Regionen (global verteilte Rechenzentren für Microsofts Cloud-Computing-Plattform) verfügbar und kostet beispielweise in der Region Germany Central 30 US-Dollar pro Monat. (Brien)
 
-Laut Microsoft (2017, Introduction) ist die Azure Cosmos DB eine global verteilte Datenbank mit mehreren Modellen. Der Datenbank-Dienst soll verschiedene Datenmodelle unterstützen: Dokumente, Schlüsselwerte, Graphen und spaltenorientierte Datenmodelle (siehe Abbildung ?). Neben dem Datenmodell könne der Nutzer auch "Durchsatz und Speicher elastisch und unabhängig voneinander über eine beliebige Anzahl von geografischen Azure-Regionen hinweg zu skalieren". Auch die Indexierung der Daten übernehme die Datenbank voll automatisch, sodass sich der Nutzer nicht mit der Schema- und Indexverwaltung befassen muss. Aufgrund des begrenzten Umfanges dieser Arbeit kann an dieser Stelle nur tiefer auf die Graphdatenbank von Azure Cosmos DB eingegangen werden.
+Laut Microsoft (Introduction) ist die Azure Cosmos DB eine global verteilte Datenbank mit mehreren Modellen. Der Datenbank-Dienst soll verschiedene Datenmodelle unterstützen: Dokumente, Schlüsselwerte, Graphen und spaltenorientierte Datenmodelle (siehe Abbildung ?). Neben dem Datenmodell könne der Nutzer auch "Durchsatz und Speicher elastisch und unabhängig voneinander über eine beliebige Anzahl von geografischen Azure-Regionen hinweg zu skalieren". Auch die Indexierung der Daten übernehme die Datenbank voll automatisch, sodass sich der Nutzer nicht mit der Schema- und Indexverwaltung befassen muss. Aufgrund des begrenzten Umfanges dieser Arbeit kann an dieser Stelle nur tiefer auf die Graphdatenbank von Azure Cosmos DB eingegangen werden.
 
 ![Image of cypher](images/azure-cosmos-db.png)
 
 *Abbildung ?: Azure Cosmos DB<br/>
 (https://docs.microsoft.com/de-de/azure/cosmos-db/media/introduction/azure-cosmos-db.png)*
 
-Nach Meinung von Microsoft (2017, Graph Introduction) biete die Graph-API ihrer Datenbank folgende Vorteile:
+### Datenstruktur
+
+Die Azure Cosmos Graphdatenbank benutzt wie Neo4j auch das Property-Graph-Modell. Allerdings bezeichnet Microsoft in ihrer Produktbeschreibung Knoten als Vertices und Kanten als Edges. Vertices stellen im Graphen "diskrete Objekte" wie zum Beispiel eine Person, einen Ort oder ein Ereignis dar. Durch die Edges werden die Beziehungen untereinander deutlich. Sowohl Vertices als auch Edges können eine beliebige Anzahl von Eigenschaften aufweisen. Diese Eigenschaften geben zusätzliche Informationen zu Vertices (z.B. Alter und Name) und Edges (z.B. Zeitstempel und Gewichtung) an. (Microsoft, Graph Introduction)
+
+### Abfragesprache
+
+Zur Abfrage der Azure Cosmos DB kann die Apache TinkerPop-Graph-Traversalsprache Gremlin oder andere mit TinkerPop kompatible Diagrammsysteme wie Apache Spark GraphX verwendet werden. (Microsoft, Graph Introduction)
+
+Mehr..?
+
+### Vorteile zu anderen NoSQL Datenbanken
+
+Nach Meinung von Microsoft (Graph Introduction) biete die Graph-API ihrer Datenbank folgende Vorteile:
 
 * Graph-Modellierung
 * Replikation in mehreren Regionen
@@ -107,7 +119,46 @@ Nach Meinung von Microsoft (2017, Graph Introduction) biete die Graph-API ihrer 
 
 ## OrientDB
 
+Die OrientDB wurde 2010 von der Firma OrientDB Ltd., die heute zu dem kalifornischen Unternehmen CallidusCloud gehört, als Open Source Projekt veröffentlicht [2]. Sie ist in Java implementiert und weist wie Microsofts Azure Cosmos DB mehrere Modelle auf [2].
+
+Bei der Multi-Model Datenbank wurden mehrere Konzepte der NoSQL-Bewegung umgesetzt und gemischt. "OrientDB stellt dem Benutzer zwei verschiedene APIs zur Verfügung um dokumentenorientierte beziehungsweise graphenorientierte Datenbanken umzusetzen. Die Graph-API arbeitet eine Ebene über der Document-API und ist somit die erste Wahl für Einsteiger, weil damit ca. 80% aller Anwendungsfälle abgedeckt werden. Die ubrigen 20% erfordern die flexiblere, weniger komplexe und für Nebenläufigkeit optimierte Document-API. Beide APIs arbeiten mit weiteren Konzepten, die auf niedrigeren Ebenen liegen." (Schmeck, S.1-2)
+
+Key-Value-Paare in Dokumenten?
+
+### Datenstruktur
+
+### Abfragesprache
+
+"SQL ist ein etablierter Standard für Abfragesprachen. Viele Entwickler sind damit vertraut und haben viel Erfahrung gesammelt. Deshalb verwendet OrientDB SQL als Abfragesprache und erweitert diese, um die Arbeit mit Graphen und Dokumenten zu ermöglichen. Die Abfragesprache von OrientDB entspricht bei simplen Abfragen dem SQL-Standard, weicht jedoch bei komplexeren Abfragen aufgrund der Strukturunterschiede zum Tabellenschema von diesem ab." (Schmeck, S.3)
+
+### Vorteile zu anderen NoSQL Datenbanken
+
+Laut des Unternehmens OrientDB Ltd. (OrientDB vs Neo4j) biete ihre Datenbank vor allem im Vergleich zu Neo4j folgende zusätzliche Features und Vorteile:
+
+* Dokumentmodell und Dokumentfunktionen
+* Objektmodell und objektorientierte Konzepte
+* Sicherheit auf Rekordniveau
+* Benutzer- und Rollensicherheit
+* SQL
+* Dynamische "Trigger"
+* Benutzerdefinierte Datentypen
+* Zusätzliche Einschränkungstypen
+* Zusätzliche Indextypen und Indizes für mehrere Eigenschaften
+* Reaktives Modell
+* Verschiedene Schemata
+* Sequenzen
+* Funktionaler Grafikeditor
+* Multi-Master-Replikation
+* Sharding
+* Elastische Skalierbarkeit ohne Konfiguration
+* Serverseitige Funktionen
+* Kommerzielle Lizenz
+* Einbettbar ohne Einschränkungen
+
+
 ## Geschichte
 
 ***
 [1] https://db-engines.com/en/ranking/graph+dbms
+
+[2] https://db-engines.com/en/system/OrientDB
