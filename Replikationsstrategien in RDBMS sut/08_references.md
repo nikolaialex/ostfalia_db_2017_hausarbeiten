@@ -24,3 +24,6 @@ https://en.wikipedia.org/wiki/Multi-master_replication#Database_Management_Syste
 
 https://de.wikipedia.org/wiki/ROWA-Verfahren
 
+http://pages.cs.wisc.edu/~remzi/Classes/739/Papers/p562-alsberg.pdf
+
+https://dbs.uni-leipzig.de/file/mrdbs-ws11-kap7.pdf
