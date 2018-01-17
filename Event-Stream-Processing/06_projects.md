@@ -1,41 +1,94 @@
-# Gundlagen
+# Projekte
 
-Diese Grundlagen befassen sich mit den Begrifflichkeiten, stellen die konkrete Motivation und Anwendungsgebiete vor. Auf Basis dieser Grundlagen können im folgenden Kapitel konkrete Techniken und Vorgehensweisen erläutert werden.
+Nach der Betrachtung der grundlegenden folgt in diesem Kapitel ein Blick auf verschiedene konkrete Projekte, die sich mit der Verarbeitung von Ereignisströmen befassen. Es tauchen auch Projekte auf, die sich nicht explizit mit der Verarbeitung von Ereignissen befassen, sondern die Verarbeitung von Datenströmen im allgemeinen realisieren. An dieser Stelle geht es nicht um einen vollständigen Überblick über alle existierenden Projekte sondern vielmehr in einzelne Einblicke.
 
-## Event
+Projekte ist an dieser Stelle ein weit gefasster Begriff. Die vorgestellten Projekte sind zum Teil Frameworks zur Realisierung von Event-Stream-Processing in einer spezifischen Programmiersprache, konkreten Anwendungen oder Vorschläge zur Umsetzung auf Basis einer Plattform.
 
-Ein grundlegender Begriff stellt das **Event** oder auch Ereignis an sich dar. David Luckham definiert ein Event als eine Aufzeichnung einer Änderung in einem System. Die Events sind über drei Faktoren miteinander verbunden: Zeit, Kausalität und Aggregation. Darüberhinaus können die Events in einer Hierarchie zueinander stehen, dass bedeutet das ein Event aus mehreren anderen Events hervorgehen kann. Als Beispiel für ein sehr niedriges Event kann ein Netzwerkevent in Form eines Ping eines Routers dienen. Mehrere langsame Pings können auf das höhere Event eines Ausfalls aggregiert werden. [1]
+## Überblick
 
-Events können auch als Veränderung eines Zustands eines reallen oder virutellen Objekts beschrieben werden. Dabei kann zwischen technischen Ereignissen (bspw. Veränderung einer gemessenen Temperatur) und Geschäftsereignissen (Kündigung eines Liefervertrags) unterschieden werden. [2]
+Die folgende Abbildungen zeigt eine Übersicht über Projekte im Event-Stream-Processing Umfeld. Sie sind natürlich nicht geeignet einen detaillierten Einblick zu liefern. Jedoch wird deutlich wie groß das Angebot an der Stelle ist.Die Abbildung zeigt die von den Autoren identifizierten Keyplayer im ersten Quartal im Jahr 2016. Sie ist explizit nicht vollständig. Es wird aber deutlich, dass bekannte Größen wie IBM, SAP, Software AG, Microsoft, Apache, Oracle und viele weitere vertreten sind.
 
-Wichtig für die Abgrenzung eines Events besteht in dem Verständnis, dass ein Event einen konkretem Zeitpunkt zugeordnet wird. Damit besitzt ein Event keine Dauer und grenzt sich damit von einer Aktivität ab. Eine Aktivität besteht aus einem Start- und einem Endeereignis. Eine Aktivität ändert den Zustand des Systems nicht. Als Beispiel für eine Aktivität kann der Transport einer Palette genommen werden. Das Anfangsereignis ist die Abfahrt des Gabelstaplers und das Endereignis die Ankunft im Lager. [3]
+![Event Processing Architecture](files/CEPMarket2016.PNG)
 
-## Event-Stream
+## Esper
 
-Ein Ereignisstrom oder **Event-Stream** besteht aus einer linear geordneten Sequenz kontinuierlich eintreffenden Ereignissen. Der typischer zu verarbeitender Datenstrom weist die folgenden Kennzeichen auf: 
+Esper stellt einen Container zur Ausführung von Event-Processing-Language (EPL) Queries bereit. Esper bietet somit ein Framework für die Java-Sprache und eine entsprechende Ausführungsumgebung auf Basis der Java-Virtual-Machine bereit. Neben Java exisitert auch eine .NET Realisierung Namens NEsper. [1]
 
+![Event Processing Architecture](files/esperOverview.PNG)
 
-- Er enhält aktuelle live Daten. Die enthaltenen Daten sind von geringer Komplexität und lassen sich mit wenigen Daten beschreiben. 
-- Der Datenstrom ist hochfrequent, es handelt sich um Ereignisse mit einer hohen Eingangsrate. 
-- Der Datenstrom ist unbegrenzt, neue Ereignisse geschehen fortlaufend. 
-- Es können nicht alle Daten gespeichert werden, der Datenstrom ist volatil. 
-- Die enthaltenen Datensätze stehen in einer impliziten Beziehung. [2]
+Damit der Esper Container funktionsfähig ist, sind folgende Dinge notwendig:
 
-## Event-Stream-Processing
+1. Über die Administrationsschnittstelle werden **EPL Queries** registriert.
+2. Ebenso müssen **Callbacks** zur Verarbeitung der Queries erstellt werden.
+3. Der vorbereitete Container muss nun entsprechende **Events** erhalten.
+4. Zudem muss die **Zeit** des Containers gesteuert werden.
 
-In den Quellen finden sich zwei teilweise synonym verwendete Begriffe für die Technologie der Verarbeitung von Ereignisdatenströmen. Sowohl der Begriff **Event-Stream-Processing** als auch der Begriff **Complex-Event-Processing (CEP)** beschreiben Softwaretechnologie zur dynamischen Analyse von massiven Ereigniströmen in Echtzeit. Ziel ist dabei ein Informationsgewinn aus dem Erkennen der Beziehung zwischen den Ereignissen auf Basis von Mustern. Die Abgrenzung zwischen den beiden Begriffen erfolgt häufig über die Komplexität der Verarbeitung der Ereignisse. Als Event-Stream-Processing kann eine einfache Verarbeitung bspw. in Form einer Aggregation gesehen werden. Das Complex-Event-Processing versucht auf Basis von Regeln Muster zu erkennen und daraus höherwertige abstraktere Ereignisse zu generieren. In dieser Arbeit werden die Begriffe synonym verwendet. [2] [4] [5]
+Einige Codebeispiele sollen das vorgestellte verdeutlichen.
 
-## Konkrete Anwendungsfälle
+### Einfaches Beispiel PersonEvent
 
-Mit der geschaffenen grundlegenden Übersicht sollen an diese Stelle möglichst konkrete Einsatzgebiete für das Event-Stream-Processing als Motivation präsentiert werden.
+In diesem sehr einfachen Beispiel werden alle notwendigen Aktionen durchgeführt um mit Esper ein einfaches Event zu verarbeiten. Das Beispiel stammt aus der Einführung von Esper.
+Zunächst benötigen wir unsere Verarbeitungsengine. Hier nutzten wir den Defaultprovider.
 
-- Leistungsvoraussage für Windenergieanlagen. Die Daten mehrere Windenergieanlagen werden ausgewertet um eine Voraussage über die Stromproduktion zu gewinnen. [6]
-- Business Acitivity Monitoring. Kontrolle der Einhaltung von Service-Level-Agreements im IT-Umfeld.
-- Echtzeitüberwachung der Produktion im Industrie 4.0 Umfeld. Unter anderem zur Ablaufoptimierung, Erkennung von Wartungsnotwendigkeit und Qualitätsanalyse.
-- Überwachung von Supply-Chains mit der Erkennung von Verzögerungen.
-- Kundenbeziehung. Erfassung von Kunden-Feedback über Verhalten in sozialen Netzwerken.
-- Finanzmärkte. Analyse von Aktienkursen und Einflussgrößen. Erkennung von Betrug im Zahlungsverkehr. [7]
+```java
+EPServiceProvider engine = EPServiceProviderManager.getDefaultProvider();
+```
 
+Wie bereits in den Grundlagen erläutert muss das zu verarbeitende Event entsprechend definiert werden. In unserem Beispiel wird ein einfaches Plain-Old-Java-Object (POJO) verwendet. Unser Objekt heißt PersonEvent mit den Klassenvariablen name und age.
+Diesen Eventyp geben wir bekannt.
+
+```java
+engine.getEPAdministrator().getConfiguration().addEventType(PersonEvent.class);
+```
+
+Es können jedoch nicht nur Java-Objekte als Event registriert werden. Auch ein XML-Schema oder eine Angabe der Objekt Parameter ist möglich.
+Als nächstes erfolgt die Registrierung einer einfachen Query.
+
+```java
+String epl = "select name, age from PersonEvent";
+EPStatement statement = engine.getEPAdministrator().createEPL(epl);
+```
+
+Es handelt sich um einer sehr einfache Abfrage. Komplexere Abfragen werden später vorgestellt.
+Bei der Registrierung der EPL-Query erhalten wir ein Statement über dieses Statement können wir Callbacks definieren. Also ausführbaren Code der auf Basis der Query ausgeführt wird. In diesem Beispiel werden nur die Werte aus der Datenstruktur ausgelesen und in der Konsole ausgegeben.
+
+```java
+statement.addListener( (newData, oldData) -> {
+  String name = (String) newData[0].get("name");
+  int age = (int) newData[0].get("age");
+  System.out.println("String.format(Name: %s, Age: %d", name, age));
+});
+```
+
+Über die Runtime können Events an den Container übermittelt werden. 
+
+```java
+engine.getEPRuntime().sendEvent(new PersonEvent("Peter", 10));
+```
+
+Auf der Konsole erfolgt eine entsprechende Ausgabe. Diese sieht wie folgt aus.
+
+```
+Name: Peter, Age: 10
+```
+
+## Aurora
+
+## Odysseus
+
+## Google Cloud Architecture
+
+https://cloud.google.com/solutions/architecture/complex-event-processing
+
+## Apache Spark
+
+https://www.accenture.com/us-en/blogs/blogs-a-closer-look-at-complex-event-processing-tools
+
+http://blog.cloudera.com/blog/2015/11/how-to-build-a-complex-event-processing-app-on-apache-spark-and-drools/
+
+## Beispiel IBM
+
+https://www.research.ibm.com/haifa/dept/services/papers/cep_Jan07_nc.pdf
 
 ***
 
@@ -43,22 +96,13 @@ Mit der geschaffenen grundlegenden Übersicht sollen an diese Stelle möglichst 
 
 Quellen:
 
-[1] Luckham, David (2002): The Power of Events: An Introduction to Complex Event Processing in Distributed Enterprise Systems. Pearson Education, Inc, Seite 88ff.
+[1] Esper (o.J.): Esper Reference online unter: http://esper.espertech.com/release-7.0.0/esper-reference/html/gettingstarted.html
 
-[2] Bruns, Ralf; Dunkel, Jürgen (o.J.): Complex Event Processing im Überblick, Seite 9f.
+Bildnachweis:
 
-[3] Hedtstück, Ulrich (2017): Complex Event Processing. Berlin, Heidelberg: Springer Berlin Heidelberg, Seite 12f.
+[1] Vincent, Paul (2016): Blog Real Time Intelligence & Complex Event, CEP Tooling Market Survey 2016 online unter:  Processinghttp://www.complexevents.com/2016/05/12/cep-tooling-market-survey-2016/
 
-[4] Bade, Dirk (2009): Event Stream Processing & Complex Event Processing, online unter http://docplayer.org/3361260-Event-stream-processing-complex-event-processing-dirk-bade.html
-
-[5] David B. Robins (2010): Complex Event Processing, University of Washington, Seite 1.
-
-[6] von Gallera, Diana; Trujillo, Juan José; Nicklas, Daniela (o.J.): Leistungskennlinienberechnung von
-Windenergieanlagen unter Einsatz eines
-Datenstrommanagementsystems, online unter http://odysseus.informatik.uni-oldenburg.de/fileadmin/files/WEAUsingOdysseus.pdf.  
-
-[7] Projekt Odysseus, Uni Oldenburg: online unter http://odysseus.informatik.uni-oldenburg.de.
-
+[2] Esper (o.J.): online unter: http://esper.espertech.com/release-7.0.0/esper-reference/html/processingmodel.html
 
 ```
 

@@ -15,3 +15,7 @@ Windenergieanlagen unter Einsatz eines
 Datenstrommanagementsystems, online unter http://odysseus.informatik.uni-oldenburg.de/fileadmin/files/WEAUsingOdysseus.pdf.  
 
 Projekt Odysseus, Uni Oldenburg: online unter http://odysseus.informatik.uni-oldenburg.de.
+
+Blog Real Time Intelligence & Complex Event Processing, online unter:  http://www.complexevents.com
+
+Esper online unter: http://esper.espertech.com
