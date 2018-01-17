@@ -8,7 +8,7 @@ Projekte ist an dieser Stelle ein weit gefasster Begriff. Die vorgestellten Proj
 
 Die folgende Abbildungen zeigt eine Übersicht über Projekte im Event-Stream-Processing Umfeld. Sie sind natürlich nicht geeignet einen detaillierten Einblick zu liefern. Jedoch wird deutlich wie groß das Angebot an der Stelle ist.Die Abbildung zeigt die von den Autoren identifizierten Keyplayer im ersten Quartal im Jahr 2016. Sie ist explizit nicht vollständig. Es wird aber deutlich, dass bekannte Größen wie IBM, SAP, Software AG, Microsoft, Apache, Oracle und viele weitere vertreten sind.
 
-![Event Processing Architecture](files/CEPMarket2016.PNG)
+![Event Processing Architecture](files/CEPMarket2016.png)
 
 ## Esper
 
@@ -71,6 +71,47 @@ Auf der Konsole erfolgt eine entsprechende Ausgabe. Diese sieht wie folgt aus.
 ```
 Name: Peter, Age: 10
 ```
+
+Das Beispiel ist insgesamt sehr einfach gehalten. Der folgende Abschnitt geht stärker auf die Möglichkeiten der EPL-Queries ein.
+
+### EPL-Queries
+
+Die Abfragen auf Basis der Event-Processing-Language die Esper zur Verfügung stellen, haben eine große Ähnlichkeit mit SQL-Abfragen. EPL-Abfragen bieten einen ähnlichen Funktionsumfang: Selects, Aggregation, Auswahl (Filter genannt) und vieles mehr. Die folgenden Beispiele wollen den Unterschied verdeutlichen.
+
+Im Technologie Abschnitt haben wir uns mit unterschiedlichen Möglichkeiten Daten auszuwählen und im Arbeitsspeicher vorzuhalten um auf mehreren Events zu arbeiten. Das folgende Beispiel zeigt eine **Data-Length-Window**. Der Callback erhält so beim Aufruf die letzten 5 Events zur Verarbeitung.
+ 
+```
+select * from PersonEvent#length(5)
+```
+
+Zudem bietet uns die EPL Möglichkeiten **Muster** in Events zu erkennen. Dieses Beispiel zeigt noch ein paar weitere Features wie ein global definiertes Datenfenster und Partitionierung. Hier geht es jedoch vor allem um das definierte Muster *pattern (a1 a2)*. A1 ist definiert als high und a2 definiert als medium. Das Muster trifft also zu wenn ein Event mit priority medium auf ein event mit priority high folgt.
+
+```SQL
+select * from AlertNamedWindow
+  match_recognize (
+    partition by origin
+    measures a1.origin as origin, a1.alarmNumber as alarmNumber1, a2.alarmNumber as alarmNumber2
+    pattern (a1 a2)
+    define
+      a1 as a1.priority = 'high',
+      a2 as a2.priority = 'medium'
+)
+```
+
+Bei der Erkennung von Mustern gibt es viele verschiedene Option. Bei der Verarbeitung von Eventdatenströmen spielt natürlich auch **Zeit** eine bedeutende Rolle. Das Ziel des folgenden Statements besteht darin alle Events zu selektieren die in den letzten zwei Stunden die Summe der Preise aufeinanderfolgenden Events ServiceOrder und ProductOrder innerhalb einer Minute den Wert 100 übersteigen.
+In dem Beispiel treten direkt zwei unterschiedliche Zeitoptionen auf. Einmal wird *timer:withing(1 min)* verwendet. Damit wird spezifiziert, dass das Event *ProductOrder* innerhalb von einer Minute auf das Event ServiceOrder folgen muss. Bei den auftretenden Events muss die Kunden-ID gleich sein.
+Die zweite Zeitangabe *[...]#time(2 hour)* spezifiziert die Auswahl der Events auf einen Zeitraum der letzten zwei Stunden.
+
+```SQL
+select a.custId, sum(a.price + b.price)
+from pattern [every a=ServiceOrder -> 
+    b=ProductOrder(custId = a.custId) where timer:within(1 min)]#time(2 hour) 
+where a.name in ('Repair', b.name)
+group by a.custId
+having sum(a.price + b.price) > 100
+```
+
+Die hier gezeigten Beispiele sind nur ein Ausschnitt der Möglichkeiten. Einige Möglichkeiten sollten deutlich geworden sein.
 
 ## Aurora
 
