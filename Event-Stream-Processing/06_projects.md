@@ -2,19 +2,19 @@
 
 Nach der Betrachtung der grundlegenden folgt in diesem Kapitel ein Blick auf verschiedene konkrete Projekte, die sich mit der Verarbeitung von Ereignisströmen befassen. Es tauchen auch Projekte auf, die sich nicht explizit mit der Verarbeitung von Ereignissen befassen, sondern die Verarbeitung von Datenströmen im allgemeinen realisieren. An dieser Stelle geht es nicht um einen vollständigen Überblick über alle existierenden Projekte sondern vielmehr in einzelne Einblicke.
 
-Projekte ist an dieser Stelle ein weit gefasster Begriff. Die vorgestellten Projekte sind zum Teil Frameworks zur Realisierung von Event-Stream-Processing in einer spezifischen Programmiersprache, konkreten Anwendungen oder Vorschläge zur Umsetzung auf Basis einer Plattform.
+Projekte ist an dieser Stelle ein weit gefasster Begriff. Bei Esper handelt es sich im weitesten Sinne um eine Framework, Odysseus ist ein Beispiel für eine vollständige, Google Cloud Dataflow realisiert das Apache Beam Interface für Streamverarbeitung.
 
 ## Überblick
 
 Die folgende Abbildungen zeigt eine Übersicht über Projekte im Event-Stream-Processing Umfeld. Sie sind natürlich nicht geeignet einen detaillierten Einblick zu liefern. Jedoch wird deutlich wie groß das Angebot an der Stelle ist.Die Abbildung zeigt die von den Autoren identifizierten Keyplayer im ersten Quartal im Jahr 2016. Sie ist explizit nicht vollständig. Es wird aber deutlich, dass bekannte Größen wie IBM, SAP, Software AG, Microsoft, Apache, Oracle und viele weitere vertreten sind.
 
-![Event Processing Architecture](files/CEPMarket2016.png)
+![CEP Market 2016](files/CEPMarket2016.png)
 
 ## Esper
 
 Esper stellt einen Container zur Ausführung von Event-Processing-Language (EPL) Queries bereit. Esper bietet somit ein Framework für die Java-Sprache und eine entsprechende Ausführungsumgebung auf Basis der Java-Virtual-Machine bereit. Neben Java exisitert auch eine .NET Realisierung Namens NEsper. [1]
 
-![Event Processing Architecture](files/esperOverview.PNG)
+![Esper Overview](files/esperOverview.PNG)
 
 Damit der Esper Container funktionsfähig ist, sind folgende Dinge notwendig:
 
@@ -111,25 +111,85 @@ group by a.custId
 having sum(a.price + b.price) > 100
 ```
 
-Die hier gezeigten Beispiele sind nur ein Ausschnitt der Möglichkeiten. Einige Möglichkeiten sollten deutlich geworden sein.
-
-## Aurora
+Die hier gezeigten Beispiele sind nur ein Ausschnitt der Möglichkeiten. Der Unterschied zwischen SQL und der Esper EPL sollte jedoch deutlich geworden sein.
 
 ## Odysseus
 
-## Google Cloud Architecture
+Die Uni Oldenburg hatte von 2007 bis 2014 ein Projekt Namens Odysseus zur Entwicklung einer Umgebung zum Event-Stream-Processing. Die Anwendung besteht aus einer Server Komponente und einer Grafischenoberfläche zur Verwaltung. Die folgende Abbdilung stellt die einezlnen Komponenten mit Monitor, Query-Interface, Schedueler etc. dar. [2]
 
-https://cloud.google.com/solutions/architecture/complex-event-processing
+![Odysseus Architecture](files/odysseusArchitecture.PNG)
 
-## Apache Spark
+Odysseus wird an dieser Stelle als eine Möglichkeit zur Umsetzung von Eventverarbeitung über eine fertige Anwendung aufgeführt. Die Anwendung wird ebenfalls über eine SQL ähnliche Abfragesprache mit Queries versorgt und bietet verschiedene Möglichkeiten mit Ergebnissen umzugehen. Das nächste Projekt stellt eine Umsetzung auf Basis eines Platform-as-a-Service Angebots dar.
 
-https://www.accenture.com/us-en/blogs/blogs-a-closer-look-at-complex-event-processing-tools
+## Google Cloud Architecture & Apache Beam
 
-http://blog.cloudera.com/blog/2015/11/how-to-build-a-complex-event-processing-app-on-apache-spark-and-drools/
+Auch in unterschiedlichen Cloud Umgebungen existieren verschiedene Lösungsansätze zur Verarbeitung von Event-Streams. An dieser Stelle wird die Lösung von Google vorgestellt. Diese Lösung basiert im Kern auf den Löseungen Cloud Pub/Sub und **Cloud Dataflow**. Pub/Sub realisiert die eigentlichen Event-Streams stellt also das Messingsystem zur Verfügung. Die Verarbeitung der Events erfolgt in der Dataflow Lösung. Die Dataflow Lösung stellt eine Verarbeitung auf Basis von Pipelines dar. Dabei stellt Dataflow eine  Implementierung der Apache Beam API dar. Weitere Implementierungen der Apache Beam API stellen unter anderem IBM Streams, Apache Flink, Apache Spark und JStorm dar. Die Architektur in der folgenden Abbildung stellt auch die Möglichkeit dar über Pub/Sub zusätzlich zur Echtzeit Verarbeitung von Ereignissen auch die Batch-Verarbeitung zu integrieren. [3] 
 
-## Beispiel IBM
+![Google Event Solution](files/googleEventProcessing.PNG)
 
-https://www.research.ibm.com/haifa/dept/services/papers/cep_Jan07_nc.pdf
+Es folgt eine Betrachtung einer einfachen Pipeline mit Apache Beam. Zuerst erstellen wir eine Pipeline. Dafür müssen noch einige Dataflow Optionen angegeben werden.
+
+```java
+PipelineOptions options = PipelineOptionsFactory.create();
+
+// Options for Google Dataflow 
+DataflowPipelineOptions dataflowOptions = options.as(DataflowPipelineOptions.class);
+dataflowOptions.setRunner(DataflowRunner.class);
+dataflowOptions.setProject("Datenbanktechnologien Hausarbeit");
+dataflowOptions.setTempLocation("gs://bucket/tempDir");
+
+Pipeline p = Pipeline.create(options);
+```
+
+Die nächste Zeile sorgt für die Eingabe der Pipeline. Es werden Textdateien aus einem Verzeichnis gelesen. Die nächsten Schritte der Pipline werden jeweils eine Zeile der zurückgegebenen Collection verarbeiten.
+
+```java
+p.apply(TextIO.read().from("gs://apache-beam-samples/shakespeare/*"))
+```
+
+Der nächste Schritt in der Pipeline verarbeitet die Zeilen in einzelne Wörter. Es handelt sich um eine anonyme Implementierung des DoFn-Interfaces.
+
+```java
+.apply("ExtractWords", ParDo.of(new DoFn<String, String>() {
+    @ProcessElement
+    public void processElement(ProcessContext c) {
+        // \p{L} denotes the category of Unicode letters,
+        // so this pattern will match on everything that is not a letter.
+        for (String word : c.element().split("[^\\p{L}]+")) {
+            if (!word.isEmpty()) {
+                c.output(word);
+            }
+        }
+    }
+}))
+```
+
+Es gibt aber auch vordefinierte Schritte. Das zählen der Wörter erfolgt mit einer entsprechenden Implementierung.
+
+```java
+.apply(Count.<String>perElement())
+```
+
+Zum Abschluss erfolgt noch eine Transformation und eine Ausgabe.
+
+```java
+.apply("FormatResults", MapElements.via(new SimpleFunction<KV<String, Long>, String>() {
+    @Override
+    public String apply(KV<String, Long> input) {
+        return input.getKey() + ": " + input.getValue();
+    }
+}))
+.apply(TextIO.write().to("wordcounts"));
+```
+
+Die Ausführung erfolgt über die run() Methode. Ab hier übernimmt der jeweilige Runner und führt die Pipeline aus.
+
+```java
+p.run().waitUntilFinish();
+```
+
+Das hier vorgestellte Beispiel kommt ohne eine besondere Sprache wie die Esper-EPL aus. Es gibt aber auch ähnliche Features wie die typischen Windows. Hierbei werden mehrere Elemente in der Pipelines gruppiert. Dies entspricht dem wesentlichen Verhalten der Windows in der Esper-EPL. [4]
+
 
 ***
 
@@ -137,13 +197,23 @@ https://www.research.ibm.com/haifa/dept/services/papers/cep_Jan07_nc.pdf
 
 Quellen:
 
-[1] Esper (o.J.): Esper Reference online unter: http://esper.espertech.com/release-7.0.0/esper-reference/html/gettingstarted.html
+[1] Esper (o.J.): Esper Reference, online unter: http://esper.espertech.com/release-7.0.0/esper-reference/html/gettingstarted.html
+
+[2] Uni Oldenburg (o.J.): Projektseite Odysseus, online unter: http://odysseus.informatik.uni-oldenburg.de/index.php
+
+[3] Google (2017): Vorstellung Complex Event Processing, online unter: https://cloud.google.com/solutions/architecture/complex-event-processing
+
+[4] Apache Beam (o.J.): Projektseite, online unter: https://beam.apache.org
 
 Bildnachweis:
 
 [1] Vincent, Paul (2016): Blog Real Time Intelligence & Complex Event, CEP Tooling Market Survey 2016 online unter:  Processinghttp://www.complexevents.com/2016/05/12/cep-tooling-market-survey-2016/
 
 [2] Esper (o.J.): online unter: http://esper.espertech.com/release-7.0.0/esper-reference/html/processingmodel.html
+
+[3] Odysseus (2010): online unter: http://odysseus.informatik.uni-oldenburg.de/fileadmin/files/ArchitekturOdysseusOkt2010_-_Logo.pdf
+
+[3] Google (2017): online unter: https://cloud.google.com/solutions/architecture/complex-event-processing
 
 ```
 

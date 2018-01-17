@@ -18,4 +18,10 @@ Projekt Odysseus, Uni Oldenburg: online unter http://odysseus.informatik.uni-old
 
 Blog Real Time Intelligence & Complex Event Processing, online unter:  http://www.complexevents.com
 
-Esper online unter: http://esper.espertech.com
+Esper Referenz online unter: http://esper.espertech.com
+
+Uni Oldenburg (o.J.): Projektseite Odysseus, online unter: http://odysseus.informatik.uni-oldenburg.de/index.php
+
+Google (2017): Vorstellung Complex Event Processing, online unter: https://cloud.google.com/solutions/architecture/complex-event-processing
+
+Apache Beam: Projektseite, online unter: https://beam.apache.org

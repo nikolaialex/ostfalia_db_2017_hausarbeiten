@@ -1,5 +1,5 @@
 # Event-Stream-Processing
-Kurze Beschreibung des Inhaltes.
+Event-Stream-Processing bietet Technologien zur Verarbeitung fortlaufender Ströme um durch Erkennung von Mustern Informationen zu gewinnen. Event-Stream-Processing ermöglicht Datenmengen zu verarbeiten die sich auf Grund ihrer Menge nicht speichern lassen und in Echtzeit zu reagieren.
 
 ## Autoren
 
