@@ -1,5 +1,5 @@
 # Übersicht über populäre NOSQL-Datenbanken
-Diese Arbeit versucht dem Leser einen Überblick über aktuelle und populäre NoSQL-Datenbanken zu verschaffen. Neben einigen Grundlagen und der geschichtlichen Entwicklung der NoSQL-Datenbanken, werden aus den verschiedenen Kategorien entsprechende Vertreter vorgestellt und analysiert. Vor allem Entstehung, Datenmodelle, Abfragesprachen und eventuelle Vorteile gegenüber anderen NoSQL-Datenbanken werden im Detail betrachtet.  
+Diese Arbeit versucht dem Leser einen Überblick über aktuelle und populäre NoSQL-Datenbanken zu verschaffen. Neben einigen Grundlagen und der historischen Entwicklung der NoSQL-Datenbanken, werden aus den verschiedenen Kategorien entsprechende Vertreter vorgestellt und analysiert. Vor allem Entstehung, Datenmodelle, Abfragesprachen und eventuelle Vorteile gegenüber anderen NoSQL-Datenbanken werden im Detail betrachtet.  
 
 ## Autoren
 
