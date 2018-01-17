@@ -6,7 +6,8 @@ Dabei "zeichnete er zwischen den Stadtteilen die Spazierwege über die Brücken 
 
 ![Image of graph theory of euler](images/graph-theory-euler.png)
 
-*Abbildung 1: Königsberger Brückenproblem von L. Euler [(Quelle: springer.com)] (https://link.springer.com/chapter/10.1007/978-3-8348-9968-2_2)*
+*Abbildung 1: Königsberger Brückenproblem von L. Euler
+[(Quelle: springer.com)] (https://link.springer.com/chapter/10.1007/978-3-8348-9968-2_2)*
 
 Auf die Graphentheorie kann aufgrund des Umfanges dieser Arbeit nicht näher eingegangen werden, aber sie dient als Grundlage für die weitere Vorstellung der graphenbasierten Datenbanken, da diese auf dieses Datenmodell zurückgreifen.
 
@@ -22,7 +23,8 @@ Um eine "hochperformante Navigation [innerhalb des] Graphen" zu ermöglichen, "w
 
 ![Image of property-graph](images/property-graph-structure.jpg)
 
-*Abbildung 2: Struktur "Property-Graph" [(Quelle: graphdatamodeling.com)](http://graphdatamodeling.com/Graph%20Data%20Modeling/GraphDataModeling/page/files/stacks-image-3066b52-288x358@2x.jpg)*
+*Abbildung 2: Struktur "Property-Graph" 
+[(Quelle: graphdatamodeling.com)](http://graphdatamodeling.com/Graph%20Data%20Modeling/GraphDataModeling/page/files/stacks-image-3066b52-288x358@2x.jpg)*
 
 Die Auswahl der Kandidaten bei der anschließenden Vorstellung erfolgte aufgrund der Beliebtheit im Januar 2018 auf der Website DB-Engines [2] in der Kategorie Graphdatenbanken. Demzufolge ist Neo4j auf Platz 1, Microsoft Azure Cosmos DB (Multi-Model) auf Platz 2 und OrientDB (Multi-Model) auf Platz 3. Aufgrund des Umfanges dieser Hausarbeit konnte nur auf die ersten drei Platzierungen eingegangen werden.
 
@@ -48,7 +50,8 @@ Durch Beschriftungen können Knoten in Gruppen eingeteilt werden. Ein Knoten kan
 
 ![Image of neo4j-datasctructure](images/neo4j-datastructure.png)
 
-*Abbildung 3: Datenstruktur von Neo4j [(Quelle: neo4j.com)](https://s3.amazonaws.com/dev.assets.neo4j.com/wp-content/uploads/20170731095054/Property-Graph-Concepts-Simple.svg)*
+*Abbildung 3: Datenstruktur von Neo4j 
+[(Quelle: neo4j.com)](https://s3.amazonaws.com/dev.assets.neo4j.com/wp-content/uploads/20170731095054/Property-Graph-Concepts-Simple.svg)*
 
 ### Abfragesprache
 
@@ -60,7 +63,8 @@ Wie in Abbildung 4 erkennbar, werden die "Knoten als geklammerte Bezeichner und 
 
 ![Image of cypher](images/property-graph-cypher.png)
 
-*Abbildung 4: Beispiel von Abfragesprache Cypher [(Quelle: neo4j.com)](https://s3.amazonaws.com/dev.assets.neo4j.com/wp-content/uploads/20170731135122/Property-Graph-Cypher.svg)*
+*Abbildung 4: Beispiel von Abfragesprache Cypher 
+[(Quelle: neo4j.com)](https://s3.amazonaws.com/dev.assets.neo4j.com/wp-content/uploads/20170731135122/Property-Graph-Cypher.svg)*
 
 Zusätzlich ist Cypher eine deklarative Abfragesprache, die dem Nutzer, ähnlich wie bei SQL, eine einfache Verwendung von verschiedenen Aktionen (match, insert, update oder delete) erlaubt. (Neo4j Inc., 2018, Cypher)
 
@@ -89,7 +93,8 @@ Laut Microsoft (Introduction) ist die Azure Cosmos DB eine global verteilte Date
 
 ![Image of cypher](images/azure-cosmos-db.png)
 
-*Abbildung 5: Azure Cosmos DB [(Quelle: microsoft.com)](https://docs.microsoft.com/de-de/azure/cosmos-db/media/introduction/azure-cosmos-db.png)*
+*Abbildung 5: Azure Cosmos DB 
+[(Quelle: microsoft.com)](https://docs.microsoft.com/de-de/azure/cosmos-db/media/introduction/azure-cosmos-db.png)*
 
 ### Datenstruktur
 
