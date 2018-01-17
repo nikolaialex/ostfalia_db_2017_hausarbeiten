@@ -1,5 +1,10 @@
 # Asynchrone Replikation
 
+geringere Konsistenzanforderungen 
+
+- Zugriff auf ältere Objektversionen
+- evtl. keine strikte Serialisierung von Änderungen, sondern parallele Änderungen mit nachträglicher Konflikt-Behebung
+
 Die asynchrone Replikation ist das einfachste Verfahren und kann meist ohne großen Mehraufwand realisiert werden. Die Daten werden hier in eine primäre Datenbank geschrieben und zu einem späteren Zeitpunkt in das Replikat übertragen. Der Latenzzeitraum kann hierbei klein sein (z.B. fünf Minuten), je nach Bedarf kann aber auch ein großer Zeitraum gewählt werden (z.B. täglich). Bei dem Einsatz eines Replikationsservers ist die Latenz idealerweise der Zeitintervall, die das Datenbanksystem braucht um Transaktionslogs zu schreiben (SAP, 2015).
 
 Asynchrone Replikation kann sowohl uni- als auch bidirektional betrieben werden. Die Probleme der bidirektionalen Replikation und verschiedene Lösungsstrategien werden im Kapitel [Bidirektionale Replikation](06_peer_to_peer.md) aufgegriffen.
@@ -53,3 +58,5 @@ https://de.wikipedia.org/wiki/Primary_Copy
 ### Merge Replikation
 
 https://de.wikipedia.org/wiki/Merge-Replikation
+
+[Synchrone Replikation](04_synchronous_replication.md)|[Bidirektionale Replikation]((06_peer_to_peer.md))

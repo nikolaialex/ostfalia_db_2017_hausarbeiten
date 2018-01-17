@@ -1,5 +1,11 @@
 # Synchrone Replikation
 
+1-Kopien-Äquivalenz: 
+
+- vollständige Replikationstransparenz: jeder Zugriff liefert jüngsten transaktionskonsistenten Objektzustand 
+- alle Replikate sind wechselseitig konsistent
+- Serialisierung von Änderungen
+
 Bei Systemen, die aus Gründen der Ausfallsicherheit einen immer synchronen Datenbestand brauchen, kann synchrone Replikation eingesetzt werden. Hierbei müssen alle Komponenten redundant vorhanden sein, was meist hohe Kosten und hohen Aufwand verursacht. Synchrone Replikation wird auch **Hot Standby** genannt.
 
 ![Synchrone Replikation](images\Synchrone Replikation.png)
@@ -14,8 +20,10 @@ Fällt eines der Systeme aus, kann das **ROWA-Verfahren** nicht weiter funktioni
 
 Probleme können bei diesem Verfahren auftreten, falls zwischen den Datenbanken zu viel Distanz besteht, da das Acknowledgement nicht schnell genug übertragen werden kann (Rouse,M. 2016). Dieses Verfahren verlangsamt ebenfalls proportional zu der Anzahl der Replikate die Performanz der Schreibfunktion. Es ist also hauptsächlcih für den Einsatz geeignet, wenn es eine geringe Anzahl an Knoten oder Datenänderungen geben soll, und alle verteilten Systeme sich in relativer Nähe zueinander befinden.
 
-**Welche DBMS?**
+**Welche DBMS? "Atomare Transaktionen"**
 
 **Quellen**
 
 **Bearbeitungssperren**
+
+[Einleitung](03_introdction.md)|[Asynchrone Replikation]((05_asynchronous_replication.md))

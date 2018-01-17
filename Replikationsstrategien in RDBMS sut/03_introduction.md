@@ -1,58 +1,19 @@
 # Einleitung
 
-Datenbanken stehen heutzutage im Kern vieler Anwengungen und Systeme. Da diese Datenbanken möglichst immer und von vielen Standorten aus erreichbar sein sollen, bietet es sich an, die Daten an den verschiedenen Standorten zu speichern. Dies nennt man **verteiltes Dantenbanksystem**. Die Methode, um verteilte Datenbanksysteme zu erstellen und aufrecht zu erhalten nennt sicht **Replikation**. Daten können hiermit an mehreren Knoten gespeichert werden und bleiben damit auch nach Ausfall einer der Datenbankservern erreichbar. Die Geschwindigkeit der Lesezugriffe kann durch Replikation ebenfalls verbessert werden, da auf eine lokale zugegriffen wird anstatt auf ein entferntes System.
+Datenbanken stehen heutzutage im Kern vieler Anwengungen und Systeme. Da diese Datenbanken möglichst immer und von vielen Standorten aus erreichbar sein sollen, bietet es sich an, die Daten an den verschiedenen Standorten zu speichern. Dies nennt man ein **verteiltes Dantenbanksystem**, wobei die verschiedenen Standorte als **Knoten** bezeichnet werden.
 
-http://www.itwissen.info/Replikation-replication.html
+Die Methode, **verteilte Datenbanksysteme** zu erstellen und aufrecht zu erhalten nennt sicht **Replikation**. Daten können hiermit an mehreren Knoten gespeichert werden und bleiben auch nach Ausfall einer der Datenbankservern erreichbar. Die Geschwindigkeit der Lesezugriffe kann durch Replikation ebenfalls verbessert werden, da auf eine lokale Kopie zugegriffen wird anstatt auf ein entferntes System. Auch die Überlastung einzelner Datenbankserver kann durch verbesserte Lastbalancierung beim Einsatz von Replikation vermieden werden (Rahm, E. 1994).
 
-Es gibt verschiedene Replikationsverfahren, die in den folgenden Kapiteln näher betrachtet werden.
+Replikation kann grundsätzlich in relationalen und auch nicht relationalen Datenbankmanagementsystemen (**DBMS**) eingesetzt werden. Im Rahmen dieser Arbeit werden verschiedene Replikationsstrategien in relationalen Datenbanken (**RDBMS**) vorgestellt.
 
+Es gibt verschiedene Verfahren und Ansätze, wie Replikation betrieben werden kann.
 
+Zunächst wird zwischen **vollständiger** und **Teilreplikation** unterschieden. Bei **vollständiger Replikation** sind alle Daten an allen Knotenpunkten vorhanden (voll-redundant), während bei **Teilreplikation** nur ein Teil der Datenmenge repliziert wird. Diese beiden Arten der Replikation können bei allen aufgeführten Replikationsstrategien angewandt werden, daher werden sie nicht weiter besprochen.
 
-Hauptziel beim Einsatz replizierter Datenbanken ist die Steigerung der Verfügbarkeit
- eines Verteilten DBS. Denn repliziert an mehreren Knoten gespeicherte 
-Daten bleiben auch nach Ausfall eines der Rechner erreichbar. Daneben 
-wird auch eine Verbesserung der Leistungsfähigkeit angestrebt, 
-insbesondere für Lesezugriffe. So lassen sich viele 
-Kommunikationsvorgänge einsparen, indem man Objekte repliziert an allen 
-Knoten speichert, an denen sie häufig referenziert werden (Unterstützung
- von Lokalität). Zum anderen erhöht die Wahlmöglichkeit unter mehreren Kopien das Potential zur Lastbalancierung,
- so daß die Überlastung einzelner Rechner eher vermeidbar ist. Unter 
-diesen Gesichtspunkten bieten natürlich voll-redundante Datenbanken, bei
- denen jeder Knoten eine Kopie der gesamten Datenbank führt, die größten
- Vorteile; insbesondere können prinzipiell alle Lesezugriffe lokal 
-abgewickelt werden. 
+Weiterhin kann Replikation nach bestimmten Zeitschemen kategorisiert werden. Bei der **synchronen Replikation** werden Änderungstransaktionen in allen Knoten gleichzeitig durchgeführt, bei Verwendunger **asynchroner Replikation** wird die Änderung erst gespeichert und später an den anderen Knoten durchgeführt  (ITWissen).
 
-vollständige, teilweise Replikation
+Schließlich gibt es noch die Unterscheidung zwischen **uni-** und **bidirektionaler Replikation**. **Unidirektionale Replikation** ist nach dem **Master/Slave-Prinzip** aufgebaut, besitzt also einen **Primärknoten**, an dem Daten geändert werden können (auch: **asymmetrische Replikation**). Beliebig viele Knoten können lokale Kopien der Daten vorhalten (**Replikate**), die nicht geändert werden dürfen. Wird **bidirektionale Replikation** eingesetzt, können die Daten an allen Knoten geändert werden (auch: **symmetrische Replikation**). Die Synchronisierung kann mittels verschiedener Verfahren erfolgen, die in den folgenden Kapiteln erläutert werden. Hierbei können verschiedene Probleme bei den Datenbeständen auftreten, auf die im Kapitel [Bidirektionale Replikation](06_peer_to_peer.md) weiter eingegangen wird.
 
-###Replikationsstrategien
+**ACID/CAP, Quellen, Zitate**
 
-* Korrektheitskriterium / Synchronisation 
-
-* 1-Kopien-Äquivalenz: 
-
-  * vollständige Replikationstransparenz: jeder Zugriff liefert jüngsten transaktionskonsistenten Objektzustand 
-  * alle Replikate sind wechselseitig konsistent
-  * Serialisierung von Änderungen
-
-* geringere Konsistenzanforderungen 
-
-  * Zugriff auf ältere Objektversionen
-  * evtl. keine strikte Serialisierung von Änderungen, sondern parallele Änderungen mit nachträglicher Konflikt-Behebung
-
-* symmetrische vs. asymmetrische Konfigurationen 
-
-  * symmetrisch: jedes Replikat gleichartig bezüglich Lese- und Schreibzugriffen; n Knoten können Objekt ändern 
-
-*  asymmetrisch(Master/Slave, Publish/Subsribe-Ansätze) 
-
-  * Änderungen eines Objekts an 1 Knoten (Master, Publisher, Primärkopie)
-  * Lesen an n Knoten (Slave, Subscriber, Sekundärkopien) 
-  * Kombinationen (z.B. Multi-Master-Ansätze)
-
-* Zeitpunkt der Aktualisierung: synchron oder asynchron
-
-  * synchron (eager): alle Kopien werden durch Änderungstransaktion 
-
-  aktualisiert 
-
-  * asynchron (lazy): verzögertes Aktualisieren (Refresh)
+[Inhaltsverzeichnis](02_toc.md)|[Synchrone Replikation]((04_synchronous_replication.md))
