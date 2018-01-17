@@ -10,6 +10,6 @@ Event-Stream-Processing bietet Technologien zur Verarbeitung fortlaufender Strö
 
 ***
 
-[Einleitung >>](02_introduction.md)
+[Inhaltsverzeichnis >>](02_toc.md)
 
 ***
