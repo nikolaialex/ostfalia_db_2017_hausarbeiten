@@ -1,3 +1,9 @@
+***
+
+[<< zurück](03_introduction.md)
+
+***
+
 # Gundlagen
 
 Diese Grundlagen befassen sich mit den Begrifflichkeiten, stellen die konkrete Motivation und Anwendungsgebiete vor. Auf Basis dieser Grundlagen können im folgenden Kapitel konkrete Techniken und Vorgehensweisen erläutert werden.
@@ -36,6 +42,10 @@ Mit der geschaffenen grundlegenden Übersicht sollen an diese Stelle möglichst 
 - Kundenbeziehung. Erfassung von Kunden-Feedback über Verhalten in sozialen Netzwerken.
 - Finanzmärkte. Analyse von Aktienkursen und Einflussgrößen. Erkennung von Betrug im Zahlungsverkehr. [7]
 
+
+***
+
+[<< Einleitung](03_introduction.md) | [Technologie >>](05_technology.md)
 
 ***
 

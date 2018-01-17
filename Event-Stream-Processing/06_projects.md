@@ -1,3 +1,9 @@
+***
+
+[<< zurück](05_technology.md)
+
+***
+
 # Projekte
 
 Nach der Betrachtung der grundlegenden folgt in diesem Kapitel ein Blick auf verschiedene konkrete Projekte, die sich mit der Verarbeitung von Ereignisströmen befassen. Es tauchen auch Projekte auf, die sich nicht explizit mit der Verarbeitung von Ereignissen befassen, sondern die Verarbeitung von Datenströmen im allgemeinen realisieren. An dieser Stelle geht es nicht um einen vollständigen Überblick über alle existierenden Projekte sondern vielmehr in einzelne Einblicke.
@@ -190,6 +196,9 @@ p.run().waitUntilFinish();
 
 Das hier vorgestellte Beispiel kommt ohne eine besondere Sprache wie die Esper-EPL aus. Es gibt aber auch ähnliche Features wie die typischen Windows. Hierbei werden mehrere Elemente in der Pipelines gruppiert. Dies entspricht dem wesentlichen Verhalten der Windows in der Esper-EPL. [4]
 
+***
+
+[<< Technologie](05_technology.md) | [Fazit >>](07_conclusion.md)
 
 ***
 

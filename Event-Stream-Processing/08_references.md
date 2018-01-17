@@ -1,3 +1,9 @@
+***
+
+[<< zurück](07_conclusion.md)
+
+***
+
 # Literaturverzeichnis
 
 Luckham, David. 2002. The Power of Events: An Introduction to Complex Event Processing in Distributed Enterprise Systems. Pearson Education, Inc, Seite 88ff.

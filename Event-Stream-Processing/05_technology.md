@@ -1,3 +1,9 @@
+***
+
+[<< zurück](04_basics.md)
+
+***
+
 # Technologie
 
 Dieses Kapitel befasst sich mit der grundlegenden Technologie nach der das Event-Stream-Processing arbeitet. Grundlegendes Ziel ist dabei aus einem primitiven Ereigniststrom durch Abstraktion abstraktere Ereignisse zu erkennen. Die folgende Abbildung verdeutlich noch einmal diesen Ansatz.
@@ -71,6 +77,10 @@ Eine derartige Event-Driven Architecture basiert auf drei Ebenen:
 ![Event Processing Architecture](files/eventDrivenArchitecture.PNG)
 
 Innerhalb des Netzwerks spricht man auch von einer Event Cloud. Damit ist nur gemeint, dass alle Ereignisquellen ihre Ereignisse zentral zur Verfügung stellen und die verarbeitenden Agenten sich hierfür registrieren können. Dabei kann der Agent bereits bestimmen welche Ereignistypen er erhalten möchte. [2]
+
+***
+
+[<< Grundlagen](04_basics.md) | [Projekte >>](06_projects.md)
 
 ***
 
