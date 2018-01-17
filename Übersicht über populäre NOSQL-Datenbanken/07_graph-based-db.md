@@ -11,6 +11,12 @@ Dabei "zeichnete er zwischen den Stadtteilen die Spazierwege über die Brücken 
 
 Auf die Graphentheorie kann aufgrund des Umfanges dieser Arbeit nicht näher eingegangen werden, aber sie dient als Grundlage für die weitere Vorstellung der graphenbasierten Datenbanken, da diese auf dieses Datenmodell zurückgreifen.
 
+Der genaue Startpunkt der Graphdatenbank-Entwicklung wird in der Fachwelt unterschiedlich eingeschätzt. Einige Experten behaupten, dass das Netzwerk-Datenmodell [1], welches von IBM in ihren Systemen in den 1970er Jahren verwendet wurde, dem Graph-Datenmodell sehr ähnelt. Allerdings gab es für das Netzwerk-Datenmodell damals keine deklarative Abfragesprache und daher lassen sich die beiden Modelle nicht miteinander vergleichen. Entwickler mussten früher die genau pysische Speicherung der Daten kennen, um Programme für die Abfrage der Daten schreiben zu können. (Bitnine)
+
+In den 1980er Jahren etablierte sich das relationale Datenbankmodell. Diese Entwicklung war schon ein erheblicher Fortschritt und stellte ein gewisses Level der Datenunabhängigkeit dar, da Informationen ohne das Wissen der genauen pysischen Struktur der Datenbank abgerufen werden konnten. Nach einigen Jahren, wurde die Abfragesprache SQL (Structured Query Language) von IBM entwickelt und blieb bis heute durch viele iterative Weiterentwicklungen die Standard Abfragesprache für relationale Datenbanken. (Bitnine)
+
+Erst in den 1990er Jahren wurden vom W3C verschiedene Vorschläge zu Webdatenstandards, wie XML und RDF, gemacht. Diese Entwicklung kann man als eigentlichen Startpunkt der Graphdatenbanken sehen, da diese Datenmodelle bereits in ihrer Basis das Graph-Datenmodell beinhalten. Ab 1998 startete die NoSQL-Welle und bis heute wurden schon unzählige NoSQL-Datenbanken veröffentlicht. Im Jahre 2000 wurde dann Neo Technologies gegründet und die Entwicklung von ihrer Graphdatenbank Neo4j begann. Seitdem wurden zahlreiche kommerzielle und frei verfügbare Graphdatenbanken entwickelt. Seit 2010 setzen sich auch zunehmend Multi-Modell Datenbanken durch. (Bitnine)
+
 Graphenbasierte Datenbanken sind Teil der NoSQL-Bewegung und vereinen die Eigenschaften Transaktionalität und ACID (atomicity, consistency, isolation und durability). Mit diesem Datenbankentyp ist das Management von komplexen, vernetzten Daten (Graphstrukturen) möglich und größtenteils sind sie quelloffen sowie entwicklerorientiert. Zudem sind sie vor allem "dafür prädestiniert, relevante Informationsnetzwerke transaktional zu speichern und besonders schnell und effizient abzufragen. Das Datenmodell besteht aus Knoten, die mittels gerichteter, getypter Verbindungen miteinander verknüpft sind. Beide können beliebige Mengen von Attribut-Wert-Paaren (Properties) enthalten. Daher wird dieses Modell auch als 'Property-Graph' bezeichnet" (siehe Abbildung ?). (Hunger, S.3-4)
 
 Um eine "hochperformante Navigation [innerhalb des] Graphen" zu ermöglichen, "werden die Verbindungen beim Einfügen in die Datenbank als persistente Strukturen abgelegt." Zwar entsteht dadurch ein Zusatzaufwand beim Speichern, aber beim Abfragen der Informationen, welches viel häufiger geschieht, "können die direkt gespeicherten Verknüpfungsinformationen zur schnellen Navigation in konstanter Zeit genutzt werden". (Hunger, S.4-5)
@@ -20,16 +26,15 @@ Um eine "hochperformante Navigation [innerhalb des] Graphen" zu ermöglichen, "w
 *Abbildung ?: Struktur "Property-Graph"<br/>
 (http://graphdatamodeling.com/Graph%20Data%20Modeling/GraphDataModeling/page/files/stacks-image-3066b52-288x358@2x.jpg)*
 
-
-Die Auswahl und folgende Vorstellung der Graphdatenbanken erfolgte aufgrund der Beliebtheit im Januar 2018 auf der Website DB-Engines [1]. Demzufolge ist Neo4j auf Platz 1, Microsoft Azure Cosmos DB auf Platz 2 und OrientDB auf Platz 3. Aufgrund des Umfanges dieser Hausarbeit konnte nur auf die ersten drei Platzierungen eingegangen werden.
+Die Auswahl und folgende Vorstellung der Graphdatenbanken erfolgte aufgrund der Beliebtheit im Januar 2018 auf der Website DB-Engines [2]. Demzufolge ist Neo4j auf Platz 1, Microsoft Azure Cosmos DB (Multi-Model) auf Platz 2 und OrientDB (Multi-Model) auf Platz 3. Aufgrund des Umfanges dieser Hausarbeit konnte nur auf die ersten drei Platzierungen eingegangen werden.
 
 ## Neo4j
 
-Neo4j ist eine Graphdatenbank, die ihre Daten ebenfalls in Knoten und Kanten (Beziehungen) speichert. 2010 wurde die Version 1.0, nach 10 Jahren Entwicklungsarbeit, von Neo Technology, einem Startup-Unternehmen mit Sitz in Malmö und San Francisco, veröffentlicht. (Neo4j Inc., 2010) 
+Neo4j ist eine Graphdatenbank, die ihre Daten ebenfalls in Knoten und Kanten (Beziehungen) speichert. 2010 wurde die Version 1.0, nach 10 Jahren Entwicklungsarbeit, von Neo Technology, einem Startup-Unternehmen mit Sitz in Malmö und San Francisco, veröffentlicht (Neo4j Inc., 2010). 
 
 Sie gilt "als einer der ältesten Vertreter [in] der Kategorie der Graphdatenbanken" und wurde "ursprünglich für die Echtzeitsuche von verschlagworteten Dokumenten über Sprachgrenzen (27 Sprachen) und Bedeutungshierarchien hinweg als Teil eines Onlinedokumentenmanagementsystems entwickelt" (Hunger, S.9). Zudem gehört Neo4j zu den nativen Graphdatenbanken. "Nativ bedeutet, dass Knoten und Beziehungen direkt in den internen Datenbankstrukturen als Records in den Datenbankdateien repräsentiert sind. Neo4j nutzt keine andere Datenbank als Persistenzmechanismus, sondern baut auf einer eigenen Infrastruktur auf, die speziell dafür entwickelt wurde, vernetzte Daten effizient zu speichern" (Hunger, S.4).
 
-Die Datenbank ist in Java implementiert und wird als Open-Source-Projekt angeboten. Laut der Entwickler wird Neo4j als eingebettete, Disk-basierte, transaktionale Datenbank-Enginge, die Daten anstatt in Tabellen in Graphen strukturiert speichert, beschrieben. Ein Graph ist eine flexible Datenstruktur, die eine agile und schnellere Entwicklung erlaubt. (Terrill, 2008)
+Die Datenbank ist in Java implementiert und wird als Open-Source-Projekt angeboten. Laut der Entwickler wird Neo4j als eingebettete, Disk-basierte, transaktionale Datenbank-Enginge, die Daten anstatt in Tabellen in Graphen strukturiert speichert, beschrieben. Ein Graph ist eine flexible Datenstruktur, die eine agile und schnellere Entwicklung erlaubt. (Terrill)
 
 ### Datenstruktur
 
@@ -50,7 +55,7 @@ Durch Beschriftungen können Knoten in Gruppen eingeteilt werden. Ein Knoten kan
 
 ### Abfragesprache
 
-Die Firma Neo4j Inc. entwickelte zusätzlich die Graphdatenbankabfragesprache Cypher für die Neo4j Graph Datenbank. Sie ist aber darüber hinaus für alle Graphdatenbanken anwendbar und wurde aus diesem Zweck im Jahr 2016 zu einem Open Source Projekt von der Neo4j Inc. erklärt. Sie soll laut Hersteller die beliebteste Abfragesprache für Graphdatenbanken sein und als Standard-Sprache ("SQL for graphs") weiterhin ausgebaut werden. (Neo4j Inc., 2018, Cypher)
+Die Firma Neo4j Inc. entwickelte zusätzlich die deklarative Graphdatenbankabfragesprache Cypher für die Neo4j Graph Datenbank. Sie ist aber darüber hinaus für alle Graphdatenbanken anwendbar und wurde aus diesem Zweck im Jahr 2016 zu einem Open Source Projekt von der Neo4j Inc. erklärt. Sie soll laut Hersteller die beliebteste Abfragesprache für Graphdatenbanken sein und als Standard-Sprache ("SQL for graphs") weiterhin ausgebaut werden. (Neo4j Inc., 2018, Cypher)
 
 Cypher ist eine Abfragesprache, die für alle Graphdatenbanken geeignet ist und zeichnet sich durch eine einfach ASCII-artige Syntax aus. Diese Syntax ermöglicht die Bildung vielfältiger, gut lesbarer "Match Patterns" für Knoten und Kanten (siehe Abbildung ?). (Neo4j Inc., 2018, Cypher)
 
@@ -99,8 +104,6 @@ Die Azure Cosmos Graphdatenbank benutzt wie Neo4j auch das Property-Graph-Modell
 
 Zur Abfrage der Azure Cosmos DB kann die Apache TinkerPop-Graph-Traversalsprache Gremlin oder andere mit TinkerPop kompatible Diagrammsysteme wie Apache Spark GraphX verwendet werden. (Microsoft, Graph Introduction)
 
-Mehr..?
-
 ### Vorteile zu anderen NoSQL Datenbanken
 
 Nach Meinung von Microsoft (Graph Introduction) biete die Graph-API ihrer Datenbank folgende Vorteile:
@@ -119,13 +122,17 @@ Nach Meinung von Microsoft (Graph Introduction) biete die Graph-API ihrer Datenb
 
 ## OrientDB
 
-Die OrientDB wurde 2010 von der Firma OrientDB Ltd., die heute zu dem kalifornischen Unternehmen CallidusCloud gehört, als Open Source Projekt veröffentlicht [2]. Sie ist in Java implementiert und weist wie Microsofts Azure Cosmos DB mehrere Modelle auf [2].
+Die OrientDB wurde 2010 von der Firma OrientDB Ltd., die heute zu dem kalifornischen Unternehmen CallidusCloud gehört, als Open Source Projekt veröffentlicht [3]. Sie ist in Java implementiert und weist wie Microsofts Azure Cosmos DB mehrere Modelle auf [3].
 
-Bei der Multi-Model Datenbank wurden mehrere Konzepte der NoSQL-Bewegung umgesetzt und gemischt. "OrientDB stellt dem Benutzer zwei verschiedene APIs zur Verfügung um dokumentenorientierte beziehungsweise graphenorientierte Datenbanken umzusetzen. Die Graph-API arbeitet eine Ebene über der Document-API und ist somit die erste Wahl für Einsteiger, weil damit ca. 80% aller Anwendungsfälle abgedeckt werden. Die ubrigen 20% erfordern die flexiblere, weniger komplexe und für Nebenläufigkeit optimierte Document-API. Beide APIs arbeiten mit weiteren Konzepten, die auf niedrigeren Ebenen liegen." (Schmeck, S.1-2)
-
-Key-Value-Paare in Dokumenten?
+Bei der Multi-Model Datenbank wurden mehrere Konzepte der NoSQL-Bewegung umgesetzt und gemischt. Als Basis besitzt das Modell eine dokumentenorientierte Datenbank, die zusätzlich über Eigentschaften von Graphendatenbanken verfügt. "OrientDB stellt dem Benutzer zwei verschiedene APIs zur Verfügung um dokumentenorientierte beziehungsweise graphenorientierte Datenbanken umzusetzen. Die Graph-API arbeitet eine Ebene über der Document-API und ist somit die erste Wahl für Einsteiger, weil damit ca. 80% aller Anwendungsfälle abgedeckt werden. Die übrigen 20% erfordern die flexiblere, weniger komplexe und für Nebenläufigkeit optimierte Document-API. Beide APIs arbeiten mit weiteren Konzepten, die auf niedrigeren Ebenen liegen." (Schmeck, S.1-2)
 
 ### Datenstruktur
+
+"Die Graph-API von OrientDB setzt das Konzept der Graphdatenbanken um." Knoten werden, wie bei Microsofts Azure Cosmos DB, als Vertices oder ein Knoten als Vertex bezeichnet und "speichern Eigenschaften sowie ein- und ausgehende Kanten (Referenzen). Ein Vertex ist
+dabei gleichzeitig ein Dokument mit variablem Schema, was noch einmal deutlich macht, dass die Graph-API eine Ebene über der Document-API arbeitet." Eine Kante wird auch als Edge bezeichnet und "ist eine bidirektionale Referenz zwischen zwei Vertices. Es wird dabei zwischen 'leightweight' und 'regular' Edges unterschieden. Eine 'regular Edge' wird im Gegensatz zur 'leightweight Edge' als Dokument gespeichert. Der Grundtyp in OrientDB ist ein Record,
+das 'kleinste' Element das von der Datenbank verwaltet werden kann. Ein Record ist entweder ein Dokument, eine Edge oder ein Vertex. Beim Einfügen eines Records bekommt dieser eine eindeutige Record-ID, die vom System nicht neu vergeben wird. Eine Record-ID setzt sich aus der Cluster-ID und der Position des Records im Cluster zusammen." (Schmeck, S.3)
+
+Zusätzlich kann OrientDB für Vertices und Edges einen Index anlegen. Ein Index ist ein key/value-Paar, wobei der Schlüssel über mehrere Eigenschaften der Objekte gebildet wird und der Wert die Record-ID ist. "Es gibt vier Indizierungs-Algorithmen von denen standardmäßig der SB-Baum, ein erweitertes B-Baum Modell, verwendet wird." (Schmeck, S.3)
 
 ### Abfragesprache
 
@@ -155,10 +162,9 @@ Laut des Unternehmens OrientDB Ltd. (OrientDB vs Neo4j) biete ihre Datenbank vor
 * Kommerzielle Lizenz
 * Einbettbar ohne Einschränkungen
 
-
-## Geschichte
-
 ***
-[1] https://db-engines.com/en/ranking/graph+dbms
+[1] http://www-lehre.inf.uos.de/~dbs/2001/skript/node21.html
 
-[2] https://db-engines.com/en/system/OrientDB
+[2] https://db-engines.com/en/ranking/graph+dbms
+
+[3] https://db-engines.com/en/system/OrientDB

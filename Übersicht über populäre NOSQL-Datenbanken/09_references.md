@@ -1,5 +1,7 @@
 # 7 Literaturverzeichnis
 
+Bitnine (2016). http://bitnine.net/blog-graph-database/history-of-databases-and-graph-database. Online. [Zugriff: 17.01.2018]
+
 Brien, J. (2017). https://t3n.de/news/microsoft-azure-cosmos-db-822053. Online. [Zugriff: 14.01.2018]
 
 Hecht, R. (2015). Konzeptuelle und Methodische Aufarbeitung von NoSQL-Datenbanksystemen.
