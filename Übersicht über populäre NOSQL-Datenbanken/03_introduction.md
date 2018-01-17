@@ -4,7 +4,7 @@ Ein Umdenken bei der Verwendung von relationalen Datenbanken erfolgte durch den 
 
 "Auch Amazon sah sich zu diesem Zeitpunkt mit ähnlichen Herausforderungen
 konfrontiert. Viele unternehmenskritische Dienste und Daten des Onlineshops, wie
-Bestsellerlisten, Einkaufswagen, Benutzervorlieben, Verkaufszahlen und Produktkataloge, mussten innerhalb riesiger Cluster verteilt werden. Da auch nur kurzzeitig Ausfälle dieser Dienste massive finanzielle Schäden nach sich ziehen würden, stand vor allem die Hochverfügbarkeit dieser Dienste im Fokus des Interesses von Amazon."  (Hecht, S.5)
+Bestsellerlisten, Einkaufswagen, Benutzervorlieben, Verkaufszahlen und Produktkataloge, mussten innerhalb riesiger Cluster verteilt werden. Da auch nur kurzzeitige Ausfälle dieser Dienste massive finanzielle Schäden nach sich ziehen würden, stand vor allem die Hochverfügbarkeit dieser Dienste im Fokus des Interesses von Amazon."  (Hecht, S.5)
 
 Da sich "traditionelle Datenbankenlösungen" in der modernen Entwicklung von webbasierten Anwendungen zunehmend als "ineffizient erwiesen", entwickelten viele Internet-Giganten aus dieser Not neue, hochverfügbare und nichtrelationale Datenbank-Lösungen. (Hecht, S.5)
 
