@@ -5,4 +5,4 @@
 3. [Spaltenorientierte Datenbanken](05_column-oriented-db.md)
 4. [Graphenbasierte Datenbanken](06_graph-based-db.md)
 5. [Fazit](07_conclusion.md)
-7. [Literaturverzeichnis](08_references.md)
+6. [Literaturverzeichnis](08_references.md)
