@@ -1,4 +1,4 @@
-# 7 Literaturverzeichnis
+# 6 Literaturverzeichnis
 
 Bitnine (2016). http://bitnine.net/blog-graph-database/history-of-databases-and-graph-database. Online. [Zugriff: 17.01.2018]
 
