@@ -15,4 +15,4 @@ Die verschiedenen Replikationsverfahren haben Vor- und Nachteile, die man gegene
 
 Es gibt nicht "das Eine" Verfahren, mit dem man am Besten beraten ist, sondern man sollte situationsbedingt analysieren, was man braucht.
 
-[Fallbeispiel](07_example.md)|[Literaturverzeichnis](09_references.md)
+[Fallbeispiel](07_example.md) | [Literaturverzeichnis](09_references.md)
