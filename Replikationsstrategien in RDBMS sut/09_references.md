@@ -14,6 +14,10 @@ Techopedia: What is Snapshot Replication? URL: https://www.techopedia.com/defini
 
 **Zitate einbringen**
 
+**Abbildungen ändern**
+
+http://docplayer.org/1501640-Replikation-in-datenbanken.html
+
 [Fazit](08_conclusion.md)
 
 

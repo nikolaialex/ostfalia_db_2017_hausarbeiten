@@ -29,7 +29,7 @@ Diese Strategie eignet sich zur Anwendung, wenn nicht an allen Standorten schrei
 
 Eine weitere asynchrone Strategie ist der Einsatz eines Replikationsservers. Dieser liest die von der Datenbank erstellten Transaktionslogs aus und gibt die Transaktionen weiter an die Replikate, was zu einer relativ kleinen Latenz bei minimalen Auswirkungen auf die Performanz des primären Systems führt (SAP, 2015). SAP Sybase nennt diese Art der Replikation **Warm Standby**, da es eine Kompromisslösung zwischen **Cold Standby** und **Hot Standby** (siehe [Synchrone Replikation](05_synchronous_replication.md)) darstellt. Da beim Einsatz dieser Stategie die Transaktionen repliziert werden, wird sie auch **transactional replication** genannt. Gegenüber anderen Verfahren gibt es hierbei den Vorteil, dass außer den SQL-Grundbefehlen *update*, *insert*, *delete* und *alter table* auch Transaktionen repliziert werden können, die nicht den Datenbestand, sondern die Datenbanknutzer betreffen (*stored procedures*, SAP, 2015).
 
-![Asynchrone Replikation](images\Asynchrone Replikation.png)
+![Warm Standby](images\Warm Standby.png)
 
 *Abbildung 2: Asynchrone Replikation Warm Standby*
 
@@ -52,8 +52,6 @@ Wie auf der Abbildung zu sehen ist, kann ein Client an einem beliebigen Knoten l
 **Insgesamt bestehen mehrere Alternativen bei der Realisierung eines Primary-Copy-Protokolls. Ein Ansatz besteht darin, wie beim ROWA-Protokoll Änderungssperren verteilt bei allen kopienhaltenden Rechnern anzufordern. Am Transaktionsende wird jedoch nur die Primärkopie synchron aktualisiert, so daß eine schnellere Bearbeitung von Änderungstransaktionen als mit dem ROWA-Ansatz erreicht wird. Nach Aktualisierung der Primärkopie geht die Schreibsperre dann quasi in den Besitz des Primary-Copy-Rechners über, der diese bis nach der Aktualisierung der Replikate hält. Das verteilte Sperren aller Kopien bringt den Vorteil mit sich, daß Leser wie im ROWA-Verfahren ein beliebiges Replikat referenzieren (sperren) können, nicht also notwendigerweise die Primärkopie. Die verzögerte Aktualisierung der Replikate kann dafür vermehrte Sperrkonflikte verursachen.**
 
 **Die Alternative zu diesem Ansatz besteht darin, Schreibsperren nur noch zentral beim jeweiligen Primary-Copy-Rechner anzufordern, um den Aufwand verteilter Schreibsperren zu umgehen. Für Leser besteht jetzt jedoch das Problem, daß die lokalen Kopien aufgrund der verzögerten Aktualisierung möglicherweise veraltet sind. Für die Behandlung der Lesezugriffe bestehen im wesentlichen drei Alternativen, die sich dadurch unterscheiden, wo die Objektzugriffe erfolgen und wo die Sperren angefordert werden (zentral beim Primary-Copy-Rechner oder verteilt/lokal):**
-
-https://de.wikipedia.org/wiki/Primary_Copy
 
 ### Merge Replikation
 
