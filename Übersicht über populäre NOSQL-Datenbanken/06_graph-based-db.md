@@ -1,4 +1,4 @@
-# 5 Graphenbasierte Datenbanken
+# 4 Graphenbasierte Datenbanken
 
 Die mathematische Theorie zu Graphen ist weitaus älter als die Entwicklung der graphenbasierten Datenbanken (Hunger, S.3). Bereits 1736 befasste sich Leonard Euler unwissentlich bei der Lösung des berühmten Königsberger Brückenproblems mit der Graphentheorie (Nitzsche, S.19). Er entwickelte die Theorie, "als er einen Weg über die sieben Brücken des damaligen Königsbergs finden wollte, ohne eine doppelt überqueren zu müssen" (Hunger, S.3).
 
@@ -6,7 +6,7 @@ Dabei "zeichnete er zwischen den Stadtteilen die Spazierwege über die Brücken 
 
 ![Image of graph theory of euler](images/graph-theory-euler.png)
 
-*Abbildung 1: Königsberger Brückenproblem von L. Euler*
+*Abbildung 1: Königsberger Brückenproblem von L. Euler* 
 [(Quelle: springer.com)] (https://link.springer.com/chapter/10.1007/978-3-8348-9968-2_2)
 
 Auf die Graphentheorie kann aufgrund des Umfanges dieser Arbeit nicht näher eingegangen werden, aber sie dient als Grundlage für die weitere Vorstellung der graphenbasierten Datenbanken, da diese auf dieses Datenmodell zurückgreifen.
@@ -23,7 +23,7 @@ Um eine "hochperformante Navigation [innerhalb des] Graphen" zu ermöglichen, "w
 
 ![Image of property-graph](images/property-graph-structure.jpg)
 
-*Abbildung 2: Struktur "Property-Graph"*
+*Abbildung 2: Struktur "Property-Graph"* 
 [(Quelle: graphdatamodeling.com)](http://graphdatamodeling.com/Graph%20Data%20Modeling/GraphDataModeling/page/files/stacks-image-3066b52-288x358@2x.jpg)
 
 Die Auswahl der Kandidaten bei der anschließenden Vorstellung erfolgte aufgrund der Beliebtheit im Januar 2018 auf der Website DB-Engines [2] in der Kategorie Graphdatenbanken. Demzufolge ist Neo4j auf Platz 1, Microsoft Azure Cosmos DB (Multi-Model) auf Platz 2 und OrientDB (Multi-Model) auf Platz 3. Aufgrund des Umfanges dieser Hausarbeit konnte nur auf die ersten drei Platzierungen eingegangen werden.
