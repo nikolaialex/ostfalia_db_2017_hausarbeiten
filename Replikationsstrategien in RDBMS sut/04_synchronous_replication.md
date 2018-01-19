@@ -32,4 +32,4 @@ Bei Einsatz von gewichteten Stimmen erhält jeder Knoten eine bestimmte Anzahl a
 
 Das statische Quorum ist hier fehleranfälliger, da es vorkommen kann, dass so viele Knoten ausfallen, dass die bestimmte Anzahl an Stimmen nicht mehr erreicht werden kann. Bei gewichteten Stimmen kann dies schnell der Fall sein, wenn ein System ausfällt, das eine hohe Anzahl an Stimmen hat (Rahm, E. 2011 und Rahm, E. 1994).
 
-[Einleitung](03_introduction.md)|[Asynchrone Replikation]((05_asynchronous_replication.md))
+[Einleitung](03_introduction.md) | [Asynchrone Replikation](05_asynchronous_replication.md)
