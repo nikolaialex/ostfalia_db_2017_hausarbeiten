@@ -12,9 +12,10 @@ Problemen. System A hat aber keine Möglichkeit um die Nachrichten solange vorzu
 2. System A sendet unmengen an Nachrichten an System B,
 wobei der Empfänger so viele Nachrichten auf einmal nicht
 verarbeiten kann und überlastet ist.
-Um diese Herausforderungen zu lösen, werden Messaging-Systeme, Queues oder Topics dazwischen geschaltet.
 
 <img src="images/problem_Messaging2.png" alt="Messaging Problem 2" style="width:500px;height:100px; padding-left:6%">
+
+Um diese Herausforderungen zu lösen, werden Messaging-Systeme in Form von Queues oder Topics dazwischen geschaltet.
 
 ### Messaging Systeme
 
