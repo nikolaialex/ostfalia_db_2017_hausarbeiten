@@ -12,5 +12,5 @@ Apache Beam hat eine spannende Entstehungsgeschicht, die im Kapitel: "Evolution 
 
 ------------
 
-[☜ vorheriges Kapitel](https://github.com/kuzdu/DBS---DynamboDB-vs-MongoDB/blob/master/README.md)
-   |   [nächstes Kapitel ☞](https://github.com/kuzdu/DBS---DynamboDB-vs-MongoDB/blob/master/2_Grundlagen.md)
+[☜ vorheriges Kapitel](README.md)
+   |   [nächstes Kapitel ☞](2_Grundlagen.md)
