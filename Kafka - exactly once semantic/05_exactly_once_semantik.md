@@ -34,8 +34,11 @@ Um idempotente Aktionen zu erreichen werden den ein Nachrichtenbündeln Sequenzn
 **Transaktionen**  
 Schreibvorgänge können atomar ausgeführt, selbst über verschiedene Partitionen. 
 
+![Partition X](./images/partition_x.png)
 
-Abb. 1 und 2 zeigen zwei verschiedene und unabhängige Partitionen. Im Falle X werden alle transkationale Nachrichten committed. In beiden Fällen stellt man fest, dass auch noch immer nicht-transaktionale Nachrichten versendet werden können. Im Falle von Y gibt es einen Rollback. Dies wird durch den abort-Marker signalisiert.
+![Partition Y](./images/partition_y.png)
+
+Die zuvor gezeigten Abbildungen zeigen zwei verschiedene und unabhängige Partitionen. Im Falle X werden alle transkationale Nachrichten committed. In beiden Fällen stellt man fest, dass auch noch immer nicht-transaktionale Nachrichten versendet werden können. Im Falle von Y gibt es einen Rollback. Dies wird durch den abort-Marker signalisiert.
 Der Vollständigkeit halber ist zu erwähnen, dass es sich hierbei um eine Einstellung des Consumers handelt. Besitzt ein Consumer die Einstellung „read_uncommitted“ so liest dieser auch die Nachrichten 8tm und 9tm in Partition Y. Mit der Einstellung „read_committed“ hingegen werden 8tm und 9tm ignoriert.
 Weiterhin werden auch die commit-Marker sowie die abort-Marker in jedem Fall beim Auslesen ignoriert.
 
