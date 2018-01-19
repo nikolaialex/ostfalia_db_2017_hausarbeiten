@@ -15,7 +15,7 @@ Zu diesem Zweck werden sog. Topics genutzt. Ein Publisher produziert Daten zu ei
 Ein weiterer Aspekt ist, dass Kafka sog. Partitionierung nutzt. Dadurch ist ein Broker immer für ein Topic zuständig.
 
 Die folgende Abb. zeigt den o.g. Sachverhalt.  
-![Kafka Überblick](/images/kafka_ueberblick.png)
+![Kafka Überblick](./images/kafka_ueberblick.png)
 
 Bei der Verarbeitung von Daten ist noch zu erwähnen, dass Kafka einen sog. Commit Log erstellt. Dieser hilft bei verschiedenen Fällen. Einmal dient er dazu einem Consumer, bspw. nach einem Ausfall,  die verpassten Daten zu übergeben. Zum anderen kann es aber auch dazu dienen nur die aktuellen Daten vorzuhalten. Dazu wird anhand eines Keys überprüft, ob hierzu ältere Daten vorliegen. Ist dies der Fall werden diese gelöscht.
 
