@@ -1,6 +1,6 @@
 # Einführung in Messaging Systeme (Berle, 2017)
 
-Die Herausforderung der eingangs beschrieben Entwicklung, ist eine reibungslose Kommunikation der unterschiedlichen Services und Systeme. Im Folgenden wird nun näher auf den Austausch von Informationen und deren Probleme eingegangen, die beim Senden bzw. beim Empfangen von Nachrichten auftreten.
+Die Herausforderung der Eingangs beschrieben Entwicklung, ist eine reibungslose Kommunikation der unterschiedlichen Services und Systeme. Im Folgenden wird nun näher auf den Austausch von Informationen und deren Probleme eingegangen, die beim Senden bzw. beim Empfangen von Nachrichten auftreten.
 
 1. System A möchte System B eine Nachricht senden.
 System B ist aber nicht erreichbar aufgrund von Netzwerk-
