@@ -16,4 +16,6 @@ Schließlich gibt es noch die Unterscheidung zwischen **uni-** und **bidirektion
 
 **ACID/CAP, Quellen, Zitate**
 
-[Inhaltsverzeichnis](02_toc.md)|[Synchrone Replikation]((04_synchronous_replication.md))
+**Als Replikation (im Zusammenhang mit Datenbanken) wird der Prozess zur mehrfachen Datenspeicherung und Datenpflege in (verteilten) Datenbank- bzw. Informationssystemen bezeichnet. Allerdings entsteht auch ein nicht unerheblicher Mehraufwand beim Design, der Implementierung und der Wartung des Datenbanksystems.**
+
+[Inhaltsverzeichnis](02_toc.md) | [Synchrone Replikation]((04_synchronous_replication.md))

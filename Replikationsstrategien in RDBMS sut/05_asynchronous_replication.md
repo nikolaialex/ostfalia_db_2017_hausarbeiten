@@ -5,7 +5,7 @@ geringere Konsistenzanforderungen
 - Zugriff auf ältere Objektversionen
 - evtl. keine strikte Serialisierung von Änderungen, sondern parallele Änderungen mit nachträglicher Konflikt-Behebung
 
-Die asynchrone Replikation ist das einfachste Verfahren und kann meist ohne großen Mehraufwand realisiert werden. Die Daten werden hier in eine primäre Datenbank geschrieben und zu einem späteren Zeitpunkt in das Replikat übertragen. Der Latenzzeitraum kann hierbei klein sein (z.B. fünf Minuten), je nach Bedarf kann aber auch ein großer Zeitraum gewählt werden (z.B. täglich). Bei dem Einsatz eines Replikationsservers ist die Latenz idealerweise der Zeitintervall, die das Datenbanksystem braucht um Transaktionslogs zu schreiben (SAP, 2015).
+Bei der **asynchronen Replikation** werden die Daten in eine primäre Datenbank geschrieben und zu einem späteren Zeitpunkt in das Replikat übertragen. Der Latenzzeitraum kann hierbei klein sein (z.B. fünf Minuten), je nach Bedarf kann aber auch ein großer Zeitraum gewählt werden (z.B. täglich). Bei dem Einsatz eines Replikationsservers ist die Latenz idealerweise der Zeitintervall, die das Datenbanksystem braucht um Transaktionslogs zu schreiben (SAP, 2015).
 
 Asynchrone Replikation kann sowohl uni- als auch bidirektional betrieben werden. Die Probleme der bidirektionalen Replikation und verschiedene Lösungsstrategien werden im Kapitel [Bidirektionale Replikation](06_peer_to_peer.md) aufgegriffen.
 
@@ -15,13 +15,13 @@ Asynchrone Replikation kann sowohl uni- als auch bidirektional betrieben werden.
 
 ###Cold Standby
 
-Asynchrone Replikation wird häufig zur Datensicherung (Backup, Replikat 2 in der Abbildung) genutzt. Hierbei kann zu bestimmten Zeitpunkten ein dump (Snapshot) der Datenbank erstellt und in ein Replikat eingespielt werden (Rouse, M. 2015). Diese Strategie nennt sich **snapshot replication** oder **Cold Standby**. Die Übertragung des Snapshots kann z.B. durch FTP oder SSH realisiert werden. Eine Variante dieser Replikationsstrategie ist, dass die Snapshots nur die Änderungen seit dem letzten Update enthalten.
+**Cold Standby** ist das einfachste Verfahren und kann meist ohne großen Mehraufwand realisiert werden. Es wird häufig zur Datensicherung (Backup, Replikat 2 in der Abbildung) genutzt. Hierbei kann zu bestimmten Zeitpunkten ein dump (Snapshot) der Datenbank erstellt und in ein Replikat eingespielt werden (Rouse, M. 2015). Diese Strategie nennt sich **snapshot replication** oder **Cold Standby**. Die Übertragung des Snapshots kann z.B. durch FTP oder SSH realisiert werden. Eine Variante dieser Replikationsstrategie ist, dass die Snapshots nur die Änderungen seit dem letzten Update enthalten.
 
 ![Asynchrone Replikation](images\Asynchrone Replikation.png)
 
 *Abbildung 1: Asynchrone Replikation Cold Standby*
 
-Wie in Abbildung 1 zu sehen, kann ein Nutzer auf dem Client 1 lesend und schreibend auf die primäre Datenbank zugreifen. Sind in der Masterdatenbank Daten geändert worden, werden diese an die Replikate übertragen, um einen gleichen Datenbestand zu gewährleisten. Falls Nutzer auf ein Replikat zugreifen können (in der Abbildung bei Replikat 1), sollten diese nur lesende Rechte zugewiesen bekommen, da von den Replikaten keine Synchronisation zum Master erfolgt und auch - je nach Latenzzeitraum - nicht die aktuellen Daten gesehen und bearbeitet werden können (Lie, J.S. 2011).
+Wie in Abbildung 1 zu sehen, kann ein Nutzer auf dem Client 1 lesend und schreibend auf die primäre Datenbank zugreifen. Sind in der Masterdatenbank Daten geändert worden, werden diese an die Replikate übertragen, um einen gleichen Datenbestand zu gewährleisten. Falls Nutzer auf ein Replikat zugreifen können (in der Abbildung bei Replikat 1), sollten diese nur lesende Rechte zugewiesen bekommen, da von den Replikaten keine Synchronisation zum Master erfolgt und auch - je nach Latenzzeitraum - nicht die aktuellen Daten gesehen und bearbeitet werden können.
 
 Diese Strategie eignet sich zur Anwendung, wenn nicht an allen Standorten schreibend auf die Datenbank zugegriffen werden muss, oder nur ein Backup erstellt werden soll. Für die initiale Einrichtung eines Replikats bietet sich diese Strategie ebenfalls an (Techopedia, Snapshot).
 
@@ -57,4 +57,4 @@ Wie auf der Abbildung zu sehen ist, kann ein Client an einem beliebigen Knoten l
 
 https://de.wikipedia.org/wiki/Merge-Replikation
 
-[Synchrone Replikation](04_synchronous_replication.md)|[Bidirektionale Replikation]((06_peer_to_peer.md))
+[Synchrone Replikation](04_synchronous_replication.md) | [Bidirektionale Replikation]((06_peer_to_peer.md))

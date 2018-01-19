@@ -9,4 +9,4 @@
 + [Literaturverzeichnis](09_references.md) 
 
 
-[Titelblatt](01_title.md)|[Einleitung](03_introduction.md)
+[Titelblatt](01_title.md) | [Einleitung](03_introduction.md)

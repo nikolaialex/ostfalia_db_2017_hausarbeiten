@@ -2,6 +2,8 @@
 
 ITWissen: Replikation. URL:http://www.itwissen.info/Replikation-replication.html
 
+Oracle (2007): Oracle Database Advanced Replication 10g Release 2 (10.2). URL: https://docs.oracle.com/cd/B19306_01/server.102/b14226/preface.htm#CIADDCEJ
+
 Rahm, E. (1994): Mehrrechner-Datenbanksysteme (Kapitel 9 Replizierte Datenbanken).  ISBN: 3-89319-702-8. URL: https://dbs.uni-leipzig.de/buecher/mrdbs/mrdbs-91.html
 
 Rouse, M. (2015): Asynchronous Replication. URL:http://searchdatabackup.techtarget.com/definition/asynchronous-replication
@@ -11,6 +13,8 @@ Rouse, M. (2016): Synchronous Replication. URL:http://searchdisasterrecovery.tec
 SAP (2015): EDB377 Fast Track to SAP Replication Server Administration  - Participant Handbook. (keine ISBN vorhanden
 
 Techopedia: What is Snapshot Replication? URL: https://www.techopedia.com/definition/24441/snapshot-replication
+
+
 
 **Zitate einbringen**
 
