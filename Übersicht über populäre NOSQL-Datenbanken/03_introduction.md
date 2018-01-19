@@ -4,7 +4,7 @@ Ein Umdenken bei der Verwendung von relationalen Datenbanken erfolgte durch den 
 
 "Auch Amazon sah sich zu diesem Zeitpunkt mit ähnlichen Herausforderungen
 konfrontiert. Viele unternehmenskritische Dienste und Daten des Onlineshops, wie
-Bestsellerlisten, Einkaufswagen, Benutzervorlieben, Verkaufszahlen und Produktkataloge, mussten innerhalb riesiger Cluster verteilt werden. Da auch nur kurzzeitig Ausfälle dieser Dienste massive finanzielle Schäden nach sich ziehen würden, stand vor allem die Hochverfügbarkeit dieser Dienste im Fokus des Interesses von Amazon."  (Hecht, S.5)
+Bestsellerlisten, Einkaufswagen, Benutzervorlieben, Verkaufszahlen und Produktkataloge, mussten innerhalb riesiger Cluster verteilt werden. Da auch nur kurzzeitige Ausfälle dieser Dienste massive finanzielle Schäden nach sich ziehen würden, stand vor allem die Hochverfügbarkeit dieser Dienste im Fokus des Interesses von Amazon."  (Hecht, S.5)
 
 Da sich "traditionelle Datenbankenlösungen" in der modernen Entwicklung von webbasierten Anwendungen zunehmend als "ineffizient erwiesen", entwickelten viele Internet-Giganten aus dieser Not neue, hochverfügbare und nichtrelationale Datenbank-Lösungen. (Hecht, S.5)
 
@@ -31,9 +31,7 @@ eine Sammlung sehr heterogener Lösungen" (Herden et al., S.337). Laut Herden et
 
 Bei Key-Value Datenbanken "wird unter einem eindeutigen Schlüssel ein einzelner Wert gespeichert, wobei prinzipiell die Struktur des Wertes von der Datenbank nicht interpretiert wird. Einige Lösungen weichen hiervon ab und bieten z.B. das Speichern von Listen und Mengen (Redis) oder die Gruppierung von Schlüssel-Wert-Paaren zu Domänen (Amazon Simple DB). Großer Pluspunkt der Schlüssel-Wert-basierten Systeme ist die einfache Verteilung großer Datenmengen auf mehrere Rechner. Demgegenüber wird die Strukturierung von Daten jedoch vernachlässigt." (Herden et al., S.337-338)
 
-"Wide Column Stores basieren auf Tabellen und bieten die Möglichkeit in einer
-Zeile mehrere Attribute zu speichern. Attributname und –wert bilden ein
-Schlüssel-Wert-Paar, das als Spalte bezeichnet wird. Wesentlicher Unterschied
+Spaltenorientierte Datenbanksysteme (Wide Column Stores) "basieren auf Tabellen und bieten die Möglichkeit in einer Zeile mehrere Attribute zu speichern. Attributname und –wert bilden ein Schlüssel-Wert-Paar, das als Spalte bezeichnet wird. Wesentlicher Unterschied
 zu relationalen Tabellen ist die Nicht-Existenz eines Schemas, d.h. zu einer
 Zeile können beliebige Daten hinzugefügt bzw. weggelassen werden. Daraus
 ergibt sich auch das primäre Anwendungsgebiet von dünn besetzten Daten." (Herden et al., S.337-338)
@@ -48,13 +46,9 @@ ersten vorgestellten Ansätzen geringer." (Herden et al., S.337-338)
 Graphdatenbanken sind auf das Speichern und effiziente Traversieren von
 Graphen ausgelegt (Herden et al., S.337-338). Dieser Datenbanktyp organisiert "Objekte in Knoten und Beziehungen zwischen Objekten in Kanten" (Meier und Kaufmann, Abstract).
 
-In der nachfolgenden Grafik sind Vertreter der vier NoSQL-Datenbank Kategorien abgebildet:
+In der nachfolgenden Grafik sind einige Vertreter der vier NoSQL-Datenbank Kategorien abgebildet. Aufgrund der geringen Anzahl von Personen bei dieser Gruppenarbeit konnten nur drei NoSQL-Kategorien detaillierter vorgestellt werden: Dokumentenorientierte Datenbanken, Spaltenorientierte Datenbanken und Graphdatenbanken.
 
 ![Image of nosql-database-family](images/nosql-database-family.jpg)
-*Abbildung 1: Übersicht der vier NoSQL-Datenbank Kategorien[^footnote]*
 
-[^footnote]: https://aryannava.files.wordpress.com/2014/04/nosql-database-family.jpg
-
-
-
-
+*Abbildung 1: Übersicht der vier NoSQL-Datenbank Kategorien* 
+[(Quelle: aryannava.com)](https://aryannava.files.wordpress.com/2014/04/nosql-database-family.jpg)
