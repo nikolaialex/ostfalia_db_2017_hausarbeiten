@@ -6,8 +6,5 @@
 + [Datenstruktur](03_4_datenstruktur.md)
 + [Anforderungen an Datenbanken](03_5_merkmale.md)
 + [Vergleich Datenbanken](03_6_vergleich.md)
-+ [Marktübersicht Datenbanken](03_7_marktuebersicht.md)
 + [Fazit](04_fazit.md)
 + [Literaturverzeichnis](04_references.md)
-
-\pagebreak

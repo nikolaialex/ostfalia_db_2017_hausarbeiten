@@ -1,4 +1,4 @@
-# Wichtige Datenbank Anforderungen
+# Wichtige Datenbank Anforderungen [^fn7]
 
 Im folgenden werden wichtige Anforderungen an die Datenbanken einer IoT-Architektur formuliert. Allen Klassen gemein ist, dass die zu speichernden Daten, wie im vorherigen Kapitel aufgezeigt, in Form von zeitbasierten heterogenen Nutzdaten vorliegen. Daraus ergibt sich die wichtigste Anforderung an ein Datenbanksystem (DBMS) für die IoT-Architektur: die Fähigkeit mit heterogenen Daten umzugehen.
 
@@ -48,12 +48,8 @@ Aktuelle Abfragesprachen wie SQL setzen strukturierte Daten voraus. Halb-struktu
 Somit muss die Abfragesprache des eingesetzten DBMS Anwender-Anfragen schnell und effektiv lösen können.
 Bezogen auf die Klassen ist diese Anforderung für alle gültig, da die Daten schnell und zuverlässig erfasst und an die weiteren Klassen übergeben werden müssen.
 
-## Systemreife
+## Systemreife [^fn8]
 Mit dem Begriff der Systemreife ist gemeint, dass ein DBMS soweit entwickelt ist, dass die gängigen Operationen und Schutzmechanismen wie Authentifikation, Datenvertraulichkeit und Intrigrität abgedeckt sind. SQL ist eine ausgereifte Technologie, welche die angesprochenen Funktionen bereist implementiert. Bim Bereich der NoSQL Datenbanken sind diese bisher noch nicht vollständig umgesetzt. Sollte ein IoT-Gerät vertrauliche Daten erfassen, so sind die genannten Funktionen unabdingbar und mit sicheren Übertragungswegen zu paaren, so dass ein bestmöglicher Schutz der Daten gewährleistet ist. Gleiches gilt verstärkt für die Gateways und die Cloud, da hier durch Sicherheitsprobleme viele Geräte im Zugriff wären.
-
-
-[paper gurav-2017]
-[paper 07887957]
 
 
 Die genannten Anforderungen gelten hauptsächlich für die Datenbank der Cloud und der Gateways für Edge-Systeme. Für die Datenbanken der IoT-Geräte gelten abgeschwächte Anforderungen. Bedingungen, wie das Handling von heterogenen Daten, sind bei einem IoT-Gerät sehr begrenzt, da die Anzahl der angeschlossenen Geräte meist bekannt ist. Ebenfalls gehört das Vorhalten historischer Daten und entsprechende Auswertemöglichkeiten nicht mit zu den Aufgaben eines entsprechenden IoT-Geräts. Innerhalb eine IoT-Geräts können, bedingt durch die begrenzten Ressourcen, nur performante kleine Datenbanken eingesetzt werden. Hierbei werden weniger heterogene Daten verarbeitet, deren Struktur zuvor bekannt ist. Des Weiteren müssen die anfallenden Daten nur so lange vorgehalten werden, bis diese über ein Gateway persistiert wurden.
