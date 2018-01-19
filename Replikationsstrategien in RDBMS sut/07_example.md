@@ -4,7 +4,7 @@ In diesem Kapitel wird eine Replikationsstrategie betrachtet, die für ein Syste
 
 Das Datenbanksystem besteht aus vielen verteilten Knoten, an allen soll geschrieben werden. Die Distanz zwischen den Knoten ist teilweise sehr groß, sie befinden si ch auf verschiedenen Kontinenten. Synchrone Replikation ist hiermit schwierig zu erreichen, trotzdem soll eine möglichst hohe Aktualität an allen verfügbaren Knoten gegeben sein. Abbildung 5 zeigt vereinfacht den gewünschten Aufbau des Systems.
 
-*![Systemaufbau](images\Systemaufbau.png)*
+*![Systemaufbau](images/Systemaufbau.png)*
 
 *Abbildung 5: Systemaufbau*
 
@@ -22,4 +22,4 @@ Damit es keine Synchronisationskonflikte gibt, werden die Schreibsperren inhaltl
 
 Zusätzlich werden noch Backupsysteme betrieben, die über Datenbankdumps täglich aktualisiert werden. Dadurch ist das System insgesamt sehr ausfallsicher, der Ausfall eines Knotens beeinflusst auch nicht die Möglichkeit, weiter an den anderen Replikation zu arbeiten. Fällt der Transferknoten (Datenbank 3) zwischen den beiden Netzen aus, kann es allerdings zu größeren Abweichungen in den Datenbeständen kommen.
 
-[Bidirektionale Replikation](06_peer_to_peer.md) | [Fazit]((08_conclusion.md)) 
+[Bidirektionale Replikation](06_peer_to_peer.md) | [Fazit](08_conclusion.md) 
