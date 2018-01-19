@@ -16,7 +16,7 @@ Die Replikationsserver arbeiten mit dem **Warm Standby** Verfahren, bei dem Tran
 
 Für die Datenbankserver außerhalb des Netzes wird die Methode **Cold Standby** genutzt. Hierzu werden die Tabellen aus den Datenbanken als .bcp-Datei exportiert, per Speichermedium in das andere Netz übertragen und dort eingespielt. Beide Verfahren werden bidirektional betrieben. Die folgende Abbildung zeigt den Systemaufbau mit Replikation.
 
-*![System mit Replikation](images\System mit Replikation.png)*
+*![System mit Replikation](images/System mit Replikation.png)*
 
 *Abbildung 6: Systemaufbau mit Replikation*
 
