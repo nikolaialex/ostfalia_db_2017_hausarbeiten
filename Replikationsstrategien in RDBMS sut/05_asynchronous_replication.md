@@ -38,9 +38,9 @@ Diese Strategie eignet sich für den Einsatz, wenn auf alle Knoten schreibend zu
 
 Bei diesem Verfahren gibt es für jedes Objekt eine **Primärkopie**. **Primärkopien **unterschiedlicher Objekte müssen nicht auf demselben Datenbankserver liegen, sie werden dort abgelegt, wo sie am häufigsten bearbeitet und gelesen werden sollen.
 
-![Asynchrone Replikation](images/Primary Copy.png)
+![Asynchrone Replikation](images/Primary_Copy.png)
 
-*Abbildung 4: Primary_Copy*
+*Abbildung 4: Primary Copy*
 
 Wie auf Abbildung 4 zu sehen ist, kann ein Client an einem beliebigen Knoten lesend und schreibend auf die Datenbanken zugreifen. Bearbeitet ein Nutzer einen Datensatz, wird die Bearbeitung am aktuellen Knoten gespeichert. Liegt hier die **Primärkopie**, wird der Satz geändert und die Änderung an alle weiteren Replikate geendet. Wurde eine **Sekundärkopie** bearbeitet, wird die Änderung zunächst an den Server mit der **Primärkopie** gesendet.
 
