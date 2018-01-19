@@ -16,7 +16,8 @@ Die Replikationsserver arbeiten mit dem **Warm Standby** Verfahren, bei dem Tran
 
 Für die Datenbankserver außerhalb des Netzes wird die Methode **Cold Standby** genutzt. Hierzu werden die Tabellen aus den Datenbanken als .bcp-Datei exportiert, per Speichermedium in das andere Netz übertragen und dort eingespielt. Beide Verfahren werden bidirektional betrieben. Die folgende Abbildung zeigt den Systemaufbau mit Replikation.
 
-![System mit Replikation](images\System mit Replikation.png)*Abbildung 6: Systemaufbau mit Replikation*
+*![System mit Replikation](images\System mit Replikation.png)*
+*Abbildung 6: Systemaufbau mit Replikation*
 
 Damit es keine Synchronisationskonflikte gibt, werden die Schreibsperren inhaltlich in der Datenbank verwaltet. Jeder Datenbankserver erhält eine eigene, eindeutige *Site-ID*, aus dieser die primären Schlüssel der erstellten Daten generiert werden. Dadurch lässt sich sicherstellen, dass kein Primärschlüssel doppelt vergeben wird. Um zu verhindern, dass Daten bearbeitet werden, die eventuell nicht auf aktuellem Stand sind, wird ein sogenannter *Responsible Producer* eingeführt und in den erstellten Datensätzen vermerkt. Nur der *Responsible Producer* kann einen Datensatz direkt ändern, andere können Änderungsvorschläge erstellen, die dem *Reponsible Producer* des originalen Datensatzes nach Synchronisation der Daten vorgelegt werden. Responsible Producer können somit Personen oder Personengruppen sein, die an demselben Standort auf die Datenbank zugreifen.
 
