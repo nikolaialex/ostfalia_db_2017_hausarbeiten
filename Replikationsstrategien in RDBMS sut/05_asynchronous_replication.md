@@ -10,11 +10,11 @@ Es gibt verschiedene Alternativen zum Weiterleiten der Änderungstransaktionen. 
 
 Man kann ebenfalls zwischen einfachen Replikation, die eine direkte Kopie darstellt, und abgeleiteter Replikation, die die Ergebnisse von SQL-Operationen betrachtet, unterscheiden.
 
-###Cold Standby
+### Cold Standby
 
 **Cold Standby** ist das einfachste Verfahren und kann meist ohne großen Mehraufwand realisiert werden. Es wird häufig zur Datensicherung (Backup, Replikat 1 in der Abbildung) genutzt. Hierbei kann zu bestimmten Zeitpunkten ein dump (Snapshot) der Datenbank erstellt und in ein Replikat eingespielt werden. Diese Strategie nennt sich **Snapshot Replication** oder **Cold Standby**. Die Übertragung des Snapshots kann z.B. durch FTP oder SSH realisiert werden. Eine Variante dieser Replikationsstrategie ist, dass die Snapshots nur die Änderungen seit dem letzten Update enthalten (Rouse, M. 2015).
 
-![Asynchrone Replikation](images/Cold Standby.png)
+![Asynchrone Replikation](images/Cold_Standby.png)
 
 *Abbildung 2: Cold Standby*
 
@@ -22,11 +22,11 @@ Wie in Abbildung 2 zu sehen, kann ein Nutzer auf dem Client 1 lesend und schreib
 
 Diese Strategie eignet sich zur Anwendung, wenn nicht an allen Standorten schreibend auf die Datenbank zugegriffen werden muss, oder nur ein Backup erstellt werden soll. Für die initiale Einrichtung eines Replikats bietet sich diese Strategie ebenfalls an (Techopedia, Snapshot).
 
-###Warm Standby
+### Warm Standby
 
 Eine weitere asynchrone Strategie ist der Einsatz eines Replikationsservers. Dieser liest die von der Datenbank erstellten Transaktionslogs aus und gibt die Transaktionen weiter an die Replikate, was zu einer relativ kleinen Latenz bei minimalen Auswirkungen auf die Performanz des primären Systems führt (SAP, 2015). SAP Sybase nennt diese Art der Replikation **Warm Standby**, da es eine Kompromisslösung zwischen **Cold Standby** und **Hot Standby** ([Synchrone Replikation](05_synchronous_replication.md)) darstellt. Da beim Einsatz dieser Stategie die Transaktionen repliziert werden, wird sie auch **transactional replication** genannt. Gegenüber anderen Verfahren gibt es hierbei den Vorteil, dass außer den SQL-Grundbefehlen *update*, *insert*, *delete* und *alter table* auch Funktionen repliziert werden können (*stored procedures*, SAP, 2015).
 
-![Warm Standby](images/Warm Standby.png)
+![Warm Standby](images/Warm_Standby.png)
 
 *Abbildung 3: Warm Standby*
 
@@ -40,7 +40,7 @@ Bei diesem Verfahren gibt es für jedes Objekt eine **Primärkopie**. **Primärk
 
 ![Asynchrone Replikation](images/Primary Copy.png)
 
-*Abbildung 4: Primary Copy*
+*Abbildung 4: Primary_Copy*
 
 Wie auf Abbildung 4 zu sehen ist, kann ein Client an einem beliebigen Knoten lesend und schreibend auf die Datenbanken zugreifen. Bearbeitet ein Nutzer einen Datensatz, wird die Bearbeitung am aktuellen Knoten gespeichert. Liegt hier die **Primärkopie**, wird der Satz geändert und die Änderung an alle weiteren Replikate geendet. Wurde eine **Sekundärkopie** bearbeitet, wird die Änderung zunächst an den Server mit der **Primärkopie** gesendet.
 
