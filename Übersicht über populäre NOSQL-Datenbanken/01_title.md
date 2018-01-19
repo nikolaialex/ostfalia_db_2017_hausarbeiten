@@ -5,6 +5,6 @@ Diese Arbeit versucht dem Leser einen Überblick über aktuelle und populäre No
 
 | Name          | Matrikelnummer | Hochschule | E-Mail                             |
 |:--------------|:---------------|:-----------|:-----------------------------------|
-|Maik Puschmann | ...            | ...        | ...                                |
+|Maik Puschmann | 271363            | FH Lübeck        | maik.puschmann@stud.fh-luebeck.de                                |
 |Marcel Birkhahn| 217563         | FH Lübeck  | marcel.birkhahn@stud.fh-luebeck.de |
 |Yvonne Pawlik  | 175511         | FH Lübeck  | yvonne.pawlik@stud.fh-luebeck.de   |
