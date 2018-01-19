@@ -10,30 +10,30 @@ An diesem Punkt kommt Apache Kafka ins Spiel. Apache Kafka ist ein Open Source S
 * fehler-tolerante Speicherung von Datenströmen
 * Verarbeitung von Einträgen in Datenströmen, sobald diese auftreten
 
-Da Kafka im wesentliche ein Message-Broker ist bzw. dies zu den Hauptaufgaben von Kafka gehört, gibt es zwei Seiten, die von Kafka bedient werden. Auf der einen Seite gibt es die Publisher und auf der anderen Seite die Consumer. Kafka erhält Daten von den Publishern, verarbeitet die Daten und publiziert die Daten an die entsprechenden Consumer.
-Zu diesem Zweck werden sog. Topics genutzt. Ein Publisher produziert Daten zu einem bestimmten Topic und das Kafka-System publiziert die Daten an alle Konsumer, die sich für dieses Topic angemeldet haben.
-Ein weiterer Aspekt ist, dass Kafka sog. Partitionierung nutzt. Dadurch ist ein Broker immer für ein Topic zuständig.
+Da Kafka im wesentlichen ein Message-Broker ist beziehungsweise dies zu den Hauptaufgaben von Kafka gehört, gibt es zwei Seiten, die von Kafka bedient werden. Auf der einen Seite gibt es die Producer und auf der anderen Seite die Consumer. Kafka erhält Daten von den Producern, verarbeitet die Daten und publiziert die Daten an die entsprechenden Consumer.
+Zu diesem Zweck werden sogenannte Topics genutzt. Ein Producer produziert Daten zu einem bestimmten Topic und das Kafka-System publiziert die Daten an alle Consumer, die sich für dieses Topic angemeldet haben.
+Ein weiterer Aspekt ist, dass Kafka sogenannte Partitionierung nutzt. Dadurch ist ein Broker immer für ein Topic zuständig.
 
-Die folgende Abb. zeigt den o.g. Sachverhalt.  
+Die folgende Abbildung zeigt den oben genannten Sachverhalt.
 ![Kafka Überblick](./images/kafka_ueberblick.png)
 
-Bei der Verarbeitung von Daten ist noch zu erwähnen, dass Kafka einen sog. Commit Log erstellt. Dieser hilft bei verschiedenen Fällen. Einmal dient er dazu einem Consumer, bspw. nach einem Ausfall,  die verpassten Daten zu übergeben. Zum anderen kann es aber auch dazu dienen nur die aktuellen Daten vorzuhalten. Dazu wird anhand eines Keys überprüft, ob hierzu ältere Daten vorliegen. Ist dies der Fall werden diese gelöscht.
+Bei der Verarbeitung von Daten ist noch zu erwähnen, dass Kafka ein sogenanntes Commit Log erstellt. Dieses hilft bei verschiedenen Fällen. Einmal dient es dazu einem Consumer, beispielsweise nach einem Ausfall, die verpassten Daten zu übergeben. Zum Anderen kann es aber auch dazu dienen nur die aktuellen Daten vorzuhalten. Dazu wird anhand eines Keys überprüft, ob hierzu ältere Daten vorliegen. Ist dies der Fall werden diese gelöscht.
 
 Typische Use-Cases für Kafka sind Messaging, Website Activity, Metrics, Log Aggregation, Stream Processing, Event Sourcing und Commit Logs.
 
-Im Bereich des Messaging entspricht Kafka einem typischem Message Broker wie bspw. ActiveMQ oder RabbitMQ. Kafka wird in diesem Zusammenhang bspw. zum Entkuppeln von Processing und Daten-Produktion oder auch zum Vorhalten von unverarbeiteten Daten genutzt.
+Im Bereich des Messaging entspricht Kafka einem typischem Message Broker wie beispielsweise ActiveMQ oder RabbitMQ. Kafka wird in diesem Zusammenhang beispielsweise zum Entkuppeln von Processing und Daten-Produktion oder auch zum Vorhalten von unverarbeiteten Daten genutzt.
 
-Website Activity Tracking war die ursprünglich einzige Aufgabe von Kafka. Daten in einem Publish-Subscribe-System sollten analysiert werden. Hier werden also Daten wie Page Views, Suchen u.ä. anylisert.
+Website Activity Tracking war die ursprünglich einzige Aufgabe von Kafka. Daten in einem Publish-Subscribe-System sollten analysiert werden. Hier werden also Daten wie Page Views, Suchen und ähnliches anylisert.
 
 Der Metrics-Bereich entspricht dem aggregieren von Statistiken.
 
-Log Aggregating wird genutzt um physikalische Logs von einem oder mehreren Servern in einem zentralen Ort zu verwalten und verarbeiten.
+Log Aggregation wird genutzt um physikalische Logs von einem oder mehreren Servern in einem zentralen Ort zu verwalten und verarbeiten.
 
-Stream-Processing bedeutet, dass eine Pipeline zwischen Producer, Kafka und Konsument aufgebaut wird. Kafka erhält hier aus verschiedenen Quellen Daten, entfernt bspw. Duplikate und übergibt die Daten an die entsprechenden Konsumenten.
+Stream-Processing bedeutet, dass eine Pipeline zwischen Producer, Kafka und Consumer aufgebaut wird. Kafka erhält hier aus verschiedenen Quellen Daten, entfernt beispielsweise Duplikate und übergibt die Daten an die entsprechenden Consumer.
 
-Beim Event Sourcing werden bspw. state changes in einer zeitlichen Sortierung abgelegt. So kann im Nachhinein nachvollzogen werden, wieso ein bestimmter state gesetzt wurde / entstanden ist.
+Beim Event Sourcing werden beispielsweise state changes in einer zeitlichen Sortierung abgelegt. So kann im Nachhinein nachvollzogen werden, wieso ein bestimmter state gesetzt wurde oder entstanden ist.
 
-Commit Log wurde bereits zuvor erwähnt. Hier werden Daten aus verschiedenen Quellen vorgehalten und an verschiedene Konsumenten verteilt sowie bei Bedarf ältere Einträge ersetzt oder auch gelöscht.
+Das Commit Log wurde bereits zuvor erwähnt. Hier werden Daten aus verschiedenen Quellen vorgehalten und an verschiedene Consumer verteilt, sowie bei Bedarf ältere Einträge ersetzt oder auch gelöscht.
 
-Neben LinkedIn, wo Kafka als für verschiedene Metriken genutzt wird, wird es auch von vielen weiteren namhaften Unternehmen wie bspw. Netflix. Paypal oder Goldman Sachs genutzt. Netflix nutzt Kafka bspw. zum Real-time monitoring und als event-processing pipeline. 
-Insgesamt zeigt sich, dass gerade Unternehmen mit großer Datenverarbeitung (s. bspw. Netflix) Kafka nutzen.
+Neben LinkedIn, wo Kafka für verschiedene Metriken genutzt wird, wird es auch von vielen weiteren namhaften Unternehmen wie beispielsweise Netflix, Paypal oder Goldman Sachs genutzt. Netflix nutzt Kafka beispielsweise zum Real-time monitoring und als event-processing pipeline.
+Insgesamt zeigt sich, dass gerade Unternehmen mit großer Datenverarbeitung (so beispielsweise Netflix) Kafka nutzen.

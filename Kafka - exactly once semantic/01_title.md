@@ -7,4 +7,4 @@ Die vorliegende Arbeit beschäftigt sich mit einem Überblick zu Apache Kafka. E
 | Name             | Matrikelnummer | Hochschule                          | E-Mail                     |
 |:-----------------|:---------------|:------------------------------------|:---------------------------|
 | Sebastian Große  | 856132         | Beuth Hochschule für Technik Berlin | s69728@beuth-hochschule.de |
-| Daniel Dannewitz |                | HS Emden-Leer                       | daniel.dannewitz@stud.hs-emden-leer.de| 
+| Daniel Dannewitz |                | HS Emden-Leer                       | daniel.dannewitz@stud.hs-emden-leer.de|
