@@ -15,3 +15,5 @@
 **[kreps-i-heart-logs]** Jay Kreps: "I ♥ Logs", O´Reilly, 2015, ISBN: 978-1-491-90938-6
 
 **[confluent-kafka-streams-intro]** https://www.confluent.io/blog/introducing-kafka-streams-stream-processing-made-simple/
+
+**[kafka-streams]** https://kafka.apache.org/documentation/streams/
