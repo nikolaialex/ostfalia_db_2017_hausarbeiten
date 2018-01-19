@@ -15,7 +15,9 @@ verarbeiten kann und überlastet ist.
 Um diese Herausforderungen zu lösen, werden Messaging-Systeme, Queues oder Topics dazwischen geschaltet.
 
 <img src="images/problem_Messaging2.png" alt="Messaging Problem 2" style="width:500px;height:100px; padding-left:6%">
+
 ### Messaging Systeme
+
 Eine Queue hält die gesendeten Nachrichten solange vor, bis der Empfänger die Nachricht verarbeiten kann. Danach kann die Nachricht aus der Warteschlange gelöscht werden.
 
 Die zweite Messaging Variante ist der Publish-Subscribe-Mechanismus, welcher die Nachrichten an alle Empfänger verteilt. Zum Beispiel, alle die ein RSS-Feed abonniert haben bekommen die Nachricht zugesendet.
