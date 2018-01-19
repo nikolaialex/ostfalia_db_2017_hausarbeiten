@@ -2,7 +2,7 @@
 
 *"Multimaster replication (also called peer-to-peer or n-way replication) enables multiple sites, acting as equal peers, to manage groups of replicated database objects. Each site in a multimaster replication environment is a master site, and each site communicates with the other master sites."* (Oracle, 2007 Seite 1-4)
 
-###Konflikte
+### Konflikte
 
 Grundsätzlich können alle Replikationsverfahren bidirektional betrieben werden. Im Gegensatz zur unidirektionalen Replikation können hier verschiedene bei zeitgleichen oder zeitnahen Transaktionen Synchronisationskonflikte auftreten, die im Folgenden aufgeführt werden(Oracle, 2007 Seite 1-4).
 
@@ -40,4 +40,4 @@ Treten Konflikte bei Zugriffen auf Relationen auf, kann der Ansatz der **Priorit
 
 Referenzkonflikte können durch erneutes Ausführen der fehlerhaften Transaktion, sobald der referenzierte Datensatz vorhanden ist, gelöst werden (Adler, Y. 2016).
 
-[Asynchrone Replikation](05_asynchronous_replication.md) | [Fallbeispiel]((07_example.md))
+[Asynchrone Replikation](05_asynchronous_replication.md) | [Fallbeispiel](07_example.md)
