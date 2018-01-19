@@ -14,7 +14,7 @@ Man kann ebenfalls zwischen einfachen Replikation, die eine direkte Kopie darste
 
 **Cold Standby** ist das einfachste Verfahren und kann meist ohne großen Mehraufwand realisiert werden. Es wird häufig zur Datensicherung (Backup, Replikat 1 in der Abbildung) genutzt. Hierbei kann zu bestimmten Zeitpunkten ein dump (Snapshot) der Datenbank erstellt und in ein Replikat eingespielt werden. Diese Strategie nennt sich **Snapshot Replication** oder **Cold Standby**. Die Übertragung des Snapshots kann z.B. durch FTP oder SSH realisiert werden. Eine Variante dieser Replikationsstrategie ist, dass die Snapshots nur die Änderungen seit dem letzten Update enthalten (Rouse, M. 2015).
 
-![Asynchrone Replikation](images\Cold Standby.png)
+![Asynchrone Replikation](images/Cold Standby.png)
 
 *Abbildung 2: Cold Standby*
 
@@ -26,7 +26,7 @@ Diese Strategie eignet sich zur Anwendung, wenn nicht an allen Standorten schrei
 
 Eine weitere asynchrone Strategie ist der Einsatz eines Replikationsservers. Dieser liest die von der Datenbank erstellten Transaktionslogs aus und gibt die Transaktionen weiter an die Replikate, was zu einer relativ kleinen Latenz bei minimalen Auswirkungen auf die Performanz des primären Systems führt (SAP, 2015). SAP Sybase nennt diese Art der Replikation **Warm Standby**, da es eine Kompromisslösung zwischen **Cold Standby** und **Hot Standby** ([Synchrone Replikation](05_synchronous_replication.md)) darstellt. Da beim Einsatz dieser Stategie die Transaktionen repliziert werden, wird sie auch **transactional replication** genannt. Gegenüber anderen Verfahren gibt es hierbei den Vorteil, dass außer den SQL-Grundbefehlen *update*, *insert*, *delete* und *alter table* auch Funktionen repliziert werden können (*stored procedures*, SAP, 2015).
 
-![Warm Standby](images\Warm Standby.png)
+![Warm Standby](images/Warm Standby.png)
 
 *Abbildung 3: Warm Standby*
 
@@ -38,7 +38,7 @@ Diese Strategie eignet sich für den Einsatz, wenn auf alle Knoten schreibend zu
 
 Bei diesem Verfahren gibt es für jedes Objekt eine **Primärkopie**. **Primärkopien **unterschiedlicher Objekte müssen nicht auf demselben Datenbankserver liegen, sie werden dort abgelegt, wo sie am häufigsten bearbeitet und gelesen werden sollen.
 
-![Asynchrone Replikation](images\Primary Copy.png)
+![Asynchrone Replikation](images/Primary Copy.png)
 
 *Abbildung 4: Primary Copy*
 
@@ -60,4 +60,4 @@ Durch Einsatz von **Merge Replikation** werden die Datenbestände der Replikate 
 
 Diese Strategie ist besonders für den Einsatz in mobilen Datenbank Applikationen geeignet, bei der es bei der Erstellung neuer und Bearbeitung alter Datensätze geringes Konfliktpotential gibt (Rahm, E. 2011).
 
-[Synchrone Replikation](04_synchronous_replication.md) | [Bidirektionale Replikation]((06_peer_to_peer.md))
+[Synchrone Replikation](04_synchronous_replication.md) | [Bidirektionale Replikation](06_peer_to_peer.md)
