@@ -16,4 +16,4 @@ Schließlich gibt es noch die Unterscheidung zwischen **uni-** und **bidirektion
 
 
 
-[Inhaltsverzeichnis](02_toc.md) | [Synchrone Replikation]((04_synchronous_replication.md))
+[Inhaltsverzeichnis](02_toc.md) | [Synchrone Replikation](04_synchronous_replication.md)
