@@ -27,7 +27,7 @@ Anwendung findet dieses Datenbankmodell auch bei Facebook. Dort ermöglicht es d
 
 Auf der Website von DB-Engines (DB, 2018) ist eine Rangliste in Bezug auf die Popularität von Datenbankmanagementsystemen der letzten drei Monate zu finden. Im Bereich der Wide Column Store handelt es sich bei Apache Cassandra, Apache HBase und Microsoft Azure Cosmos DB um die populärsten Datenbanken, wie es in Abbildung 3 zu sehen ist.
 
-![Ranking](images/Raking.png)
+![Ranking](images/Ranking.png)
 
 *Abbildung 3: Ranking Wide Column Stores [DB_2]*
 
@@ -75,4 +75,89 @@ Bei umfangreichen und verteilten Datenbanksystemen sind eine hohe Verfügbarkeit
 
 Wie der Abbildung zu entnehmen ist, kann ein verteiltes System immer nur 2 Eigenschaften aufweisen. Entweder verfügt das System über eine hohe Konsistenz mit Verfügbarkeit (CA), Konsistenz mit Fehlertoleranz (CP) oder über Verfügbarkeit mit Ausfalltoleranz (AP). Cassandra zählt hier zu den Systemen mit hoher Verfügbarkeit und Ausfalltoleranz (AP).
 
-Um diese Eigenschaften zu gewährleisten verwendet Cassandra replizierte Rechnerknoten um die Daten über mehrere Knoten hinweg zu replizieren. In diesem Modell sind alle Knoten gleichberechtigt, wodurch es keine Masterknoten gibt. Auf wie vielen Knoten die Daten dabei gespeichert werden, hängt von dem Replikationsfaktor ab. Des Weiteren kann bei Abfragen ein Konsistenzlevel angegeben werden. Dieser gibt die Anzahl der zu lesenden Replikas an damit eine Anfrage erfolgreich ist. Diese Methode wird auch als „Tunable Consistency“ bezeichnet (Codecentric). In Beschreibung der einzelnen Konsistenzlevel, differenziert nach Schreib- und Leseoperation, ist in Abbildung 7 aufgeführt.
+Um diese Eigenschaften zu gewährleisten verwendet Cassandra replizierte Rechnerknoten um die Daten über mehrere Knoten hinweg zu replizieren. In diesem Modell sind alle Knoten gleichberechtigt, wodurch es keine Masterknoten gibt. Auf wie vielen Knoten die Daten dabei gespeichert werden, hängt von dem Replikationsfaktor ab. Des Weiteren kann bei Abfragen ein Konsistenzlevel angegeben werden. Dieser gibt die Anzahl der zu lesenden Replikas an damit eine Anfrage erfolgreich ist. Diese Methode wird auch als „Tunable Consistency“ bezeichnet (Codecentric). Zwischen Folgenden Konsistenzlevel wird dabei unterschieden (Nidzwetzki,2013):
+
+*Konsistenz-Level von Cassandra beim Lesen von Daten*
+
+* **All:** Das Ausliefern der Zeilen erfolgt erst, wenn die Zeilen von allen Knoten vorliegen
+* **One:** Dem Client wird das erste verfügbare Ergebnis zurückgegeben.
+* **Quorum:** Haben (Replikationsfaktor R / 2 +1) Knoten geantwortet, werden die Zeilen mit dem letzten Zeitstempel zurückgegeben.
+
+*Konsistenz-Level von Cassandra beim Schreiben von Daten*
+
+* **All:** Erst wenn alle Replika Knoten die Änderung bestätigt haben, gilt die Schreiboperation für den Client als beendet.
+* **Any:** Die Schreiboperation muss auf mindestens einem Knoten durchgeführt worden sein.
+* **One:** Die Schreiboperation muss auf mindestens einem Knoten bestätigt worden sein.
+* **Quorum:** Es müssen (Replikationsfaktor R / 2 +1) Knoten die Schreiboperation bestätigen.
+* **Zero:** Die Schreiboperation wird asynchron bearbeitet.
+
+Mit Hilfe dieser Konsistenz-Level ist es dem Nutzer möglich die Konsistenz und Verfügbarkeit an die Bedürfnisse individuell anzupassen. Dabei muss jedoch stets bedacht werden, dass eine hohe Verfügbarkeit nur auf Kosten der Konsistenz erreicht werden kann und umgedreht.
+
+### 3.2.4 Vor- und Nachteile
+
+Cassandra ist eine Open Source Software und wird seit 2008 kontinuierlich weiterentwickelt. Der Zeit befindet sich die Version 3.11 auf dem Markt (Stand vom 10.10.2017). Aufgrund der stetigen Weiterentwicklung bietet Cassandra viele Vorteile. Cassandra weißt eine hohe Verfügbarkeit und Fehlertoleranz auf. Wodurch keine Single Point of Failures mehr auftreten. Auch ist das Schreiben und Lesen von Daten nicht mehr auf bestimmte Knoten beschränkt. Cassandra bietet des Weiteren eine konfigurierbare Replikationsstrategie, die eine Verteilung der Daten über mehrere Standorte erlaubt. Hinzu kommt die Verwendung von Superspalten die es ermöglicht Spalten als Listen von Key-Value Paaren zu nutzen. Negativ anzumerken ist die verstreute Dokumentation. Dies erschwert die Einarbeitung in das Thema erheblich.  Aufgrund der schnellen Entwicklung neuer Versionen kann es passieren, dass Dokumente im Netz oder spezielle Bücher veraltet sind und fehlerhafte Informationen weitertragen (Edlich et. al., 2010).
+
+## 3.3 HBase
+
+HBase stellt eine weitere Wide Colum Store Datenbank dar. Wie Cassandra auch, orientiert sich dieses Modell ebenfalls an dem BigTable Konstrukt von Google.
+
+### 3.3.1 Allgemein
+
+Bei HBase handelt es sich um ein Open Source Datenbankmanagementsystem und gehört zu der Plattform Hadoop. Die Entwicklung begann 2006 durch die Firma Powerset. Die Entwicklung begann aus der Motivation heraus HBase mit dem Hadoop Distributed File System (HDFS), einem Framework für die Verarbeitung großer Datenmengen in einem verteilten Speichersystem, zusammenarbeiten zu lassen. Das System ist in Java implementiert und verzichtet auf eine Mehrzahl der Features von relationalen Datenbanken, da das Primärziel darin besteht möglichst simpel auf preisgünstiger Standardhardware zu skalieren.
+Des Weiteren wird ein kommerzieller Support für HBase und Hadoop durch die Firma Cloudera angeboten Verwendung findet dieses Datenbanksystem in Unternehmen wie Facebook, Twitter, Yahoo und Adobe. (Edlich et. al., 2010).
+
+### 3.3.2 Datenmodell
+
+Eine Speicherung von Daten findet bei HBase in Tabelle statt. Im Vergleich zu relationalen Datenbanken werden die Spalten mit zugehörigen Wert als verkettete Liste abgebildet und werden nicht sequenziell geschrieben. Dies hat mir der unbekannten Spaltenanzahl am Beginn zu tun. Im Laufe der Zeit können sich immer wieder neue Spalteninhalte ergeben, aufgrund dessen Spalten hinzugefügt oder entfernt werden müssen.
+
+Auch in diesem Modell werden die Elemente einer Liste (Spalte) in Spaltenfamilien gruppiert. Die Sortierung der Elemente einer Zeile erfolgt dabei zuerst nach dem Namen der Spaltenfamilie und anschließend nach dem Namen der Spalte. In Abbildung 7 ist dieses Modell grafisch dargestellt.
+
+![Datenmodell_HBase](images/Datenmodell_HBase.png)
+
+*Abbildung 7: Datenmodell HBase in Anlehnung an (Freiknecht, 2014)*
+
+Dadurch das Tabellen im Speicher abgebildet werden, benötigen leere Spalten keinen zusätzlichen Speicher mehr. Abgesehen von den Spalten werden auch die einzelnen Zeilen in Form verketteter Listen abgelegt. Sortiert werden die Zeilen alphabetisch anhand ihres Zeilenschlüssels. Positiv ist die individuelle Belegung des Zeilenschlüssels. Die alphabetische Sortierung kann zu Problemen führen, da Zahlen nicht ordnungsgemäß sortiert werden. Werden beispielsweise die Schlüssel 2, 13, 47 und 259 genutzt so würde die Sortierung folgendermaßen aussehen: 13, 2, 259, 47. Es wird nicht der eigentliche Wert betrachtet, sondern jede Zahlenstelle für sich alleine (Freiknecht, 2014).
+
+### 3.3.3 Operationen
+
+HBase verfügt über eine Shell, mit dessen Hilfe der Nutzer einfache Kommandos ausführen kann. Mit Hilfe dieser Operatoren ist das Anlegen von Tabellen oder Einfügen von Datensätzen möglich. In Anlehnung an dem Beispiel aus Abbildung 7 werden einige Operationen vorgestellt.
+
+* **Erzeugen einer Tabelle mit zwei Spaltenfamilien:**
+(>) create 'Studierende', ' ID', ' Property'  
+Es wird eine Tabelle mit den Namen „Studierende“ angelegt. Diese besitzt die zwei Spaltenfamilien „ID“ und „Property“.
+
+* **Hinzufügen von Daten:**
+Als Parameter werden eine Tabelle, ein Zeilenschlüssel, eine Zelle (Spaltenfamilie) und ein Wert erwartet.
+(>) put 'Studierende', 'row 1', 'id:Name', 'Max Mustermann'
+(>) put 'Studierende', 'row 1', 'property:alter', '25'
+Mit Hilfe der „put“ Operation wurde ein Datensatz mit der ID row 1 erstellt. Dieser Datensatz besitzt dabei die Eigenschaften Name und Alter in jeweils einer der beiden Spaltenfamilien.
+
+* **Abfragen eines bestimmten Datensatzes:**
+(>) get 'Studierende', 'row 1'
+Mit diesem Befehl werden alle Spalten der Zeile mit dem Zeilenschlüssel 1, innerhalb der Tabelle „Studierende“ identifiziert.
+
+* **Scannen einer Tabelle auf gesamten Inhalt:**
+(>) scan 'Studierende'
+Mit diesem Befehl erhält der Nutzer für jede Zeile die Zelleninhalte angezeigt.
+
+* **Zeilenanzahl Ausgeben:**
+(>) count 'Studierende'
+Der Nutzer erhält Informationen darüber, wie viele Zeilen die durchsuchte Tabelle besitzt.
+
+* **Löschen von Zellen:**
+(>) delete 'Studierende', 'row 1', 'cf:name'
+(>) delete 'Studierende', 'row 1'
+Mit Variante 1 löscht der Nutzer lediglich die Zelle „Name“. In Version zwei hingegen löscht der Nutzer alle Zellen die sich in der Zeile befinden.
+
+### 3.3.4 Architektur
+
+Das HBase Datenbanksystem setzt auf Hadoop auf und nutzt das Hadoop Distributed File System zur Speicherung von HBase-Files. Die Architektur von HBase besteht aus mehreren Komponenten. Bei der Komponente Region (Slaves) handelt es sich um das Grundelement bei der Speicherung und Verteilung von HBase. Dabei verwaltet jede Region eine Teilmenge bzw. Partition einer HBase Tabelle. Die Regionen bestehen aus den Elementen Store (verwaltet die Partition einer Spaltenfamilie), MemStore (ist ein Cache im Speicher und speichert alle mit der Partition verbundenen Schreibvorgänge) und HFile (physische Datei, in welcher Daten gespeichert werden). Die nächste Komponente bildet der Region Server. Er ist für die Verwaltung der Regionen zuständig. Erreichen Tabellen ein bestimmtes Maximum an Größe, werden sie auf mehrere Regionen partitioniert mittels der „Split Region“ Methode. Ein Region Server kann dabei mehrere Regionen enthalten. Die nächste Komponente bildet der HBase Master. Dieser ist für die Koordination und Überwachung aller Region Server Instanzen im Cluster zuständig. Als letztes existiert noch die Komponente Zookeeper. Seine Funktion liegt dabei auf der Überwachung des Clusters. Ändern sich Zustände, wird direkt der HBase Master informiert (Linusnova, 2013).
+
+### 3.3.5 Vor- und Nachteile
+
+Das HBase Datenbanksystem arbeitet wie relationale Datenbanken mit einer starken Konsistenz. So besitzen die Nutzer zu jedem Zeitpunkt die gleiche Sicht auf die Daten.
+In Bezug auf das CAP-Theorem lässt sich HBase in den Bereich CP einordnen aufgrund der starken Konsistenz und Fehlertoleranz. Besonders geeignet ist das System für den Einsatz in Cluster Umgebungen. Dies hängt damit zusammen, dass für die Speicherung von Daten die Funktionen des verteilten Hadoop Systems (HDFS) genutzt werden. Als weiterer Vorteil lässt sich das integrierte Map/Reduce Framework aufzählen, wodurch die volle Leistung eines verteilten Systems genutzt werden kann. Negativ zu bewerten ist das Aufsetzen eines HBase Clusters mit den zugehörigen Komponenten (Hadoop und Zookeeper), da dieses Vorgehen sehr komplex und aufwendig ist (Edlich et. al., 2010).
+
+### 3.4 Fazit
+
+Vergleicht man die beide aufgeführte Datenbank miteinander so lassen sich gewisse Unterschiede feststellen. Cassandra kann als Stand-Alone Anwendung betrieben werden. HBase hingegen greift meistens auf Hadoop zurück. Einen weiteren Unterschied gibt es bei den Serverknoten. Bei Cassandra sind alle Knoten gleichberechtigt, während bei HBase sogenannte Master und Slaveknoten existieren. Auch unterscheiden sich die beiden Datenbanksysteme in Bezug auf ihrer Einteilung nach dem CAP-Theorem. HBase ist fest dem Bereich CP (Konsistenz und Fehlertoleranz) zugeordnet. Cassandra hingegen besitzt die Eigenschaft AP (Verfügbarkeit und Ausfalltoleranz). Es ist jedoch möglich das Konsistenzlevel bei Cassandra anzupassen wodurch es jedoch zu Einschränkungen bei anderen Eigenschaften kommt (vgl. CAP-Theorem). Als letzter Unterschied ist die Sortierung nach Zeilenschlüssel aufgefallen. Diese ist bei HBase automatisch und kann nicht geändert werden. Bei Cassandra hingegen ist dies individuell konfigurierbar für den Nutzer.
