@@ -49,6 +49,8 @@ An diesem Bsp. zeigt sich, dass hier eine schier unendliche Anzahl an Nachrichte
 
 Weiterhin gibt es Stimmen, die Behaupten, dass hier die Definition von „exactly once“ sehr weit gedehnt wird, wenn es darum geht ein System als „exactly once“ zu bebwerben. 
 Dies lässt sich mit eigenen Angaben des Erstellers Confluent auch belegen. Hier wird erwähnt, dass die „exactly once“-Semantik lediglich durch die Kommunikation zwischen Client und Server realisieren lässt. Nach eigenen Angaben werden bspw. bei einem Zurücksetzen eines Consumers auf einen voherigen Offset, auch alle Nachrichten ab diesem Offset nochmals gesendet.
-Daraus lässt sich schließen, dass das System keine echte „exactly once“-Semantik implementiert, die dafür sorgt, dass eine Nachricht tatsächlich nur ein einziges Mal gesendet werden. Sondern durch eine Kombination aus Client und Server bzw. Broker und Consumer sichergestellt wird, dass eine Nachricht nicht mehrere Male beim Consumer abgelegt wird.
+Daraus lässt sich schließen, dass das System keine echte „exactly once“-Semantik implementiert, die dafür sorgt, dass eine Nachricht tatsächlich nur ein einziges Mal gesendet werden. Sondern durch eine Kombination aus Client und Server bzw. Broker und Consumer sichergestellt wird, dass eine Nachricht nicht mehrere Male beim Consumer abgelegt wird.  
+
+---  
 
 <a name="image_src">1<a/>: Quelle [JaxEnter](https://jaxenter.de/kafka-0-11-60108)
