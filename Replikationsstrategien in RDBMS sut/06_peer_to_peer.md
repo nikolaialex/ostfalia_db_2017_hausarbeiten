@@ -28,68 +28,16 @@ Konflikte werden bei den meisten Replikationsverfahren in ein **Error Log** gesc
 
 Zur Lösung der oben genannten Konflikte gibt es verschiedene Ansätze (Oracle, 2007). 
 
+Zunächst können die Replikate mit **Timestamps** versehen werden, durch den die jeweils aktuellste Kopie erkannt werden kann. Mit der Strategie **Latest Timestamp** gewinnt bei Konflikten immer der jüngste Timestamp, während bei **Earliest Timestamp** immer das älteste Replikat gewählt wird.
 
+Wird ein **asymmetrisches Verfahren** eingesetzt, kann festgelegt werden, dass immer das Replikat gewinnt, das sich auf dem Master-Server befindet. Ebenso kann den Knoten eine Priorität zugeordnet werden, die bei der Strategie der **Site Priority** ausgewertet wird und bei der das am Höchsten priorisierte Replikat gewinnt.
 
-Timestamp basierte Verfahren:
+Scheitern alle genannten Verfahren, gibt es die Möglichkeit den Nutzer über den Konflikt zu informieren, damit er manuell gelöst werden kann (**Notice User**).
 
-- „Latest Timestamp“:
+Weiterhin gibt es Attribut- und Spaltenbasierte Konfliktlösungen. Bei den Strategien **Additive** und **Average** wird beispielsweise der Durchschnitt zweier konkurrierender Werte gebildet - die angewandte Formel richtet sich nach der gewählten Stragie. Ähnlich kann der **Maximum** oder **Minimum** Wert gebildet werden.
 
-  Tritt ein Konflikt zwischen zwei Replikaten bei einem Timestamp
-  basierten Replikationsverfahren auf, so wird das Replikat mit dem
-  „jüngeren“ Timestamp gewählt. Diese Strategie ist zwar
-  Problembehaftet, erfüllt aber trotzdem das Konvergenzkriterium.
+Treten Konflikte bei Zugriffen auf Relationen auf, kann der Ansatz der **Priority Group** genutzt werden, bei dem die Spalten der Relation mit Prioritäten versehen werden und anschließend die Spalte mit der höchsten Priorität Zugriff erhält.
 
-- „Earliest Timestamp“:
-
-  Stellt das Gegenteil der „Latest Timestamp“ Methode dar, wählt also
-  das „älteste“ Replikat.
-
-- Master/Slave -„Mastercopy wins“:
-
-  Bei Konflikten gewinnt immer das Replikat auf dem Master-Server,
-  dies kommt häufig beim „Disconnected Computing“ zum Einsatz
-
-- Site Priority“:
-
-  Bei Prioritätsbasierten Konfliktauflösungsverfahren werden nicht alle
-
-  Replikationsstandardorte als gleichberechtigt erachtet. Dies ist meist
-
-  der Fall, wenn ein Standard den Anspruch auf „präzisereërhebt.
-
-- „Notice User“:
-
-  Wird oft als letzte Möglichkeit angesehen, wenn andere Verfahren
-
-  scheitern wird der Nutzer aufgefordert den entstandenen Konflikt
-
-  manuell aufzulösen
-
-Attributbasierte/Spaltenbasierte Konfliktauflösung
-
-- „Additive and Average“: Bei zwei konkurrierenden Werten wird einfach
-
-  der Durchschnitt der beiden gebildet. Je nach dem, ob man „Additive“
-  oder „Average“ verwendet wird dabei auf eine andere Formel
-  zurückgegriffen.
-
-- „Minimum and Maximum“: Bei zwei konkurrierenden Werten wird
-
-  einfach das Minimum, bzw. Maximum der beiden gebildet.
-
-- „Priority Group“: Kommt bei konkurrierenden Zugriffen auf eine
-
-  Relation zum Einsatz. Dabei werden die Spalten der Relation mit
-  Prioritäten versehen, die Spalte mit der höchsten Priorität bekommt
-  als erstes den Zugriff
-
-Referenzkonflikte können durch erneutes Ausführen der fehlerhaften Transaktion, sobald der referenzierte Datensatz vorhanden ist, gelöst werden.
-
-[Voting-Verfahren](https://de.wikipedia.org/w/index.php?title=Voting-Verfahren&action=edit&redlink=1), zum Beispiel [Gewichtetes Votieren](https://de.wikipedia.org/wiki/Gewichtetes_Votieren)
-
-
-* ​
+Referenzkonflikte können durch erneutes Ausführen der fehlerhaften Transaktion, sobald der referenzierte Datensatz vorhanden ist, gelöst werden (Adler, Y. 2016).
 
 [Asynchrone Replikation](05_asynchronous_replication.md) | [Fallbeispiel]((07_example.md))
-
-http://www.inf.fu-berlin.de/lehre/SS10/DBS-TA/folien/09-10-TA-Repl-1-1.pdf
