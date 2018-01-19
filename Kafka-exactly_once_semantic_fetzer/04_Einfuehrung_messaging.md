@@ -6,7 +6,7 @@ Die Herausforderung der eingangs beschrieben Entwicklung, ist eine reibungslose 
 System B ist aber nicht erreichbar aufgrund von Netzwerk-
 Problemen. System A hat aber keine Möglichkeit um die Nachrichten solange vorzuhalten bis die Netzwerkprobleme behoben sind.
 
-<img src="images/problem_Messaging1.png" alt="Messaging Problem 1" style="width:50%;height:50%; padding-left:6%">
+<img src="images/problem_Messaging1.png" alt="Messaging Problem 1" style="width:150%;height:150%; padding-left:6%">
 
 
 2. System A sendet unmengen an Nachrichten an System B,
