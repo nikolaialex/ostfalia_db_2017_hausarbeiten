@@ -6,11 +6,11 @@ Durch **synchrone Replikation** kann eine **1-Kopien-Äquivalenz** erreicht werd
 
 Synchrone Replikation wird auch **Hot Standby** genannt und ist grundsätzlich ein **bidirektionales** (**symmetrisches**) Verfahren, und braucht daher Konfliktlösungsstrategien.
 
-![Synchrone Replikation](images/Synchrone Replikation.png)
+![Synchrone Replikation](images/Synchrone_Replikation.png)
 
 *Abbildung 1: Synchrone Replikation*
 
-###Read-One-Write-All (ROWA)
+### Read-One-Write-All (ROWA)
 
 Wenn ein Nutzer bei Einsatz dieser Strategie einen Datensatz bearbeitet oder einfügt, wird diese Änderung erst durchgeführt, wenn  alle Datenbanken ein Acknowledgement an die Sendende geschickt haben. Die Transaktion wird somit auf allen Datenbankservern gleichzeitig ausgeführt oder gar nicht. Dies sichert einen immer auf allen Systemen synchronen Datenbestand und dadurch kann bei Ausfall eines Knotens ein anderer direkt mit demselben Datenbestand eingesetzt werden.
 
