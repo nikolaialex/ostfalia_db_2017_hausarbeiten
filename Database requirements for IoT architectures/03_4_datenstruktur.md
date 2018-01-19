@@ -1,8 +1,8 @@
 # Datenstruktur
 
-Für die Auswahl des richtigen Datenbanksystems und den Anforderungen an dieses ist es wichtig die zu erwartenden Datenstruktur zu betrachtet.
+Für die Auswahl des richtigen Datenbanksystems und den Anforderungen an dieses, ist es wichtig die zu erwartenden Datenstruktur zu betrachtet.
 
-Ein Device stellt immer einen bzw. mehrere Werte, passend zu seiner Aufgabe zur Verfügung. Bei einem Temperatursensor mit eingebauten Hygrometer wären dies zum Einen die Temperatur und zum Anderen die relative Luftfeuchtigkeit. Zusammen mit dem Kontext ergeben sich somit für dieses Beispiel die folgenden Daten
+Ein Device stellt immer einen bzw. mehrere Werte, passend zu seiner Aufgabe zur Verfügung. Bei einem Temperatursensor mit eingebauten Hygrometer wären dies zum Einen die Temperatur und zum Anderen die relative Luftfeuchtigkeit. Zusammen mit dem Kontext ergeben sich somit für dieses Beispiel die folgenden Daten:
 
 * ID des Sensors(Kontext)
 * Messzeitpunkt (Kontext)
@@ -18,5 +18,4 @@ Werden verschiedenste Arten von Devices betrachtet, zeigt sich, dass die Messdat
 
 Aus Datenbanksicht handelt es sich somit um Zeitserien und schemalose Nutzdaten, die es zu speichern gilt.
 
-Die Häufigkeit mit der diese Datenstrukturen erzeugt werden, ist jeweils durch das einzelnen Device bzw. des Gateways festgelegt und
-kann somit nicht vorhergesagt werden.
+Die Häufigkeit mit der diese Datenstrukturen erzeugt werden, ist jeweils durch das einzelnen Device bzw. IoT-Gerät festgelegt und kann somit nicht vorhergesagt werden.

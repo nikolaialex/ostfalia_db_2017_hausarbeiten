@@ -10,4 +10,3 @@ memsql
 voltDb
 TimescaleDB
 [https://blog.timescale.com/choose-postgresql-for-iot-19688efc60ca]
-\pagebreak
