@@ -4,7 +4,7 @@ In diesem Kapitel wird eine Replikationsstrategie betrachtet, die für ein Syste
 
 Das Datenbanksystem besteht aus vielen verteilten Knoten, an allen soll geschrieben werden. Die Distanz zwischen den Knoten ist teilweise sehr groß, sie befinden si ch auf verschiedenen Kontinenten. Synchrone Replikation ist hiermit schwierig zu erreichen, trotzdem soll eine möglichst hohe Aktualität an allen verfügbaren Knoten gegeben sein. Abbildung 5 zeigt vereinfacht den gewünschten Aufbau des Systems.
 
-*![Systemaufbau](images/Systemaufbau.png)*
+![Systemaufbau](images/Systemaufbau.png)
 
 *Abbildung 5: Systemaufbau*
 
@@ -16,7 +16,7 @@ Die Replikationsserver arbeiten mit dem **Warm Standby** Verfahren, bei dem Tran
 
 Für die Datenbankserver außerhalb des Netzes wird die Methode **Cold Standby** genutzt. Hierzu werden die Tabellen aus den Datenbanken als .bcp-Datei exportiert, per Speichermedium in das andere Netz übertragen und dort eingespielt. Beide Verfahren werden bidirektional betrieben. Die folgende Abbildung zeigt den Systemaufbau mit Replikation.
 
-*![System mit Replikation](images/System mit Replikation.png)*
+![System mit Replikation](images/System_mit_Replikation.png)
 
 *Abbildung 6: Systemaufbau mit Replikation*
 
