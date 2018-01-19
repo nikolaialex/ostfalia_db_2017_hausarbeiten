@@ -38,7 +38,7 @@ Schreibvorgänge können atomar ausgeführt, selbst über verschiedene Partition
 
 ![Partition Y](./images/partition_y.png)
 
-Die zuvor gezeigten Abbildungen zeigen zwei verschiedene und unabhängige Partitionen. Im Falle X werden alle transkationale Nachrichten committed. In beiden Fällen stellt man fest, dass auch noch immer nicht-transaktionale Nachrichten versendet werden können. Im Falle von Y gibt es einen Rollback. Dies wird durch den abort-Marker signalisiert.
+Die zuvor gezeigten Abbildungen<sup>[1](#image_src)</sup> zeigen zwei verschiedene und unabhängige Partitionen. Im Falle X werden alle transkationale Nachrichten committed. In beiden Fällen stellt man fest, dass auch noch immer nicht-transaktionale Nachrichten versendet werden können. Im Falle von Y gibt es einen Rollback. Dies wird durch den abort-Marker signalisiert.
 Der Vollständigkeit halber ist zu erwähnen, dass es sich hierbei um eine Einstellung des Consumers handelt. Besitzt ein Consumer die Einstellung „read_uncommitted“ so liest dieser auch die Nachrichten 8tm und 9tm in Partition Y. Mit der Einstellung „read_committed“ hingegen werden 8tm und 9tm ignoriert.
 Weiterhin werden auch die commit-Marker sowie die abort-Marker in jedem Fall beim Auslesen ignoriert.
 
@@ -50,3 +50,5 @@ An diesem Bsp. zeigt sich, dass hier eine schier unendliche Anzahl an Nachrichte
 Weiterhin gibt es Stimmen, die Behaupten, dass hier die Definition von „exactly once“ sehr weit gedehnt wird, wenn es darum geht ein System als „exactly once“ zu bebwerben. 
 Dies lässt sich mit eigenen Angaben des Erstellers Confluent auch belegen. Hier wird erwähnt, dass die „exactly once“-Semantik lediglich durch die Kommunikation zwischen Client und Server realisieren lässt. Nach eigenen Angaben werden bspw. bei einem Zurücksetzen eines Consumers auf einen voherigen Offset, auch alle Nachrichten ab diesem Offset nochmals gesendet.
 Daraus lässt sich schließen, dass das System keine echte „exactly once“-Semantik implementiert, die dafür sorgt, dass eine Nachricht tatsächlich nur ein einziges Mal gesendet werden. Sondern durch eine Kombination aus Client und Server bzw. Broker und Consumer sichergestellt wird, dass eine Nachricht nicht mehrere Male beim Consumer abgelegt wird.
+
+<a name="image_src">1<a/>: Quelle [JaxEnter](https://jaxenter.de/kafka-0-11-60108)
