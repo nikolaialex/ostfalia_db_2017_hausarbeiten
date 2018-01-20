@@ -31,6 +31,10 @@ Ein Producer ist dafür verantwortlich Daten nach Kafka zu übertragen. Eine Anw
 
 Die den Producern in Kafka gegenüberliegende Seite sind die Consumer. Ein Consumer liest die Daten aus dem Kafka-Cluster. Auch ein Consumer wird über die von Kafka zur Verfügung gestellten Bibliotheken in der eigenen Anwendung implementiert. So kann beispielsweise ein Consumer in einer Anwendung implementiert werden um Daten aus Kafka in einem Web-Frontend zu visualisieren oder um die Daten in einer wie auch immer gearteten Datenbank zu persistieren. Consumer lesen entweder das komplette Topic von Anfang an ab ihrem Start aus, oder speichern sich das Offset des letzten Eintrags den sie erfolgreich ausgelesen haben, um so im Falle eines Ausfalls ab diesem Offset weiterlesen zu können. [NarkhedeShapiraPalino2017-07]
 
+Im folgenden Screenshot sieht man auf der linken Seite einen Console Producer für Kafka der Nachrichten verschickt, die vom Console Consumer auf der rechten Seite abgerufen werden.
+
+![screenshot des console producer und consumer](images/kafka_console_producer_consumer.png)
+
 ## Connector
 
 In Kafka existiert zusätzlich zur API für Consumer und Producer auch eine Connector API, die im Prinzip wiederverwendbare Producer und Consumer zur Verfügung stellt. So müssen beispielsweise keine eigenen Consumer oder Producer implementiert werden, die Daten in eine relationale Datenbank wie PostgreSQL schreiben oder auslesen. Connector-Implementationen werden dabei für Producer als "Source" und für Consumer als "Sink" bezeichnet. So existiert beispielsweise ein Connector für die Twitter API, bei der man sich nur um die Konfiguration und nicht die spezifischen Details der API kümmern muss. [kafka-connect-twitter]
