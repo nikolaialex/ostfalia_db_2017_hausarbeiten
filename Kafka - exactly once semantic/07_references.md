@@ -17,3 +17,13 @@
 **[confluent-kafka-streams-intro]** https://www.confluent.io/blog/introducing-kafka-streams-stream-processing-made-simple/
 
 **[kafka-streams]** https://kafka.apache.org/documentation/streams/
+
+**[seeking alpha]** https://seekingalpha.com/article/4040498-two-generals-problem
+
+**[hacker-news]** https://news.ycombinator.com/item?id=9266725
+
+**[jaxenter]** https://jaxenter.de/kafka-0-11-60108
+
+**[heise]** https://www.heise.de/developer/meldung/MapR-stellt-proprietaere-Alternative-zu-Apache-Kafka-vor-3036950.html
+
+**[techrepublic]** https://www.techrepublic.com/article/apache-kafka-is-booming-but-should-you-use-it/
