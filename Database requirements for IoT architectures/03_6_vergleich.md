@@ -1,4 +1,4 @@
-# Vergleich relationales zu schemafreies Datenbanksystem
+# Vergleich relationales zu schemafreies Datenbankmanagementsystem
 
 Im Folgenden werden die aus dem vorherigem Kapitel genannten Anforderungen für die relationale und schemafreie Datenbanken überprüft, um zu schauen ob es neue Datenbanksysteme für die IoT-Architektur braucht, oder ob bereits die heutigen System in der Lage sind, dies Aufgaben zu erfüllen.
 
@@ -23,7 +23,7 @@ Die Fähigkeit die Daten strukturiert in einer Tabelle abzulegen bietet auch die
 
 ### Schnell und zuverlässig
 Die Geschwindigkeit der Beantwortung von Abfragen hängt bei relationalen DBMS stark von deren Struktur und Komplexität ab. Während bei kleineren Datenbanken noch mit Indizies eine Beschleunigung erreicht werden kann, ist dies bei sehr großen Datenbanken schlecht realisierbar, wenn die Indizies nicht mehr komplett in den Hauptspeicher passen.
-[Artikel ...]
+[14]
 
 Ein Master/Slave Verbund kann zwar bei Leseoperationen einen Performancegewinn liefern, hat aber Schwächen bei den Geschwindigkeit von Schreiboperationen, welche bei mehreren tausenden IoT-Geräte zum Flaschenhals werden wird.
 
@@ -52,7 +52,7 @@ In schemafreien Datenbanken ist aufgrund der Anwendung des BASE-Prinzip die Tran
 Durch horizontale Skalierung einer schemafreien Datenbank können viele Knoten in einem Cluster erzeugt werden, die eine hohe Verfügbar der Daten gewährleisten. Ein Ausfall eines Knoten kann über die weiteren Knoten kompensiert werden. Durch die Replikation nach dem BASE-Prinzip kann allerdings ein Knoten für eine kurze Zeit mit nicht aktuellen Daten existieren, welches bei Echzeit-Anwendungen zu beachten ist.
 
 ### Räumlich-zeitliche Skalierbarkeit
-Eine räumliche und zeitliche Zuordnung von Messdaten kann in einer schemafreien Datenbank über unterschiedliche Methoden erfolgen. Die gängigste Methode ist das Tagging von Dokumenten. Hierbei werden die Messdaten dem Dokument, welches einem IoT-Gerät entspricht, angehangen und das Dokument mit Tags für den z.B. den Standort versehen. Über die Tags können bei Abfragen schnell die betroffenen Dokumente identifiziert werden und die Zeitserie mit den Messdaten ausgelesen werden.
+Eine räumliche und zeitliche Zuordnung von Messdaten kann in einer schemafreien Datenbank über unterschiedliche Methoden erfolgen. Die gängigste Methode ist das Tagging von Dokumenten. Hierbei werden die Messdaten dem Dokument, welches einem IoT-Gerät entspricht, angehängt und das Dokument mit Tags für den z.B. den Standort versehen. Über die Tags können bei Abfragen schnell die betroffenen Dokumente identifiziert werden und die Zeitserie mit den Messdaten ausgelesen werden.
 
 ### Schnell und zuverlässig
 In schemafreien Datenbanksystemen kann eine hohe Geschwindigkeit Lesegeschwindigkeit bei heterogenen Daten erreicht werden, da diese nicht erst vereinheitlicht werden müssen. Im Gegensatz zu relationalen Datenbanken müssen die Informationen nicht aus verschiedenen Tabellen über Relationen aufgelöst werden und stehen somit schneller zur Verfügung. Bei Schreibzugriffen verhält es sich ähnlich, da durch das BASE-Prinzip nicht alle Knoten eines Cluster zeitgleich geändert werden müssen und die Konsistenz asynchron erreicht werden kann.

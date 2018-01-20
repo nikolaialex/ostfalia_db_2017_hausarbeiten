@@ -1,6 +1,6 @@
 # Grundlagen
 ## ACID-Prinzip [1]
-Das ACID-Prinzip beschreibt erwünschte Eigenschaften von transaktionsbasierten Datenbanken sowie von verteilten Systemen. Die Bezeichnung ist eine Abkürzung und steht für folgenden Eigentschaften:
+Das ACID-Prinzip beschreibt erwünschte Eigenschaften von transaktionsbasierten Datenbanken sowie von verteilten Systemen. Die Bezeichnung ist eine Abkürzung und steht für folgenden Eigenschaften:
 
 ### Atomicity
 Alle Datanbankoperationen in einer Transaktion sind ununterbrechbar angelegt und werden zusammen in  ausgeführt. Schlägt eine Einzeloperation fehl, schlägt die gesamte Transaktion fehl (Alles-oder-nichts-Eigenschaft).
@@ -14,6 +14,8 @@ Durch den isolierten Ablauf von Transaktionen wird erreicht, dass parallel ablau
 ### Durability
 Alle Operationen haben eine persistente Wirkung.
 
+## CAP-Theorem
+Das CAP-Theorem wurden von Eric A. Brewer aufgestellt und besagt, dass maximal zwei der drei Eigenschaften "Consistency" (Konsistenz), "Availability" (Verfügbarkeit) und "Partition tolerance" (Partitionstoleranz) bei einem verteilten System garantiert werden können. Eine Konzentration auf eine dieser Eigenschaften hat somit nachteiligen Effekt auf die anderen Eigenschaften.
 
 ## BASE-Prinzip [2]
 Autor des BASE-Prinzips ist Eric A. Brewer, welcher im Jahr 2000 das CAP-Therorem aufstellte, wonach nur entweder eine vollständige Erreichbarkeit oder eine vollständige Konsistenz einer Datenbank ermöglicht werden kann. Somit wurde es notwendig bei verteilten Datenbanken einen Weg zu beschreiben, bei denen die Daten immer verfügbar und nahezu konsistent sind. Eine Möglichkeit besteht nach Brewer darin, dass Replikate Updates der Daten asynchron erhalten und somit immer lesbar bleiben und nur für eine kurze Zeit inkonsistent sind.
@@ -36,8 +38,8 @@ Eine Zeitreihe, ursprünglich aus der statistischen Literatur kommend, ist eine 
 
 
 ## Echtzeitsystem
-Unter einem Echtzeitsystem werden Systeme verstanden, die auf Impulse (Interrupts) innerhalb einer festgelegten Zeit angemessen reagieren. So kann erreicht werden, dass diese Systeme immer vorhersehbar schnell antworten. Dies ist z.B. bei integrierten Schaltungen in einem CD Player notwendig. Die Daten werden durch das Laufwerk gelesen und an den Prozessor geschickt. Dieser muss nun die Daten alle in einer aehr kurzen Zeit decodieren und ausgeben. Dauert dies zu lange, würde sich die Musik komisch anhören.
+Unter einem Echtzeitsystem werden Systeme verstanden, die auf Impulse (Interrupts) innerhalb einer festgelegten Zeit angemessen reagieren. So kann erreicht werden, dass diese Systeme immer vorhersehbar schnell antworten. Dies ist z.B. bei integrierten Schaltungen in einem CD Player notwendig. Die Daten werden durch das Laufwerk gelesen und an den Prozessor geschickt. Dieser muss nun die Daten alle in einer sehr kurzen Zeit dekodieren und ausgeben. Dauert dies zu lange, würde sich die Musik komisch anhören.
 Weitere Echtzeitanwendungen wären unter anderem Autopiloten, Robotersteuerungen in Fabriken, Medizingeräte oder auch allerlei Gerät beim Militär.
 Im Falle einer verspäteten Antwort, wäre die in solchen Einsatzgebieten genauso schlecht wir keine Antwort.
 
-Allgemein werden Echtzeitsysteme unterteilt in harte Echtzeitsystem, bei welchen die es absolute Grenzen gibt und weiche Echtzeitsysteme, bei welchen eine Grenzüberschreitung zawr unerwünscht ist aber toleriert wird. [4]
+Allgemein werden Echtzeitsysteme unterteilt in harte Echtzeitsystem, bei welchen die es absolute Grenzen gibt und weiche Echtzeitsysteme, bei welchen eine Grenzüberschreitung zwar unerwünscht ist aber toleriert wird. [4]

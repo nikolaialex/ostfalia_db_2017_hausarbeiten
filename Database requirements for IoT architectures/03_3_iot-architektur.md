@@ -1,9 +1,9 @@
-# IoT Architktur
+# IoT-Architektur
 
 Um die Anforderungen an eine Datenbank für IoT Systeme formulieren zu können, müssen zunächst die in einer IoT Architektur verwendeten Geräteklassen identifiziert werden. IoT ist vereinfacht gesagt ein Verbund aus Geräten die Daten aus der Umwelt sammeln, diese speichern und für weitere Prozesse zur Verfügung stellen, die wiederum diese Geräte steuern können und so mit der Umwelt interagieren.
 
 In einer ausgearbeiteten Referenz Architektur, der IoT-A, werden die Geräte in zwei Klassen unterteilt (siehe Abb. 1).
-Zum Einen in die Klasse der Devices, welche die konkreten Hardware wie Sensoren, RF-Tags oder Aktoren nennt. Zum Anderen existiert die Klasse der Physischen-Entitäten, welche die Anbindung von Devices vornehmen und durch spezielle Software die angebundenen Devices kontextabhängig verarbeiten bzw. steuern kann. Im Grunde stellt die Klasse der Physischen-Entität das eigentliche Thing aus dem Internet of Things dar und kann so z.B. ein Kühlschrank, ein Auto oder auch größer gefasst, ein Haus darstellen. [5]
+Zum Einen in die Klasse der Devices, welche die konkreten Hardware wie Sensoren, RF-Tags oder Aktoren nennt. Zum Anderen existiert die Klasse der Physischen-Entitäten, welche die Anbindung von Devices vornehmen und durch spezielle Software die angebundenen Devices kontextabhängig verarbeiten bzw. steuern kann. Im Grunde stellt die Klasse der Physischen-Entitäten das eigentliche Thing aus dem Internet of Things dar und kann so z.B. ein Kühlschrank, ein Auto oder auch größer gefasst, ein Haus darstellen. [5]
 
 ![Auszug aus dem Referenzmodell IoT-A](img/iot-a_auszug_modell.png)
 Abb. 1: Auszug aus dem Referenzmodell IoT-A [5]
