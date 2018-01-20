@@ -6,7 +6,6 @@ Es existiert inzwischen eine immense Vielzahl an unterschiedlichsten NoSQL Daten
 
 Man unterteilt üblicherweise NoSQL-Datenkbanken in die folgenden vier Hauptkategorien:
 
-
 - Spaltenorientierte Datenbanken (Wide-Column-Stores)
 - Key-Value-Datenbanken (Key-Value-Stores)
 - Dokumentendatenbanken (Document Stores)

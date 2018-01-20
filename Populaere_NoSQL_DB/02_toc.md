@@ -23,7 +23,6 @@
 
    [Quellenangaben][kap9]
 
-
 [kap1]:             ./03_einleitung_nosql.md "Einleitung"
 [kap2]:             ./04_kategorisierung_und_verbreitung.md "Kategorisierung und Popularität"
 [kap3]:             ./05_spaltenorientierte_db.md "Spaltenorientierte Datenbanken"

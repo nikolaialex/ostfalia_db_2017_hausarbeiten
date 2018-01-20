@@ -43,6 +43,5 @@ Nächstes Kapitel: [Quellen und Anhang][kap9]
 [kap9]:             ./9_quellen_und_anhang.md "Quellen und Anhang"
 
 
-
 [img-trend]:      ./img/trend.png "NoSQL Trend"
 [img-os-trend]:      ./img/os-trend.png "OS Trend"

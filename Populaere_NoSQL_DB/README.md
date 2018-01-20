@@ -49,4 +49,3 @@ Matr-Nr. 20109019
 [img-nosql]:        ./img/nosql.png "NoSQL"
 
 
-

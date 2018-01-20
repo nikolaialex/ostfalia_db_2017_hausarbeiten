@@ -31,7 +31,6 @@ Die Vorteile sind leicht erkennbar: Durch die nahe zusammenliegende physische Sp
 Ein weiteres wesentliches Charakteristikum von spaltenorientierten Datenbanken ist, dass diese die spaltenweise Speicherung dafür ausnutzen können, die Daten vor dem Speichern zu komprimieren und so ohne größere Latenzzeiten eine wesentliche Reduzierung der Datenbankgröße erreichen können.
 
 
-
 ![][img-cass]  
 
 ## Cassandra

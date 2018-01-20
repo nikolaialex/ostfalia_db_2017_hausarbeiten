@@ -5,7 +5,6 @@ Graphdatenbanken bilden die Relationen zwischen Datensätzen als Graphen ab. Die
 Die populärsten reinen Graphdatenbanken sind Neo4j, Titan und Giraph. Im Ranking finden sich in dieser Kategorie sonst zahlreiche Mulit-Model DBMS wie Microsoft Azure Cosmos DB, OrientDB, ArangoDB und Virtuoso.
 
 
-
 ![][img-neo4j]  
 
 ## Neo4j

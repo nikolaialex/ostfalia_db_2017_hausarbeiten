@@ -7,7 +7,6 @@ Die Architektur ist auf Skalierung ausgelegt; da alle Daten im Hauptspeicher geh
 Typische Vertreter sind Redis, Memcached, Hazelcast, Riak KV, Ehcache und Aerospike. Im Folgenden sollen Redis und Memcached näher betrachtet werden.
 
 
-
 ![][img-redis]  
 
 ## Redis

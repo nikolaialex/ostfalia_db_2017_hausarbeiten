@@ -1,7 +1,6 @@
 # 1 Einleitung 
 
 
-
 ![][img-nosql]  
 
 ## 1.1 NoSQL

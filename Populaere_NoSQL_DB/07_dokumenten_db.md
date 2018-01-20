@@ -6,8 +6,6 @@ Dokumentendatenbanken sind völlig schemafrei, das heisst, es ist nicht notwendi
 
 Verbreitete Dokumentendatenbanken sind z.B. MongoDB, CouchDB, Couchbase, Firebase Realtime Database, RethinkDB und Cloudant.
 
-
-
 ![][img-mongo]  
 
 ## MongoDB
@@ -20,7 +18,6 @@ MongoDB bietet eine Vielzahl von API’s für verschiedene Sprachen wie Java, Py
 
 Der Replikationsmechanismus von MongoDB funktioniert nach dem Master-N-Slaves-Prinzip, wobei ein Master seine Daten an einen oder mehrere Slaves repliziert. Shards sind separate Datenknoten des MongoDB-Clusters.
 
-
 ![][img-couch]  
 
 ## CouchDB
@@ -32,12 +29,9 @@ Die Verwaltung von konkurrierenden Zugriffen erfolgt über Versionierung. Durch 
 Mit CouchDB kann eine gefilterte Abfrage über MapReduce parallel ausgeführt werden.
 CouchDB wird aufgrund der oben genannten Eigenschaften vorwiegend für Webanwendungen verwendet, da hier oft viel Text mit einer nicht definierten Länge gespeichert werden muss. Typische Anwendungsbeispiele sind Blogs, Foren, oder Content-Management-Systeme.
 
-
-
 ***
 
 <a name="footnote51"></a> <a><sup>1</sup></a> REST: Representational State Transfer Protocol: Programmierparadigma für verteilte Systeme, insbesondere für Webservices mit den 6 Prinzipien Client-Server, Zustandslosigkeit, Caching, Einheitliche Schnittstelle, Mehrschichtige Systeme, Code on Demand. Eine saubere REST-Implementierung verlässt sich für Datenbankoperationen auf die in dem HTTP-Protokoll definierten Zugriffsmethoden CREATE (PUT), READ (GET), UPDATE (POST), DELETE , ingesamt CRUD genannt.
-
 
 ***
 
@@ -48,4 +42,5 @@ Nächstes Kapitel: [6. Graphdatenbanken][kap6]
 
 [img-couch]:      ./img/couch.png "CouchDB"
 [img-mongo]:      ./img/mongo.png "MongoDB"
+
 

@@ -13,5 +13,3 @@ Nach einer Einführung in den Themenkomplex NoSQL wird eine Einteilung nach vier
 ## [Inhaltsverzeichnis](./02_toc.md)
 
 
-
-

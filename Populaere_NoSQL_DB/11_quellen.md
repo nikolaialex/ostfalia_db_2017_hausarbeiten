@@ -12,6 +12,8 @@ Cassandra. *cassandra.apache.org*. Online unter: [https://cassandra.apache.org/]
 
 Chang el al (2006): *Bigtable: A Distributed Storage System for Structured Data*, Google 2006,  Online unter: [http://static.googleusercontent.com/media/research.google.com/en//archive/bigtable-osdi06.pdf](http://static.googleusercontent.com/media/research.google.com/en//archive/bigtable-osdi06.pdf). Abgerufen am 10.01.2018.
 
+Baer, Tony: *Microsoft Cosmos DB: Das neue Internetdatenbank Spitzenmodell von Azure*. 2017. Online unter: [https://ncmedia.azureedge.net/ncmedia/2014/09/IT0014_003285-Msft-Cosmos-ger-DE.pdf](https://ncmedia.azureedge.net/ncmedia/2014/09/IT0014_003285-Msft-Cosmos-ger-DE.pdf). Abgerufen am 19.01.2018.
+
 Couchdb. *couchdb.apache.org*. Online unter: [https://couchdb.apache.org/](https://couchdb.apache.org/). Abgerufen am 15.01.2018.
 
 DB-Engines.com: *DB-Engines Ranking*. Online unter: [http://db-engines.com/de/ranking](http://db-engines.com/de/ranking). Abgerufen am 09.01.2018.
