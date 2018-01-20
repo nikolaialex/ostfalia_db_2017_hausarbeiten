@@ -85,11 +85,13 @@ Beim Discaring Modus werden nur die Elemente aufgenommen die seit dem letzten Fi
 
 ### Accumulating
 
-Der Accumulaing Modus summiert die einzelnen Elemente bei jedem Firing Prozess zusammen, was zur Folge hat das die Zahl im Last Observed der Zahl 11 entspricht aber die Gesamtanzahl der betrachteten Elemente bei 23 liegt-
+Der Accumulaing Modus summiert die einzelnen Elemente bei jedem Firing Prozess zusammen, was zur Folge hat das die Zahl im Last Observed der Zahl 11 entspricht aber die Gesamtanzahl der betrachteten Elemente bei 23 liegt.
 
 ### Accumulating & Retracting
 
 Dieser Modus ist angelehnt an den vorherigen Modus nur das hier die vorherigen betrachteten Element wieder von den aktuellen abgezogen werden. Somit sind beide Zahlen vom letzten und der Gesamtbetrachtung her identisch und liegen bei 11.
+
+[**[Apac18]**](10_Literaturverzeichnis.md)
 
 ```Java
 //Collection of raw log lines
@@ -101,6 +103,9 @@ PCollection<KV>String, Integer>> scores = input.apply(Window.into(FixedWindows.o
 ```
 
 ![image4](images/image4.png)
+
+[**[Info17]**](10_Literaturverzeichnis.md)
+[**[Qcon16]**](10_Literaturverzeichnis.md)
 
 ---------
 
