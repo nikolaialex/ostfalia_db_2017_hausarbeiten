@@ -79,7 +79,7 @@ linear an. Dabei ist der Import in den SQL Server mit 33 Zeilen pro Nanosekunde
 ungefähr dreimal schneller als der Import von 100 Zeilen pro Nanosekunde in
 Neo4J.
 
-![](../../../Desktop/Graphenorientierte%20vs%20relationale%20Datenbank%20-%20Vergleich%20der%20Speicherung%20und%20Abfrage%20bei%20der%20Analyse%20von%20Social%20Data/media/09-performanz-von-sql-und-cypher-beim-csv-import.png)
+![](media/09-performanz-von-sql-und-cypher-beim-csv-import.png)
 
 Abbildung 9: Performance von SQL und Cypher bei CSV Import
 
@@ -466,7 +466,7 @@ Neo4J-Browser auch visuell aufbereitet. Diese Funktionalität ist im SSMS nicht
 vorhanden, dennoch werden hier die Zeiten und die Komplexität der Anfragen
 verglichen.
 
-![](../../../Desktop/Graphenorientierte%20vs%20relationale%20Datenbank%20-%20Vergleich%20der%20Speicherung%20und%20Abfrage%20bei%20der%20Analyse%20von%20Social%20Data/media/10-konversationen-zweier-profile.png)
+![](media/10-konversationen-zweier-profile.png)
 
 Abbildung 10: Konversation mit zwei sich gegenseitig erwähnenden Profilen
 
@@ -488,7 +488,7 @@ FROM Mentions m1
 GROUP BY m1.externalprofileid, m2.externalprofileid, m3.externalprofileid, m1.[Count], m2.[Count]
 ~~~
 
-![](../../../Desktop/Graphenorientierte%20vs%20relationale%20Datenbank%20-%20Vergleich%20der%20Speicherung%20und%20Abfrage%20bei%20der%20Analyse%20von%20Social%20Data/media/11-konversationen-der-sql-abfrage-in-tabellenform.png)
+![](media/11-konversationen-der-sql-abfrage-in-tabellenform.png)
 
 Abbildung 11: Konversationen der SQL Abfrage in Tabellenform
 
@@ -510,7 +510,7 @@ somit 9200-fach schneller.
 
 ### Profile, die sich selbst im Beitrag nennen
 
-![](../../../Desktop/Graphenorientierte%20vs%20relationale%20Datenbank%20-%20Vergleich%20der%20Speicherung%20und%20Abfrage%20bei%20der%20Analyse%20von%20Social%20Data/media/12-profil-mit-selbsterwaehnung.png)
+![](media/12-profil-mit-selbsterwaehnung.png)
 
 Abbildung 12: Profil mit Selbsterwähnung
 
@@ -544,7 +544,7 @@ Profil erwähnt werden.
 
 #### Anzeige aller Profile innerhalb einer Distanz von 2
 
-![](../../../Desktop/Graphenorientierte%20vs%20relationale%20Datenbank%20-%20Vergleich%20der%20Speicherung%20und%20Abfrage%20bei%20der%20Analyse%20von%20Social%20Data/media/13-profile-in-naher-distanz.png)
+![](media/13-profile-in-naher-distanz.png)
 
 Abbildung 13: Profile in naher Distanz
 

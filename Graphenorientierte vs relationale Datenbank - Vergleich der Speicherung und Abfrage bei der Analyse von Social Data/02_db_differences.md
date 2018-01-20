@@ -7,7 +7,7 @@ und ihr Ableitung aus dem ER-Modell erläutert werden.
 ER-Modell
 ---------
 
-![](../../../Desktop/Graphenorientierte%20vs%20relationale%20Datenbank%20-%20Vergleich%20der%20Speicherung%20und%20Abfrage%20bei%20der%20Analyse%20von%20Social%20Data/media/01-einfaches-er-modell.png)
+![](media/01-einfaches-er-modell.png)
 
 Abbildung 1: Einfaches ER-Modell
 
@@ -25,7 +25,7 @@ Bei relationalen Datenbanken werden aus dem Modell nun Gegenstände in Tabellen
 umgewandelt. Relationen werden teilweise diesen Tabellen hinzugefügt oder in
 separate Tabellen, sogenannte Indexe oder Relationstabellen, gespeichert.
 
-![](../../../Desktop/Graphenorientierte%20vs%20relationale%20Datenbank%20-%20Vergleich%20der%20Speicherung%20und%20Abfrage%20bei%20der%20Analyse%20von%20Social%20Data/media/02-durch-globale-indexe-realisierte-relation.png)
+![](media/02-durch-globale-indexe-realisierte-relation.png)
 
 Abbildung 2: Durch globale Indexe realisierte Relationen
 
@@ -37,7 +37,7 @@ besitzt eine Komplexität von *O(1)*. Der Durchlauf durch *m* Schritte
 „kostet“ dann *O(m log(n))* für die Indexvariante im Gegensatz zu
 *O(m)* mit Relationen.[2]
 
-![](../../../Desktop/Graphenorientierte%20vs%20relationale%20Datenbank%20-%20Vergleich%20der%20Speicherung%20und%20Abfrage%20bei%20der%20Analyse%20von%20Social%20Data/media/03-speicherung-der-relationen-ohne-verwendung-eines-indexes.png)
+![](media/03-speicherung-der-relationen-ohne-verwendung-eines-indexes.png)
 
 Abbildung 3: Speicherung der Relationen ohne Verwendung eines Indexes
 
@@ -52,7 +52,7 @@ record stores* bezeichnet (dt.: Speicher mit Einträgen festgelegter Größe) un
 sind wesentlich performanter (mit *O(1)* i.G.z. zu *O(log(n))* bei einer
 Suche).
 
-![](../../../Desktop/Graphenorientierte%20vs%20relationale%20Datenbank%20-%20Vergleich%20der%20Speicherung%20und%20Abfrage%20bei%20der%20Analyse%20von%20Social%20Data/media/04-struktur-fuer-eintraege-in-den-knoten--und-realtionenspeicher.png)
+![](media/04-struktur-fuer-eintraege-in-den-knoten--und-realtionenspeicher.png)
 
 Abbildung 4: Struktur für Einträge in den Knoten- und Relationenspeicher[4]
 
@@ -69,7 +69,7 @@ dafür, so verlinkt *Node1* singulär zur Eigenschaft *name*, die als Key-Value
 Paar im Property Store abgespeichert wird. Das zweite Key-Value Paar wird nicht
 direkt vom Knoten verlinkt, sondern vom ersten Key-Value Paar.
 
-![](../../../Desktop/Graphenorientierte%20vs%20relationale%20Datenbank%20-%20Vergleich%20der%20Speicherung%20und%20Abfrage%20bei%20der%20Analyse%20von%20Social%20Data/media/05-physikalische-speicherung-eines-graphs-in-neo4j.png)
+![](media/05-physikalische-speicherung-eines-graphs-in-neo4j.png)
 
 Abbildung 5: Physikalische Speicherung eines Graphs in Neo4j[5]
 

@@ -24,7 +24,7 @@ Autor
 
 ##### PDF Version
 
-[Graphbasierte vs. relationale Daten.pdf](../../../Desktop/Graphenorientierte%20vs%20relationale%20Datenbank%20-%20Vergleich%20der%20Speicherung%20und%20Abfrage%20bei%20der%20Analyse%20von%20Social%20Data/media/Graphenorientierte%20vs.%20relationale%20Datenbanken.pdf)
+[Graphbasierte vs. relationale Daten.pdf](media/Graphenorientierte%20vs.%20relationale%20Datenbanken.pdf)
 
 ##### Navigation
 
