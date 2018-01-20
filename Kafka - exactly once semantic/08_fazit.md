@@ -1,0 +1,4 @@
+# Fazit
+
+Es hat sich gezeigt, dass Apache Kafka nicht ohne Grund von vielen großen Technologie-Unternehmen verwendet wird. Kafka bietet ein zentrales System zur Nachrichtenvermittlung zwischen mehreren Services, unterstützt darauf aufbauend wiederverwendbare Connector-Implementationen um Standard Services und Datenbanken leicht anzubinden und bietet zusätzlich die Möglichkeit in diesem Ökosystem ohne weitere Abhängigkeiten Stream Processing durchzuführen. Auch wenn die exactly once Semantik kritisch zu sehen ist, so bietet Kafka die Möglichkeit diese zu unterstützen, wenn alle Beteiligten des Kommunikationswegs sich an gewisse Regeln halten.
+Aufgrund der Möglichkeiten die Kafka bietet und seiner mittlerweile weiten Verbreitung, ist ein Einsatz von Kafka bereits zu empfehlen, wenn man mehr als zwei Systeme hat, die miteinander kommunizieren.
