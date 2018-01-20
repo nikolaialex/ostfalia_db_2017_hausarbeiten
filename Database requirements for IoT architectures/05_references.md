@@ -31,3 +31,5 @@
 
 [14] Freedman, Mike. „Time-series data: Why (and how) to use a relational database instead of NoSQL“. Timescale, 20. April 2017. https://blog.timescale.com/time-series-data-why-and-how-to-use-a-relational-database-instead-of-nosql-d0cd6975e87c.
 
+
+[Fazit](04_fazit.md)

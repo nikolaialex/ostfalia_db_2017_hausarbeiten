@@ -4,3 +4,5 @@ Bei der Betrachtung der einzelnen Klassen einer IoT-Architektur fällt schnell a
 Die heterogene, kontextbezogene Datenhaltung sowie die hohe Verfügbarkeit gepaart mit der Möglichkeit zur Echtzeitabfrage, sollten bei der Auswahl einer entsprechenden Lösung für die Cloud unbedingt mit einfließen.
 
 Die meisten am Markt eingesetzten Systeme, wie z.B. Google BigTable [13], setzen auf schemafreie Datenbanken, um eine möglichst offene Architektur zu bieten. Ebenfalls gibt es am Markt gängige Systeme auf Basis von relationalen DBMS, die versprechen, die Probleme der Skalierung gelöst zu haben und somit auch ohne Performance-Einbrüchen in großen IoT-Umgebungen nutzbar zu sein [14].
+
+[Vergleich Datenbanken](03_6_vergleich.md) | [Literaturverzeichnis](04_references.md)

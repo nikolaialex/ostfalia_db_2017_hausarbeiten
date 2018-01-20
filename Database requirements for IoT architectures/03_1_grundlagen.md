@@ -43,3 +43,6 @@ Weitere Echtzeitanwendungen wären unter anderem Autopiloten, Robotersteuerungen
 Im Falle einer verspäteten Antwort, wäre die in solchen Einsatzgebieten genauso schlecht wir keine Antwort.
 
 Allgemein werden Echtzeitsysteme unterteilt in harte Echtzeitsystem, bei welchen die es absolute Grenzen gibt und weiche Echtzeitsysteme, bei welchen eine Grenzüberschreitung zwar unerwünscht ist aber toleriert wird. [4]
+
+
+[Inhaltsverzeichnis](02_toc.md) | [Einleitung](03_2_einleitung.md)

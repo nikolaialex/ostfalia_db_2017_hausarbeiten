@@ -37,3 +37,6 @@ Ein Gateway, welches IoT-Geräte konsolidiert und eine einheitliche Verbindung z
 
 Die Cloud selbst ist die ressourcenlastigste Komponente in der IoT-Architektur. Sie wird bei großen Systemen mit tausenden Anfragen pro Minute. bombardiert und muss diese Datenmengen speichern und den Anwendern Echtzeit-Zugriffe auf diese gewähren.
 [12]
+
+
+[Einleitung](03_2_einleitung.md) | [Datenstruktur](03_4_datenstruktur.md)

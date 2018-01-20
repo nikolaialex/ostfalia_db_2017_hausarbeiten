@@ -60,3 +60,6 @@ In schemafreien Datenbanksystemen kann eine hohe Geschwindigkeit Lesegeschwindig
 ### Systemreife
 Im Gegensatz zu relationalen Datenbanken bieten schemafreie nicht immer ein ausführliches Sicherheitskonzept z.B. auf Basis von Tabellenspalten. Das fehlen solcher Feature ist dabei aber der Performance dienlich. Sicherheitsfeature müssen somit dann über externe Maßnahmen implementiert werden.
 [10]
+
+
+[Anforderungen an Datenbanken](03_5_merkmale.md) | [Fazit](04_fazit.md)
