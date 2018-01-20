@@ -1,4 +1,4 @@
-# Wichtige Datenbank Anforderungen [^fn7]
+# Wichtige Datenbank Anforderungen [7][8]
 
 Im folgenden werden wichtige Anforderungen an die Datenbanken einer IoT-Architektur formuliert. Allen Klassen gemein ist, dass die zu speichernden Daten, wie im vorherigen Kapitel aufgezeigt, in Form von zeitbasierten heterogenen Nutzdaten vorliegen. Daraus ergibt sich die wichtigste Anforderung an ein Datenbanksystem (DBMS) für die IoT-Architektur: die Fähigkeit mit heterogenen Daten umzugehen.
 
@@ -8,7 +8,7 @@ Um ein geeignetes DBMS für die IoT-Architekturen zu finden, sollten die folgend
 
 ## Skalierbarkeit
 Die Skalierbarkeit bei einem DBMS ist wichtig, wenn die Last der Datenbank steigt, also weitere IoT-Geräte hinzukommen und massig Daten erzeugen.
-Im Bereich der DBMS wird zwischen vertikaler und horizontaler Skalierung unterschieden. Die vertikale Skalierung meint die Erweiterung der Ressourcen eines Datenbank-Servers. Die horizontale Skalierung besteht aus der Erhöhung der Anzahl der Datenbank-Server, welche sich dann die Datenlast teilen.
+Im Bereich der DBMS wird zwischen vertikaler und horizontaler Skalierung unterschieden. Die vertikale Skalierung meint die Erweiterung der Ressourcen eines Datenbank-Servers. Die horizontale Skalierung besteht aus der Erhöhung der Anzahl der Datenbank-Server, welche sich die Datenlast teilen. [12]
 
 In den Bereichen der IoT-Geräte ist die Skalierbarkeit nicht von großem Interesse, da die zu erwarteten Anbindungen bereits bekannt oder durch die Hardware vorgegeben sind und die Daten nicht auf Dauer vorgehalten werden müssen.
 
@@ -17,14 +17,14 @@ Bei dem Gateway kommt es auf die Ausgestaltung an. Je nach Größe des zu verwal
 Im Bereich der Cloud sieht dies anderes aus. In der Cloud laufen alle Daten zusammen, somit muss die Datenbank skalierbar sein, um neue Geräte und Edge-Systeme aufnehmen zu können. Ebenfalls greifen die Benutzer mittels Abfragen auf diese Daten zu und erwarten eine schnelle Reaktionszeit des Systems.
 
 ## Echtzeit-Datenverarbeitung
-Gerade im Bereich der IoT sind Echtdaten-Abfragen, wie zum Beispiel der aktuelle Stromverbrauch sowie der letzten Stunde, sehr relevant und müssen sehr schnell zur Verfügung gestellt werden. Dies betrifft im Grunde alle Klassen, da diese alle ihre Daten in Echtzeit liefern müssen, um diese so schnell wie möglich im Gateway oder der Cloud dem Anwender zur Verfügung stellen zu können. Ebenfalls dienen die Daten für weitere Geräte zur Steuerung. Veraltete Daten sind für eine Prozesssteuerung nicht relevant.
+Gerade im Bereich der IoT sind Echtzeitdaten-Abfragen, wie zum Beispiel der aktuelle Stromverbrauch sowie der letzten Stunde, sehr relevant und müssen sehr schnell zur Verfügung gestellt werden. Dies betrifft im Grunde alle Klassen, da diese alle ihre Daten in Echtzeit liefern müssen, um diese so schnell wie möglich im Gateway oder der Cloud dem Anwender zur Verfügung stellen zu können. Ebenfalls dienen die Daten für weitere Geräte zur Steuerung. Veraltete Daten sind für eine Prozesssteuerung nicht relevant.
 
 ## heterogenen Daten
 Ein Device liefert immer nur eine für sich abgestimmte Datenstruktur zurück, somit ist die Fähigkeit mit heterogenen Daten umgehen zu können für diese Klasse nicht relevant. Ein Thermometer wird immer nur seine eigenen Daten zurückgeben.
 Bei einem Thing, an dem mehrere Devices kaskadiert werden, ist diese Fähigkeit bereits relevant. Die übermittelten Nutzdaten der einzelnen angeschlossenen Devices müssen so gespeichert werden, dass diese ohne zuvor die Struktur zu kennen, an die weiteren Verarbeitungsschritte weitergegeben werden können.
-Ein Gateway für ein Edge-System nimmt wiederum die gesammelten Daten aller angeschlossenen Things auf und besitzt so schon eine große Vielfalt an unterschiedlichen Nutzdatenstrukturen. Diese müssen so gespeichert werden, dass eine Verarbeitung und Weiterleitung erfolgen kann.
-In der Cloud laufen nun alle Daten zusammen. Hier ist die Fähigkeit mit heterogenen Nutzdaten umgehen zu können am stärksten ausgeprägt. Es können jederzeit neue Edge-Systeme oder Things hinzukommen, so dass nicht jedes mal das DBMS angepasst werden muss.
-Ziel soll es sein, für alle Klassen, dass nach Möglichkeit bei neuen Nutzdatenstrukturen die DBMS nicht angepasst werden müssen.
+Ein Gateway für ein Edge-System nimmt wiederum die gesammelten Daten aller angeschlossenen IoT-Geräte auf und besitzt so schon eine große Vielfalt an unterschiedlichen Nutzdatenstrukturen. Diese müssen so gespeichert werden, dass eine Verarbeitung und Weiterleitung erfolgen kann.
+In der Cloud laufen nun alle Daten zusammen. Hier ist die Fähigkeit mit heterogenen Nutzdaten umgehen zu können am stärksten ausgeprägt. Es können jederzeit neue Edge-Systeme oder IoT-Geräte hinzukommen, so dass nicht jedes mal das DBMS angepasst werden muss.
+Für alle Klassen soll es Ziel sein, dass nach Möglichkeit bei neuen Nutzdatenstrukturen die Datenbanken nicht angepasst werden müssen.
 
 
 ## Transaktionssicherheit
@@ -48,8 +48,7 @@ Aktuelle Abfragesprachen wie SQL setzen strukturierte Daten voraus. Halb-struktu
 Somit muss die Abfragesprache des eingesetzten DBMS Anwender-Anfragen schnell und effektiv lösen können.
 Bezogen auf die Klassen ist diese Anforderung für alle gültig, da die Daten schnell und zuverlässig erfasst und an die weiteren Klassen übergeben werden müssen.
 
-## Systemreife [^fn8]
+## Systemreife [8]
 Mit dem Begriff der Systemreife ist gemeint, dass ein DBMS soweit entwickelt ist, dass die gängigen Operationen und Schutzmechanismen wie Authentifikation, Datenvertraulichkeit und Intrigrität abgedeckt sind. SQL ist eine ausgereifte Technologie, welche die angesprochenen Funktionen bereist implementiert. Bim Bereich der NoSQL Datenbanken sind diese bisher noch nicht vollständig umgesetzt. Sollte ein IoT-Gerät vertrauliche Daten erfassen, so sind die genannten Funktionen unabdingbar und mit sicheren Übertragungswegen zu paaren, so dass ein bestmöglicher Schutz der Daten gewährleistet ist. Gleiches gilt verstärkt für die Gateways und die Cloud, da hier durch Sicherheitsprobleme viele Geräte im Zugriff wären.
-
 
 Die genannten Anforderungen gelten hauptsächlich für die Datenbank der Cloud und der Gateways für Edge-Systeme. Für die Datenbanken der IoT-Geräte gelten abgeschwächte Anforderungen. Bedingungen, wie das Handling von heterogenen Daten, sind bei einem IoT-Gerät sehr begrenzt, da die Anzahl der angeschlossenen Geräte meist bekannt ist. Ebenfalls gehört das Vorhalten historischer Daten und entsprechende Auswertemöglichkeiten nicht mit zu den Aufgaben eines entsprechenden IoT-Geräts. Innerhalb eine IoT-Geräts können, bedingt durch die begrenzten Ressourcen, nur performante kleine Datenbanken eingesetzt werden. Hierbei werden weniger heterogene Daten verarbeitet, deren Struktur zuvor bekannt ist. Des Weiteren müssen die anfallenden Daten nur so lange vorgehalten werden, bis diese über ein Gateway persistiert wurden.

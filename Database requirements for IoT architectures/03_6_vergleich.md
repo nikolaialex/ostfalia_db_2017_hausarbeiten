@@ -29,7 +29,7 @@ Ein Master/Slave Verbund kann zwar bei Leseoperationen einen Performancegewinn l
 
 ### Systemreife
 Relationale DBMS sind bereits lange im Einsatz und besitzen somit einen guten Grad an Systemreife. Sie bieten umfangreiche Schutzmechanismen mit Authentifizierung und Authorisierung, teilweise sogar auf Tabellenspalten-Ebene.
-[^fn10]
+[10]
 
 
 
@@ -40,7 +40,7 @@ Schemafreie Datenbanken können vertikal als auch horizontal skalieren. Die Beso
 
 ### Echtzeitverarbeitung
 Durch die schemafreie Speicherung und das nicht verfolgen des ACID-Prinzips lassen sich bei großen Datenmengen Performancesteigerungen erzielen, welche bei Echtzeitanwendungen essentiell sind. Dies wird unter anderem durch die Art der möglichen Datenmodelle wie z.B. key-value oder graph erreicht.
-[^fn9][^fn11]
+[9][11]
 
 ### heterogene Nutzdaten
 Durch die schemafreie Speicherung der Daten, liegt es in der Natur solche Systeme, dass diese sehr gut mit heterogenen Nutzdaten umgehen können. Die Daten werden in die Datenbank eingelesen und über gewisse Felder z.B. die Geräte-ID oder den Standort kann ein Index erzeugt werden. Aufwändige Erweiterungen der Datenbanken, wie bei relationalen DBMS entfallen, wenn neue Nutzdaten mit abweichendem Schema hinzu kommen.
@@ -59,4 +59,4 @@ In schemafreien Datenbanksystemen kann eine hohe Geschwindigkeit Lesegeschwindig
 
 ### Systemreife
 Im Gegensatz zu relationalen Datenbanken bieten schemafreie nicht immer ein ausführliches Sicherheitskonzept z.B. auf Basis von Tabellenspalten. Das fehlen solcher Feature ist dabei aber der Performance dienlich. Sicherheitsfeature müssen somit dann über externe Maßnahmen implementiert werden.
-[^fn10]
+[10]
