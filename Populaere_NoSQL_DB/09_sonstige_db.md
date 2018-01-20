@@ -12,7 +12,8 @@ In den abgerufenen Ranking-Listen der NoSQL Datenbankmodelle finden sich verschi
 |   Amazon DynamoDB    |      |   ✔  |  ✔   |  
 |   MS Azure Cosmos DB   |   ✔   |   ✔  |  ✔   |  ✔  |   
 |   OrientDB   |      |   ✔  |  ✔   |  ✔  |  
-|    ArangoDB  |     |   ✔  |  ✔   |  ✔  | 
+|    ArangoDB  |     |   ✔  |  ✔   |  ✔  |  
+
 Tabelle 7.1 Kombinationen von Datenbankmodellen
 
 Dabei fällt insbesondere das proprietäre Microsoft System Azure Cosmos DB auf, welches den Versuch unternimmt, alle vier zuvor betrachteten NoSQL Datenbankmodelle "unter einen Hut" zu bekommen.
