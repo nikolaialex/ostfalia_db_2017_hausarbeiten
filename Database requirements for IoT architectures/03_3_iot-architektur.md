@@ -6,6 +6,7 @@ In einer ausgearbeiteten Referenz Architektur, der IoT-A, werden die Geräte in 
 Zum Einen in die Klasse der Devices, welche die konkreten Hardware wie Sensoren, RF-Tags oder Aktoren nennt. Zum Anderen existiert die Klasse der Physischen-Entitäten, welche die Anbindung von Devices vornehmen und durch spezielle Software die angebundenen Devices kontextabhängig verarbeiten bzw. steuern kann. Im Grunde stellt die Klasse der Physischen-Entitäten das eigentliche Thing aus dem Internet of Things dar und kann so z.B. ein Kühlschrank, ein Auto oder auch größer gefasst, ein Haus darstellen. [5]
 
 ![Auszug aus dem Referenzmodell IoT-A](img/iot-a_auszug_modell.png)
+
 Abb. 1: Auszug aus dem Referenzmodell IoT-A [5]
 
 Die einzelnen Physischen-Entitäten besitzen, bezogen auf ihre Aufgaben, eigene Prozessorkapazitäten und Speicher sowie Kommunikationschnittstellen zu anderen Geräten und können somit autark arbeiten und mit anderen kommunizieren. Im folgenden wird die Bezeichnung IoT-Gerät verwendet. [5]
@@ -16,6 +17,7 @@ Da ein IoT-Gerät sehr viele Daten in kurzer Zeit erzeugen kann, werden diese me
 [6]
 
 ![Datenreplikation aus Edge-System in Cloud](img/data-distribution-figure5.png)
+
 Abb. 2: Datenreplikation aus Edge-System in Cloud [6]
 
 In Abb. 2 ist zu erkennen, wie eine typische Replikation der Daten von IoT-Geräten/Gateways in eine Cloud aussieht. Die zu replizierenden Daten bilden in einem Edge-Systeme eine eigene logische Einheit. In der Cloud werden diese Einheiten wiederum zu einer großen logischen Einheit zusammen gesetzt
@@ -26,6 +28,7 @@ Die zur Verfügung stehenden Ressourcen der einzelnen Komponenten fallen sehr un
 Ein Device, meist ein Tag, Sensor oder Aktor, besitzt wenig Ressourcen, damit dies günstig produziert werden können und nicht viel Energie verbrauchen. Sie besitzen meist nur kleine schwache Prozessoren mit sehr wenig Speicher und haben meist nur sehr wenig Flashspeicher für eine Firmware bzw. deren Konfiguration.
 
 ![Zusammenhang Device, IoT-Gerät, Gateway und Cloud](img/iot_overview.png)
+
 Abb. 3 Zusammenhang Device, IoT-Gerät, Gateway und Cloud
 
 Ein IoT-Gerät (vgl. Abb. 3) bündelt mehrere Devices und besitzt meist mehr Prozessorleistung und Speicher. Um mit den begrenzten Ressourcen eines solchen Umgebung umgehen zu können, werden meist spezialisierte Echtzeit-Betriebssysteme eingesetzt. Im oben genannten Beispiel unserer Hauses, wäre hier ein Einplatinen-Computer zu nennen, welcher die verschiedenen Brandmelder konsolidiert. Es können hier auch schon Funktionen implementiert werden, die das IoT-Gerät "Telefon" bei einem Alarm informiert, welches dann einen Notruf absetzt.
