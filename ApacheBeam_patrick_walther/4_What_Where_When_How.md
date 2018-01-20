@@ -1,6 +1,6 @@
 # 4. What, Where, When and How
 
-##What are you computing?
+## What are you computing?
 
 Welche Transformation an Daten hat man in seinem System - Zahlen zusammen Addieren, Highscores berechnen, Diagramme berechnen. Dies entspricht dem klassischen Batchprozessing.
 
@@ -25,21 +25,21 @@ PCollection<KV>String, Integer>> scores = input.apply(Sum.integersPerKey());
 
 ![image5](images/image5.png)
 
-##Where in event time?
+## Where in event time?
 
 Wo sind meine Daten in der Event Time - Benutzt man Aggregated Window, Sliding Windows oder Session Windows.
 
 ![image2](images/image2.png)
 
-###Fixed
+### Fixed
 
 Bei der Variante Fixed wird Zeitfenster mit bestimmten gleichmäßigen abstand erzeugt und alle Daten werden je nach Zeitstempel in die entsprechenden Fenster eingeteilt.
 
-###Sliding
+### Sliding
 
 Beim Sliding spielt die Überlappung der Fenster einer große Rolle da hier Element auch mehrfach in der Auswertung vorkommen können und somit die Ergebnisse anders beeinflussen können. Das beste Beispiel hierfür wäre, wenn in jeder Stunde Elemente aus den letzten 24 Stunden ausgewertet werden.
 
-###Sessions
+### Sessions
 
 Sind sehr flexibel was den Einsatz angeht, aber gleichzeitig auch sehr komplex. Hier muss genau abgepasst werden wie die Daten ausgewertet werden, da jeder Nutzer in einer Session andere Verhaltensmuster hat und um diese entsprechend Filtern zu können muss die Auswertung gut abgestimmt sein, um nicht falsche Ergebnisse zu erzielen.
 
@@ -54,7 +54,7 @@ PCollection<KV>String, Integer>> scores = input.apply(Window.into(FixedWindows.o
 
 ![image7](images/image7.png)
 
-##When in processing time?
+## When in processing time?
 
 Wann sind die Daten in der Processing Time und ab wann werden diese Daten wichtig und ab wann unwichtig. Sind später eintreffende Daten noch sinnvoll zum auswerten oder sollen diese ignoriert werden.
 
@@ -73,21 +73,21 @@ PCollection<KV>String, Integer>> scores = input.apply(Window.into(FixedWindows.o
 
 ![image3](images/image3.png)
 
-##How do refinements relate?
+## How do refinements relate?
 
 Soll die Ergebnisse der Daten auf einander aufbauen oder sollen sie unabhängig voneinander betrachtet werden um sie für die entsprechende Art und Weise auszuwerten.
 
 ![image8](images/image8.png)
 
-###Discarding
+### Discarding
 
 Beim Discaring Modus werden nur die Elemente aufgenommen die seit dem letzten Firing Process aufgenommen wurden. In dem oberen abgebildeten Beispiel werden zuerst das Element 3 ausgewertet, anschließend die Elemente 5 und 1 separat und zum Schluß das einzelne Element 2. Diese verdeutlicht auch nochmal die letzten beiden Zeilen, wo die Elemente aufgezählt werden wie viele insgesamt betrachtet wurden und wie viele Elemente zuletzt betrachtet wurden.
 
-###Accumulating
+### Accumulating
 
 Der Accumulaing Modus summiert die einzelnen Elemente bei jedem Firing Prozess zusammen, was zur Folge hat das die Zahl im Last Observed der Zahl 11 entspricht aber die Gesamtanzahl der betrachteten Elemente bei 23 liegt-
 
-###Accumulating & Retracting
+### Accumulating & Retracting
 
 Dieser Modus ist angelehnt an den vorherigen Modus nur das hier die vorherigen betrachteten Element wieder von den aktuellen abgezogen werden. Somit sind beide Zahlen vom letzten und der Gesamtbetrachtung her identisch und liegen bei 11.
 
