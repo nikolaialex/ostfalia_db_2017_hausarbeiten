@@ -2,7 +2,7 @@
 
 Für die Auswahl des richtigen Datenbanksystems und den Anforderungen an dieses, ist es wichtig die zu erwartenden Datenstruktur zu betrachtet.
 
-Ein Device stellt immer einen bzw. mehrere Werte, passend zu seiner Aufgabe zur Verfügung. Bei einem Temperatursensor mit eingebauten Hygrometer wären dies zum Einen die Temperatur und zum Anderen die relative Luftfeuchtigkeit. Zusammen mit dem Kontext ergeben sich somit für dieses Beispiel die folgenden Daten:
+Ein Device stellt immer einen bzw. mehrere Werte, passend zu seiner Aufgabe, zur Verfügung. Bei einem Temperatursensor mit eingebauten Hygrometer wären dies zum Einen die Temperatur und zum Anderen die relative Luftfeuchtigkeit. Zusammen mit dem Kontext ergeben sich somit für dieses Beispiel die folgenden Daten:
 
 * ID des Sensors(Kontext)
 * Messzeitpunkt (Kontext)
