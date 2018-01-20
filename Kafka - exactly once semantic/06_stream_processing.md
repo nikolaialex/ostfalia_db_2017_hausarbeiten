@@ -1,4 +1,4 @@
-# Stream Processing
+# Stream Processing in Kafka
 
 Im Big Data Bereich war es bisher üblich große Mengen an Daten über sogenannten Batch Jobs zu verarbeiten. So wurden die Daten zuerst in großen Mengen über den Tag hinweg gespeichert und dann über Nacht von Anwendungen mit der Hilfe von Apache Hadoop oder ähnlichen Anwendungen in Clustern verteilt verarbeitet, damit am nächsten Tag die aktualisierten Ergebnissen vorliegen konnten. Aufgrund dieser Form der Verarbeitung wirkt sich eine neue Rezension in einem Online-Shop beispielweise erst viel später auf den Durchschnittswert des Produkts aus, obwohl der Autor der Rezension eine sofortige Aktualisierung erwarten würde.
 
