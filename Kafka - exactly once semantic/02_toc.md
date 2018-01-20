@@ -1,4 +1,5 @@
 # Inhaltsverzeichnis
+// TODO: update TOC
 
 + [Einleitung](03_introduction.md)
 + [Was ist Kafka](...)
