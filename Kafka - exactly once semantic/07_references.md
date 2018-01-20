@@ -24,6 +24,4 @@
 
 **[jaxenter]** https://jaxenter.de/kafka-0-11-60108
 
-**[heise]** https://www.heise.de/developer/meldung/MapR-stellt-proprietaere-Alternative-zu-Apache-Kafka-vor-3036950.html
-
 **[techrepublic]** https://www.techrepublic.com/article/apache-kafka-is-booming-but-should-you-use-it/
