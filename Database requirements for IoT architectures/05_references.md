@@ -16,8 +16,7 @@
 
 [7] Trupti Gurav, und R. A. Kudale. „DoT(Database for IoT): Requirements and Selection Criteria“. International Journal of Computer Applications (0975 – 8887) Volume 159, Nr. No 8 (Februar 2017). http://www.ijcaonline.org/archives/volume159/number8/gurav-2017-ijca-913021.pdf.
 
-[8] Sharvari Rautmare, und Dr. D. M. Bhalerao. „MySQL and NoSQL database comparison for IoT application“, 2016.
-
+[8] Rautmare, S., und D. M. Bhalerao. „MySQL and NoSQL database comparison for IoT application“. In 2016 IEEE International Conference on Advances in Computer Applications (ICACA), 235–38, 2016. https://doi.org/10.1109/ICACA.2016.7887957.
 
 [9] „USE CASES: Real-Time Big Data“. Zugegriffen 19. Januar 2018. https://www.couchbase.com/use-cases/real-time-big-data.
 
