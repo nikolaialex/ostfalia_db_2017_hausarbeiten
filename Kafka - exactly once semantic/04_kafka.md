@@ -6,6 +6,9 @@ Nachrichten werden in sogenannten **Topics** organisiert. Ein Topic ist in etwa 
 
 Topics werden in **Partitionen** geschrieben. Eine Partition kann man als einzelnes Log im Sinne der oberen Erklärung bezeichnen. Nachrichten werden in der Partition angehängt und sie von der ersten Nachricht an gelesen. Ein Topic verteilt sich normalerweise über mehrere solcher Partitionen. Werden Einträge in ein Topic geschrieben, gibt es keine Garantie, dass die Einträge über die Partitionen hinweg sortiert sind. So kann ein Eintrag in Partition 0 landen, der nächste in Partition 4 und ein weiterer in Partition 2. Über die Partitionen wird auch die Redundanz der Daten sichergestellt und Partitionen können über mehrere Server verteilt werden. Wie zuvor beschrieben, kann die Nutzung eines Keys sicherstellen, dass Kafka Einträge mit demselben Key in die gleiche Partition schreibt. [NarkhedeShapiraPalino2017-07]
 
+![Aufbau eines Topic mit Partitionen](images/log_anatomy.png)
+Ein Topic verteilt sich über mehrer Partitionen [kafka-intro]
+
 Da Kafka stets als Cluster auf einem oder mehreren Servern betrieben wird, besitzt es mehrere Bestandteile, die hier kurz aufgelistet sind:
 
 * Zookeeper für das Management des Clusters
@@ -30,6 +33,9 @@ Ein Producer ist dafür verantwortlich Daten nach Kafka zu übertragen. Eine Anw
 ## Consumer
 
 Die den Producern in Kafka gegenüberliegende Seite sind die Consumer. Ein Consumer liest die Daten aus dem Kafka-Cluster. Auch ein Consumer wird über die von Kafka zur Verfügung gestellten Bibliotheken in der eigenen Anwendung implementiert. So kann beispielsweise ein Consumer in einer Anwendung implementiert werden um Daten aus Kafka in einem Web-Frontend zu visualisieren oder um die Daten in einer wie auch immer gearteten Datenbank zu persistieren. Consumer lesen entweder das komplette Topic von Anfang an ab ihrem Start aus, oder speichern sich das Offset des letzten Eintrags den sie erfolgreich ausgelesen haben, um so im Falle eines Ausfalls ab diesem Offset weiterlesen zu können. [NarkhedeShapiraPalino2017-07]
+
+![Consumer lesen am gespeicherten Offset weiter](images/log_consumer.png)
+Producer schreiben in das Log, Consumer lesen am eigenen Offset weiter [kafka-intro]
 
 Im folgenden Screenshot sieht man auf der linken Seite einen Console Producer für Kafka der Nachrichten verschickt, die vom Console Consumer auf der rechten Seite abgerufen werden.
 

@@ -29,3 +29,5 @@
 **[kafka-connect-twitter]** https://github.com/Eneco/kafka-connect-twitter
 
 **[zookeeper-desc]** https://cwiki.apache.org/confluence/display/ZOOKEEPER/ProjectDescription
+
+**[kafka-intro]** https://kafka.apache.org/intro
