@@ -23,7 +23,7 @@ Typische Use-Cases für Kafka sind Messaging, Website Activity, Metrics, Log Agg
 
 Im Bereich des Messaging entspricht Kafka einem typischem Message Broker wie beispielsweise ActiveMQ oder RabbitMQ. Kafka wird in diesem Zusammenhang beispielsweise zum Entkuppeln von Processing und Daten-Produktion oder auch zum Vorhalten von unverarbeiteten Daten genutzt.[kafka-use-cases]  
 
-Website Activity Tracking war die ursprünglich einzige Aufgabe von Kafka. Daten in einem Publish-Subscribe-System sollten analysiert werden. Hier werden also Daten wie Page Views, Suchen und ähnliches anylisert.[kafka-use-cases]  
+Website Activity Tracking war die ursprünglich einzige Aufgabe von Kafka. Daten in einem Publish-Subscribe-System sollten analysiert werden. Hier werden also Daten wie Page Views, Suchen und ähnliches analysiert.[kafka-use-cases]  
 
 Der Metrics-Bereich entspricht dem aggregieren von Statistiken.[kafka-use-cases]  
 
