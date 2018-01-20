@@ -31,8 +31,7 @@ Matr-Nr. 20109019
 6. [Graphdatenbanken][kap6]  
     6.1 Neo4J  
 7. [Sonstige NoSQL Datenbanken][kap7]  
-    7.1  Volltext Suchmaschinen  
-    7.2 Multi-Model Datenbanken  
+    7.1 Multi-Model Datenbanken  
 8. [Fazit][kap8]    
 
    [Quellenangaben][kap9]
