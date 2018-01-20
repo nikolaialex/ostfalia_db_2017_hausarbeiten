@@ -25,3 +25,7 @@
 **[jaxenter]** https://jaxenter.de/kafka-0-11-60108
 
 **[techrepublic]** https://www.techrepublic.com/article/apache-kafka-is-booming-but-should-you-use-it/
+
+**[kafka-connect-twitter]** https://github.com/Eneco/kafka-connect-twitter
+
+**[zookeeper-desc]** https://cwiki.apache.org/confluence/display/ZOOKEEPER/ProjectDescription
