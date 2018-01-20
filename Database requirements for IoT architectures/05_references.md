@@ -24,3 +24,10 @@
 [10] „Comparing Relational Database Security and NoSQL Security“. SearchSecurity, Oktober 2011. http://searchsecurity.techtarget.com/answer/Comparing-relational-database-security-and-NoSQL-security.
 
 [11] „NoSQL and Real-Time Analytics: What You Need to Know“. DATAVERSITY (blog), 11. Januar 2016. http://www.dataversity.net/nosql-and-real-time-analytics-what-you-need-to-know/.
+
+[12] „The internet of things, database systems and data distribution, part one - IoT Agenda“. Zugegriffen 16. Januar 2018. http://internetofthingsagenda.techtarget.com/blog/IoT-Agenda/The-internet-of-things-database-systems-and-data-distribution-part-one.
+
+[13] „Bigtable - Scalable NoSQL Database Service“. Google Cloud Platform. Zugegriffen 15. Januar 2018. https://cloud.google.com/bigtable/.
+
+[14] Freedman, Mike. „Time-series data: Why (and how) to use a relational database instead of NoSQL“. Timescale, 20. April 2017. https://blog.timescale.com/time-series-data-why-and-how-to-use-a-relational-database-instead-of-nosql-d0cd6975e87c.
+
