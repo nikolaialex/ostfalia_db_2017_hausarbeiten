@@ -1,6 +1,6 @@
 # 1. Einleitung
 
-Apache Beam ist ein Opensource Profjekt der Apache Foundation.
+Diese Hausarbeit beschäftigt sich mit Apache Beam und die Grundlagen vom Apache Beam Model. Apache Beam ist ein Opensource Projekt.
 
 ------------
 
